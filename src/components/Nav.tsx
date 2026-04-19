@@ -9,6 +9,7 @@ const LINKS = [
   { id: "divisions", label: "Studio" },
   { id: "services", label: "Services" },
   { id: "work", label: "Work" },
+  { id: "testimonials", label: "Testimonials" },
   { id: "contact", label: "Contact" }
 ];
 
@@ -181,6 +182,7 @@ export default function Nav() {
             <a
               href="#top"
               onClick={handleHome}
+              aria-label="Rarestar Home"
               className="group flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/85 transition-colors hover:text-paper md:text-[11px]"
             >
               <Image
@@ -224,17 +226,6 @@ export default function Nav() {
             </nav>
 
             <div className="flex items-center gap-3 md:gap-4">
-              <span
-                className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/60 lg:flex"
-                aria-label="Currently accepting new projects for Q2 2026"
-              >
-                <span className="relative inline-flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                </span>
-                Booking · Q2 2026
-              </span>
-
               {/* Desktop CTA — hidden on mobile, menu overlay carries it there */}
               <div className="hidden md:block">
                 <Magnetic strength={0.3} radius={110}>
@@ -353,14 +344,6 @@ function MobileMenu({ open, active, onNav, onClose }: MobileMenuProps) {
           ].join(" ")}
           style={{ transitionDelay: open ? "340ms" : "0ms" }}
         >
-          <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/60">
-            <span className="relative inline-flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-            </span>
-            Booking · Q2 2026
-          </div>
-
           <a
             href={`mailto:${EMAIL}`}
             onClick={onClose}
@@ -380,7 +363,7 @@ function MobileMenu({ open, active, onNav, onClose }: MobileMenuProps) {
             <a
               href={CALENDLY_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               onClick={onClose}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-ember px-4 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-ink transition-opacity hover:opacity-90"
             >

@@ -169,6 +169,7 @@ export default function HeroVideo() {
     video.addEventListener("loadedmetadata", handleMeta);
 
     // autoplay guard — browsers require interaction sometimes; muted+playsinline covers most
+    video.volume = 0; // start silent; SoundDesign toggle fades in the breeze audio
     const tryPlay = () => {
       void video.play().catch(() => {
         // wait for first user interaction
@@ -196,10 +197,76 @@ export default function HeroVideo() {
       });
     });
 
+    // ── Breeze audio from the hero video ─────────────────────────────
+    // Plays at full volume when BOTH conditions are true:
+    //   1. Sound toggle is enabled (rarestar:sound event)
+    //   2. Hero section is in the viewport (IntersectionObserver)
+    // Smoothly fades in/out on either condition change.
+
+    const TARGET_VOL = 1.0;         // max volume when active
+    const FADE_MS    = 500;
+    const FADE_STEP  = 16;          // ~60 fps
+
+    let soundEnabled = false;
+    let heroVisible  = true;        // starts visible (hero is first section)
+    let fadeTimer: ReturnType<typeof setInterval> | null = null;
+
+    const fadeVolume = (target: number) => {
+      if (fadeTimer) clearInterval(fadeTimer);
+      const steps = Math.ceil(FADE_MS / FADE_STEP);
+      const delta = (target - video.volume) / steps;
+      let step = 0;
+
+      fadeTimer = setInterval(() => {
+        step++;
+        video.volume = Math.max(0, Math.min(1, video.volume + delta));
+        if (step >= steps) {
+          video.volume = target;
+          if (fadeTimer) clearInterval(fadeTimer);
+          fadeTimer = null;
+          if (target === 0) video.muted = true;
+        }
+      }, FADE_STEP);
+    };
+
+    const syncAudio = () => {
+      if (soundEnabled && heroVisible) {
+        video.muted = false;
+        fadeVolume(TARGET_VOL);
+      } else {
+        fadeVolume(0);
+      }
+    };
+
+    // Listen for sound toggle
+    const onSoundToggle = (e: Event) => {
+      soundEnabled = (e as CustomEvent<{ enabled: boolean }>).detail.enabled;
+      syncAudio();
+    };
+    window.addEventListener("rarestar:sound", onSoundToggle);
+
+    // Observe hero section visibility
+    const heroSection = mount.closest("[id='top']") || mount.parentElement;
+    let heroObserver: IntersectionObserver | null = null;
+
+    if (heroSection) {
+      heroObserver = new IntersectionObserver(
+        ([entry]) => {
+          heroVisible = entry.isIntersecting;
+          syncAudio();
+        },
+        { threshold: 0.15 }          // ~15% visible = "in view"
+      );
+      heroObserver.observe(heroSection);
+    }
+
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", handleResize);
       video.removeEventListener("loadedmetadata", handleMeta);
+      window.removeEventListener("rarestar:sound", onSoundToggle);
+      heroObserver?.disconnect();
+      if (fadeTimer) clearInterval(fadeTimer);
       introTween?.kill();
       renderer.dispose();
       geom.dispose();
@@ -217,7 +284,8 @@ export default function HeroVideo() {
           the ~200–800ms before the video has decoded enough frames for the
           shader to kick in. Same crop as the video so there is no pop. */}
       <div
-        aria-hidden="true"
+        aria-label="Rarestar Cinematic Showreel"
+        role="img"
         className="absolute inset-0 h-full w-full bg-ink"
         style={{
           backgroundImage: "url('/hero-poster.jpg')",

@@ -36,6 +36,8 @@ function HeroContent({
   // targets .reveal-char / .reveal-up inside the paper layer)
   const revealUp = withEntrance ? "reveal-up" : "";
 
+  const TitleTag = ink ? "div" : "h1";
+
   return (
     <div
       className={[
@@ -44,7 +46,7 @@ function HeroContent({
       ].join(" ")}
     >
       <div className="max-w-[min(90rem,95vw)]">
-        <h1
+        <TitleTag
           data-reveal-target={ink ? undefined : ""}
           data-hover={ink ? undefined : "reveal"}
           className={`display ${titleColor} text-[14vw] leading-[0.92] md:text-[10.5vw] md:leading-[0.9]`}
@@ -58,7 +60,7 @@ function HeroContent({
           >
             {withEntrance ? splitChars(TITLE_LINE_2) : TITLE_LINE_2}
           </span>
-        </h1>
+        </TitleTag>
 
         <div data-hero-tagline className="mt-8">
           <p

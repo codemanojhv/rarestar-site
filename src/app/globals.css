@@ -284,3 +284,13 @@ html.lenis body {
   background-position: 0 50%;
   height: 1px;
 }
+
+/* Hide scrollbar for the testimonial carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

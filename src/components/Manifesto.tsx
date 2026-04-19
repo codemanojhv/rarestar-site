@@ -40,10 +40,10 @@ export default function Manifesto() {
   return (
     <section ref={ref} className="relative bg-ink px-6 py-32 md:px-10 md:py-48">
       <div className="mx-auto max-w-6xl">
-        <div className="eyebrow mb-10 flex items-center gap-3">
+        <h2 className="eyebrow mb-10 flex items-center gap-3">
           <span className="inline-block h-1 w-1 rounded-full bg-ember" />
           <span>§01 · Manifesto</span>
-        </div>
+        </h2>
         <p className="display text-paper text-[7vw] leading-[1.05] md:text-[4.2vw]">
           {text.split(" ").map((w, i) => (
             <span key={i} data-word className="inline-block pr-[0.25em]">

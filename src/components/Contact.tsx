@@ -167,7 +167,7 @@ export default function Contact() {
             <a
               href={CALENDLY_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 rounded-full bg-ember px-6 py-4 font-mono text-[11px] uppercase tracking-[0.22em] text-ink transition-opacity hover:opacity-90"
             >
               <CalendarIcon />

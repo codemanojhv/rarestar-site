@@ -35,14 +35,14 @@ export default function Manifesto() {
   }, []);
 
   const text =
-    "Two arms. One obsession with craft. Rarestar builds the unforgettable — brand systems, websites, and commerce for the founders who can tell the difference, and the AI that makes motion graphics finally look directed.";
+    "We help brands move faster. We design systems that scale, build sites that perform, and launch commerce that converts. No fluff, just results-driven design and code.";
 
   return (
     <section ref={ref} className="relative bg-ink px-6 py-32 md:px-10 md:py-48">
       <div className="mx-auto max-w-6xl">
         <h2 className="eyebrow mb-10 flex items-center gap-3">
           <span className="inline-block h-1 w-1 rounded-full bg-ember" />
-          <span>§01 · Manifesto</span>
+          <span>§01 · About</span>
         </h2>
         <p className="display text-paper text-[7vw] leading-[1.05] md:text-[4.2vw]">
           {text.split(" ").map((w, i) => (

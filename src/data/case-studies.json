@@ -1,0 +1,70 @@
+[
+  {
+    "id": "luxe-naturals",
+    "client": "Luxe Naturals",
+    "type": "Brand identity + Shopify",
+    "year": "2026",
+    "bg": "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #3a3a5e 100%)",
+    "description": "A complete brand overhaul and Shopify migration for a premium organic skincare line.",
+    "content": {
+      "challenge": "The client had a slow, generic template and a brand voice that felt disconnected from their high-end product quality.",
+      "solution": "We designed a bespoke visual identity and built a custom Shopify theme focused on storytelling and performance.",
+      "results": [
+        "2.4s improvement in LCP",
+        "100% increase in mobile conversion",
+        "Lighthouse performance score of 98"
+      ]
+    }
+  },
+  {
+    "id": "greenfield-co",
+    "client": "Greenfield & Co.",
+    "type": "Headless Shopify · Next.js",
+    "year": "2025",
+    "bg": "linear-gradient(135deg, #101a10 0%, #1e3a2e 50%, #9be8b8 100%)",
+    "description": "Scaling a sustainable furniture brand with a sub-second headless storefront.",
+    "content": {
+      "challenge": "Scaling to 10K+ SKUs caused significant lag on their previous platform, leading to high bounce rates.",
+      "solution": "Implemented a headless architecture using Next.js and Shopify Hydrogen for instant page loads and deep SEO control.",
+      "results": [
+        "Average 450ms TTFB",
+        "40% increase in checkout completion",
+        "Sub-2s total page load time"
+      ]
+    }
+  },
+  {
+    "id": "meridian-press",
+    "client": "Meridian Press",
+    "type": "Editorial CMS · Sanity",
+    "year": "2025",
+    "bg": "linear-gradient(135deg, #1a0a14 0%, #4a1e38 50%, #f2d9e8 100%)",
+    "description": "Modernizing a legacy publishing house with a fast, editorial-first digital experience.",
+    "content": {
+      "challenge": "Their 20-year-old archive was impossible to manage and even harder for readers to navigate.",
+      "solution": "A custom Sanity CMS implementation with a Next.js frontend, focusing on typography and deep internal linking.",
+      "results": [
+        "65% increase in organic search traffic",
+        "Reduced publishing time from hours to minutes",
+        "3.5 mins average time on page"
+      ]
+    }
+  },
+  {
+    "id": "forma-studio",
+    "client": "Forma Studio",
+    "type": "Brand + Marketing Site",
+    "year": "2025",
+    "bg": "linear-gradient(135deg, #0d0d1a 0%, #2a1a3e 50%, #c9b8e8 100%)",
+    "description": "Establishing the digital presence for a contemporary architecture firm.",
+    "content": {
+      "challenge": "The studio needed a portfolio that matched the precision and minimalism of their physical structures.",
+      "solution": "We built a high-performance marketing site with fluid GSAP animations and a focus on high-fidelity visual media.",
+      "results": [
+        "Featured on Siteinspire",
+        "Zero-layout shift during page transitions",
+        "30% increase in qualified project leads"
+      ]
+    }
+  }
+]

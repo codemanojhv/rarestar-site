@@ -34,3 +34,10 @@ next-env.d.ts
 
 # editor
 .obsidian/
+
+# local agent and scratch files
+.kiro/
+.opencode/
+caveman/
+Untitled.base
+Untitled.canvas

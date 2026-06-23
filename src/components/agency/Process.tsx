@@ -6,26 +6,26 @@ const steps = [
   {
     n: "01",
     title: "Discover",
-    body:
-      "We interrogate the brief. Who is this for, what does winning look like, and what is the single thing we refuse to compromise on. No kickoff kabuki."
+    body: "We review goals, audience, timeline, and budget. We agree on scope and success criteria before design starts.",
+    deliverable: "Scope document + project timeline"
   },
   {
     n: "02",
     title: "Design",
-    body:
-      "Identity, system, site. We design in prototype, not in static frames — every interaction is a decision, every transition has intent."
+    body: "Brand and UI in Figma or equivalent. You sign off on layouts, components, and content structure before build.",
+    deliverable: "Brand kit + approved UI mockups"
   },
   {
     n: "03",
     title: "Develop",
-    body:
-      "Next.js 15 App Router, TypeScript, Sanity or Shopify where it earns its keep. Performance and accessibility are baseline, not upsells."
+    body: "Next.js, TypeScript, and Sanity or Shopify APIs as needed. Performance, accessibility, and responsive layouts are included.",
+    deliverable: "Staging site for review"
   },
   {
     n: "04",
-    title: "Deploy",
-    body:
-      "Domain, DNS, SSL, SEO, schema, indexing, analytics, monitoring. We ship it live and hand over a runbook you can actually use."
+    title: "Launch",
+    body: "DNS, SSL, SEO basics, analytics, and hosting handoff. You get notes on how to update content and who to call for changes.",
+    deliverable: "Live site + handoff docs"
   }
 ];
 
@@ -64,10 +64,10 @@ export default function Process() {
         <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="eyebrow flex items-center gap-3">
             <span className="inline-block h-1 w-1 rounded-full bg-ember" />
-            <span>§04 · How We Work</span>
+            <span>§03 · How we work</span>
           </div>
           <h2 className="display max-w-3xl text-paper text-[9vw] leading-[0.95] md:text-[5vw]">
-            Four steps. <span className="accent-italic">Zero theatre.</span>
+            From brief <span className="accent-italic">to launch.</span>
           </h2>
         </div>
 
@@ -84,7 +84,13 @@ export default function Process() {
               <h3 className="col-span-10 display text-paper text-[9vw] leading-[0.95] md:col-span-4 md:text-[3.5vw]">
                 {s.title}
               </h3>
-              <p className="col-span-12 max-w-xl text-base text-paper/70 md:col-span-7">{s.body}</p>
+              <div className="col-span-12 md:col-span-7">
+                <p className="max-w-xl text-base text-paper/70">{s.body}</p>
+                {/* @ts-ignore - deliverable exists in array */}
+                <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-paper/40">
+                  → Deliverable: <span className="text-paper/60">{s.deliverable}</span>
+                </div>
+              </div>
             </li>
           ))}
         </ol>

@@ -7,7 +7,7 @@ import path from "node:path";
 // Satori (the engine powering ImageResponse) only accepts TTF/OTF/WOFF,
 // NOT WOFF2, which is why we commit TTFs instead of pulling via CSS.
 export const runtime = "nodejs";
-export const alt = "Rarestar Creative Studio — We design the unforgettable.";
+export const alt = "RareStar — Creative agency";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -70,7 +70,7 @@ export default async function OpenGraphImage() {
                 background: "#ff4a1c"
               }}
             />
-            <div>Rarestar / Creative Studio</div>
+            <div>RareStar</div>
           </div>
           <div
             style={{
@@ -114,7 +114,7 @@ export default async function OpenGraphImage() {
               color: "#ff4a1c"
             }}
           >
-            the unforgettable.
+            websites and commerce.
           </div>
         </div>
 
@@ -138,8 +138,8 @@ export default async function OpenGraphImage() {
               color: "rgba(242,239,232,0.78)"
             }}
           >
-            A creative studio for founders who sweat every pixel. Brand systems, web,
-            headless commerce — and the AI that makes motion graphics look directed.
+            RareStar is a creative agency for brand identity, marketing websites,
+            and headless Shopify stores.
           </div>
           <div
             style={{
@@ -154,16 +154,7 @@ export default async function OpenGraphImage() {
               color: "rgba(242,239,232,0.6)"
             }}
           >
-            <div style={{ display: "flex" }}>RARES.AI · Agency</div>
-            <div
-              style={{
-                display: "flex",
-                width: 64,
-                height: 1,
-                background: "rgba(242,239,232,0.35)"
-              }}
-            />
-            <div style={{ display: "flex" }}>Est. 2026</div>
+            <div style={{ display: "flex" }}>Brand · Web · Commerce</div>
           </div>
         </div>
       </div>

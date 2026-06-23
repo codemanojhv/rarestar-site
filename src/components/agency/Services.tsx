@@ -6,32 +6,32 @@ const services = [
   {
     n: "01",
     title: "Visual Brand Identity",
-    desc: "Logo systems, typography, palette, motion principles, and a guidelines doc your team will actually use."
+    desc: "Logo, typography, color, and written guidelines so your team can apply the brand consistently."
   },
   {
     n: "02",
     title: "Landing Pages",
-    desc: "High-converting, motion-forward single-pagers for launches, campaigns, and category bets."
+    desc: "Single-page sites for launches and campaigns. Fast load, clear message, strong call to action."
   },
   {
     n: "03",
-    title: "Websites — With or Without CMS",
-    desc: "Marketing sites in Next.js. Sanity when you need to edit often, static when you don’t. Never bloated."
+    title: "Websites ",
+    desc: "Marketing sites in Next.js. We add Sanity when you need frequent edits; static when you do not."
   },
   {
     n: "04",
-    title: "Headless E-commerce",
-    desc: "Custom storefronts on Shopify + Next.js. Product pages that sell, cart flows that don’t leak."
+    title: "Custom design E-commerce",
+    desc: "Storefronts on Shopify with a custom Next.js front end. Product pages, cart, and checkout tuned for conversion."
   },
   {
     n: "05",
     title: "Custom Shopify Stores",
-    desc: "Shopify themes designed from scratch when headless is overkill. Zero template vibes."
+    desc: "Liquid themes from scratch when you do not need a separate front end. Custom design, no off-the-shelf template."
   },
   {
     n: "06",
-    title: "Domain · SEO · Indexing",
-    desc: "Domain purchase and config, technical SEO, Google Search Console, schema, sitemaps. Shipped live."
+    title: "Domain, SEO, and Launch",
+    desc: "DNS, SSL, technical SEO, Search Console, structured data, and sitemaps. We configure it before go-live."
   }
 ];
 
@@ -70,10 +70,10 @@ export default function Services() {
         <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="eyebrow flex items-center gap-3" style={{ color: "rgba(10,10,10,0.55)" }}>
             <span className="inline-block h-1 w-1 rounded-full bg-ember" />
-            <span>§03 · Agency Services</span>
+            <span>§02 · Services</span>
           </div>
           <h2 className="display max-w-3xl text-[9vw] leading-[0.95] md:text-[5vw]">
-            What we ship — <span style={{ WebkitTextStroke: "1px #0a0a0a", color: "transparent" }}>end to end.</span>
+            What we <span style={{ WebkitTextStroke: "1px #0a0a0a", color: "transparent" }}>deliver.</span>
           </h2>
         </div>
 

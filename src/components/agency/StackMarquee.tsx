@@ -5,7 +5,6 @@ const stack = [
   "Sanity",
   "Shopify",
   "GSAP",
-  "Three.js",
   "Tailwind",
   "Vercel",
   "Framer Motion",

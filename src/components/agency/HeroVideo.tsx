@@ -284,7 +284,7 @@ export default function HeroVideo() {
           the ~200–800ms before the video has decoded enough frames for the
           shader to kick in. Same crop as the video so there is no pop. */}
       <div
-        aria-label="Rarestar Cinematic Showreel"
+        aria-label="RareStar background video"
         role="img"
         className="absolute inset-0 h-full w-full bg-ink"
         style={{

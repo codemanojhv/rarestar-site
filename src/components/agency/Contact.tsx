@@ -128,16 +128,16 @@ export default function Contact() {
 
         <div data-contact className="eyebrow mb-10 flex items-center gap-3">
           <span className="inline-block h-1 w-1 rounded-full bg-ember" />
-          <span>§06 · Let&rsquo;s Talk</span>
+          <span>§06 · Contact</span>
         </div>
 
         <h2
           data-contact
           className="display text-paper text-[14vw] leading-[0.9] md:text-[10vw]"
         >
-          Have a project
+          Start a
           <br />
-          <span className="accent-italic">worth obsessing over?</span>
+          <span className="accent-italic">project with us</span>
         </h2>
 
         <div
@@ -288,7 +288,7 @@ export default function Contact() {
                   Headless commerce
                 </option>
                 <option value="motion" className="bg-ink text-paper">
-                  Motion / RARES.AI
+                  Motion or video
                 </option>
                 <option value="other" className="bg-ink text-paper">
                   Something else
@@ -316,7 +316,7 @@ export default function Contact() {
                   ? "✓ Got it. Talk soon."
                   : status === "error"
                     ? errorMsg
-                    : "24-hour reply on weekdays"}
+                    : "We review every brief within 24 hrs and reply with a scope estimate."}
               </p>
 
               <Magnetic strength={0.3} radius={120}>

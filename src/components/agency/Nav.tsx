@@ -6,7 +6,6 @@ import { scrollToId, getLenis } from "@/lib/lenisSingleton";
 import Magnetic from "@/components/Magnetic";
 
 const LINKS = [
-  { id: "divisions", label: "Studio" },
   { id: "services", label: "Services" },
   { id: "work", label: "Work" },
   { id: "testimonials", label: "Testimonials" },
@@ -182,19 +181,19 @@ export default function Nav() {
             <a
               href="#top"
               onClick={handleHome}
-              aria-label="Rarestar Home"
+              aria-label="RareStar home"
               className="group flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/85 transition-colors hover:text-paper md:text-[11px]"
             >
               <Image
                 src="/brand/mark.png"
-                alt="Rarestar"
+                alt="RareStar"
                 width={22}
                 height={22}
                 priority
                 className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-45 md:h-[22px] md:w-[22px]"
               />
-              <span className="hidden sm:inline">Rarestar / Creative Studio</span>
-              <span className="sm:hidden">Rarestar</span>
+              <span className="hidden sm:inline">RareStar</span>
+              <span className="sm:hidden">RareStar</span>
             </a>
 
             <nav className="hidden items-center gap-8 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/70 md:flex">

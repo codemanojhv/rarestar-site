@@ -60,7 +60,7 @@ export async function POST(req: Request) {
   // TODO(ramp): swap for Resend when RESEND_API_KEY is provisioned.
   //   const resend = new Resend(process.env.RESEND_API_KEY);
   //   await resend.emails.send({
-  //     from: "Rarestar <noreply@rarestar.studio>",
+  //     from: "RareStar <noreply@rarestar.studio>",
   //     to: "hello@rarestar.studio",
   //     replyTo: email,
   //     subject: `New lead from ${name}${project ? " · " + project : ""}`,

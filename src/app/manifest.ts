@@ -1,14 +1,22 @@
 import type { MetadataRoute } from "next";
+import { headers } from "next/headers";
+import { getSiteFromHostname } from "@/lib/subdomain";
+import { SITES } from "@/types/site";
 
-export default function manifest(): MetadataRoute.Manifest {
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const headersList = await headers();
+  const host = headersList.get("host") || "rarestar.studio";
+  const siteKey = getSiteFromHostname(host);
+  const site = SITES[siteKey];
+
   return {
-    name: "Rarestar Creative Studio",
-    short_name: "Rarestar",
-    description: "Creative studio building brand systems and headless commerce for high-growth founders.",
+    name: site.name,
+    short_name: site.name,
+    description: site.tagline,
     start_url: "/",
     display: "standalone",
     background_color: "#0a0a0a",
-    theme_color: "#ff4a1c",
+    theme_color: site.themeColor,
     icons: [
       {
         src: "/favicon.ico",

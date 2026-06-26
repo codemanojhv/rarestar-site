@@ -188,11 +188,16 @@ export default function SolutionsSection() {
           </div>
 
           {/* Stats 1px Grid Column */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-xl overflow-hidden solutions-cell">
+          <div className="lg:col-span-5 grid grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-xl overflow-hidden solutions-cell shadow-lg">
             
             {/* Stat 1 */}
-            <div className="bg-ink p-6 flex flex-col justify-between min-h-[120px]">
-              <span className="display text-3xl text-white font-bold">10k+</span>
+            <div className="bg-ink p-6 flex flex-col justify-between min-h-[125px] relative group/stat">
+              <div className="flex justify-between items-start">
+                <span className="display text-3xl text-white font-bold">10k+</span>
+                <svg className="w-8 h-4 stroke-[#00C9A7]/40 stroke-[1.2] fill-none transition-transform duration-500 group-hover/stat:translate-x-0.5" viewBox="0 0 30 10">
+                  <path d="M 1,9 Q 10,8 15,3 T 29,1" />
+                </svg>
+              </div>
               <div>
                 <h4 className="font-sans text-[10px] font-bold text-white uppercase tracking-wider font-mono">Sessions</h4>
                 <p className="text-[9px] text-paper/40 mt-0.5 font-mono">Patient exercises completed</p>
@@ -200,8 +205,13 @@ export default function SolutionsSection() {
             </div>
 
             {/* Stat 2 */}
-            <div className="bg-ink p-6 flex flex-col justify-between min-h-[120px]">
-              <span className="display text-3xl text-[#00C9A7] font-bold">250+</span>
+            <div className="bg-ink p-6 flex flex-col justify-between min-h-[125px] relative group/stat">
+              <div className="flex justify-between items-start">
+                <span className="display text-3xl text-[#00C9A7] font-bold">250+</span>
+                <svg className="w-8 h-4 stroke-[#8bee0f]/40 stroke-[1.2] fill-none transition-transform duration-500 group-hover/stat:translate-x-0.5" viewBox="0 0 30 10">
+                  <path d="M 1,8 C 10,9 18,3 29,1" />
+                </svg>
+              </div>
               <div>
                 <h4 className="font-sans text-[10px] font-bold text-white uppercase tracking-wider font-mono">Clinics</h4>
                 <p className="text-[9px] text-paper/40 mt-0.5 font-mono">Therapist centers enrolled</p>
@@ -209,8 +219,13 @@ export default function SolutionsSection() {
             </div>
 
             {/* Stat 3 */}
-            <div className="bg-ink p-6 flex flex-col justify-between min-h-[120px]">
-              <span className="display text-3xl text-[#8bee0f] font-bold">85%</span>
+            <div className="bg-ink p-6 flex flex-col justify-between min-h-[125px] relative group/stat">
+              <div className="flex justify-between items-start">
+                <span className="display text-3xl text-[#8bee0f] font-bold">85%</span>
+                <svg className="w-8 h-4 stroke-[#00C9A7]/40 stroke-[1.2] fill-none transition-transform duration-500 group-hover/stat:translate-x-0.5" viewBox="0 0 30 10">
+                  <path d="M 1,9 T 15,3 T 29,1" />
+                </svg>
+              </div>
               <div>
                 <h4 className="font-sans text-[10px] font-bold text-white uppercase tracking-wider font-mono">Retention</h4>
                 <p className="text-[9px] text-paper/40 mt-0.5 font-mono">Therapist daily utilization</p>
@@ -218,8 +233,13 @@ export default function SolutionsSection() {
             </div>
 
             {/* Stat 4 */}
-            <div className="bg-ink p-6 flex flex-col justify-between min-h-[120px]">
-              <span className="display text-3xl text-white font-bold">72%</span>
+            <div className="bg-ink p-6 flex flex-col justify-between min-h-[125px] relative group/stat">
+              <div className="flex justify-between items-start">
+                <span className="display text-3xl text-white font-bold">72%</span>
+                <svg className="w-8 h-4 stroke-[#8bee0f]/40 stroke-[1.2] fill-none transition-transform duration-500 group-hover/stat:translate-x-0.5" viewBox="0 0 30 10">
+                  <path d="M 1,9 Q 12,2 29,1" />
+                </svg>
+              </div>
               <div>
                 <h4 className="font-sans text-[10px] font-bold text-white uppercase tracking-wider font-mono">Accuracy</h4>
                 <p className="text-[9px] text-paper/40 mt-0.5 font-mono">Average recovery metric gain</p>
@@ -252,8 +272,8 @@ export default function SolutionsSection() {
         </div>
 
         {/* Brochure Download Banner (Minimal Border-only box) */}
-        <div id="waitlist" className="border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 solutions-cell shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-[#00C9A7]/5 blur-[60px] pointer-events-none" />
+        <div id="waitlist" className="border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 solutions-cell shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden group hover:border-[#00C9A7]/20 transition-all duration-500">
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#00C9A7]/5 blur-[70px] pointer-events-none" />
           
           <div className="flex items-center gap-4 flex-1">
             <span className="font-mono text-[10px] text-[#00C9A7] font-bold mt-0.5">// WAITLIST</span>
@@ -263,24 +283,33 @@ export default function SolutionsSection() {
             </div>
           </div>
 
-          <form onSubmit={handleDownload} className="flex gap-2 w-full md:w-auto items-center">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="vocalist@clinical.org"
-              required
-              className="rounded-lg border border-white/10 bg-white/[0.01] px-4 py-2.5 text-[11px] text-white placeholder:text-paper/20 focus:border-[#00C9A7] focus:outline-none transition-all w-full md:w-56 font-mono"
-            />
-            <Magnetic strength={0.12} radius={60}>
-              <button
-                type="submit"
-                className="rounded-lg bg-[#00C9A7] text-ink px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider font-bold flex items-center gap-2 hover:opacity-90 transition-all flex-shrink-0"
-              >
-                <span>{downloaded ? "Joined ✓" : "Join Waitlist"}</span>
-              </button>
-            </Magnetic>
-          </form>
+          <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto items-start sm:items-center">
+            <form onSubmit={handleDownload} className="flex gap-2 w-full sm:w-auto items-center">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="clinician@hospital.org"
+                required
+                className="rounded-lg border border-white/10 bg-white/[0.01] px-4 py-2.5 text-[11px] text-white placeholder:text-paper/20 focus:border-[#00C9A7] focus:outline-none focus:ring-1 focus:ring-[#00C9A7]/20 transition-all w-full sm:w-56 font-mono"
+              />
+              <Magnetic strength={0.12} radius={60}>
+                <button
+                  type="submit"
+                  className="rounded-lg bg-[#00C9A7] text-ink px-4.5 py-2.5 font-mono text-[9px] uppercase tracking-wider font-bold flex items-center gap-2 hover:opacity-90 transition-all hover:shadow-[0_0_15px_rgba(0,201,167,0.25)] flex-shrink-0 cursor-pointer"
+                >
+                  <span>{downloaded ? "Joined ✓" : "Join Waitlist"}</span>
+                </button>
+              </Magnetic>
+            </form>
+          </div>
+
+          {/* Secure Medical badges inside Waitlist frame */}
+          <div className="absolute bottom-2 left-6 right-6 flex justify-between border-t border-white/[0.02] pt-2 pointer-events-none opacity-20 text-[6.5px] font-mono uppercase tracking-widest text-white hidden md:flex">
+            <span>HIPAA Compliant Infrastructure</span>
+            <span>AES-256 Patient Data Encryption</span>
+            <span>Clinician Regulated Access</span>
+          </div>
 
         </div>
 

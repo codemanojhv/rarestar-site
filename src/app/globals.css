@@ -343,3 +343,26 @@ html.lenis body {
 .scroll-line-anim {
   animation: scroll-line 2s ease-in-out infinite;
 }
+
+/* ==========================================================================
+   Rehai Wave & Glow animations
+   ========================================================================== */
+@keyframes rehai-wave {
+  0%, 100% { transform: scaleY(0.2); }
+  50% { transform: scaleY(1); }
+}
+
+.animate-rehai-wave {
+  animation: rehai-wave 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes rehai-glow-pulse {
+  0%, 100% { opacity: 0.6; box-shadow: 0 0 10px rgba(0, 201, 167, 0.2); }
+  50% { opacity: 1; box-shadow: 0 0 20px rgba(0, 201, 167, 0.4); }
+}
+
+.animate-rehai-glow {
+  animation: rehai-glow-pulse 2.5s ease-in-out infinite;
+}
+

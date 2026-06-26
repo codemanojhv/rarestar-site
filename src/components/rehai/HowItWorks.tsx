@@ -100,32 +100,63 @@ export default function HowItWorks() {
         </div>
 
         {/* 1px Grid Layout for Steps (4-column grid on desktop) */}
-        <div className="steps-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
-          {STEPS.map((step, idx) => (
-            <div key={idx} className="step-cell group bg-ink p-8 hover:bg-white/[0.015] transition-colors duration-300 flex flex-col justify-between min-h-[240px]">
-              
-              {/* Card Header */}
-              <div className="flex justify-between items-center mb-6">
-                <span className="font-mono text-[10px] text-paper/30 tracking-widest font-semibold">
-                  {step.num} // {step.tag}
-                </span>
-                <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                  {step.icon}
+        <div className="steps-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden relative shadow-2xl">
+          
+          {STEPS.map((step, idx) => {
+            const isEven = idx % 2 === 0;
+            const glowColor = isEven ? "hover:shadow-[inset_0_0_30px_rgba(0,201,167,0.035)]" : "hover:shadow-[inset_0_0_30px_rgba(139,238,15,0.035)]";
+            const hoverBorder = isEven ? "group-hover:border-[#00C9A7]/25" : "group-hover:border-[#8bee0f]/25";
+            
+            return (
+              <div 
+                key={idx} 
+                className={[
+                  "step-cell group bg-ink p-8 hover:bg-white/[0.01] transition-all duration-500 flex flex-col justify-between min-h-[250px] relative overflow-hidden",
+                  glowColor
+                ].join(" ")}
+              >
+                {/* Subtle cell glow spot */}
+                <div className={[
+                  "absolute -bottom-20 -right-20 w-44 h-44 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-[50px] pointer-events-none",
+                  isEven ? "bg-[#00C9A7]/5" : "bg-[#8bee0f]/5"
+                ].join(" ")} />
+
+                {/* Card Header */}
+                <div className="flex justify-between items-center mb-6 relative z-10">
+                  <span className="font-mono text-[9px] text-paper/30 tracking-widest font-semibold flex items-center gap-1">
+                    <span>{step.num}</span>
+                    <span className="text-paper/20">//</span>
+                    <span className={isEven ? "text-[#00C9A7]" : "text-[#8bee0f]"}>{step.tag}</span>
+                  </span>
+                  
+                  <div className={[
+                    "w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center transition-all duration-500 group-hover:bg-white/10",
+                    hoverBorder
+                  ].join(" ")}>
+                    <div className="transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[15deg]">
+                      {step.icon}
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              {/* Card Body */}
-              <div className="mt-auto">
-                <h3 className="font-sans font-bold text-sm text-white tracking-wide mb-2 group-hover:text-[#00C9A7] transition-colors duration-300">
-                  {step.title}
-                </h3>
-                <p className="font-sans text-[11px] text-paper/40 leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
+                {/* Card Body */}
+                <div className="mt-auto relative z-10">
+                  <h3 className="font-sans font-bold text-sm text-white tracking-wide mb-2.5 transition-colors duration-300 group-hover:text-white">
+                    {step.title}
+                  </h3>
+                  <p className="font-sans text-[11px] text-paper/40 leading-relaxed group-hover:text-paper/50 transition-colors duration-350">
+                    {step.desc}
+                  </p>
+                </div>
 
-            </div>
-          ))}
+                {/* Flow Indicators: directional arrow or cycle loop */}
+                <div className="absolute top-4 right-4 opacity-15 group-hover:opacity-30 transition-opacity duration-300 font-mono text-[10px] text-white">
+                  {idx < 3 ? "→" : "↺"}
+                </div>
+
+              </div>
+            );
+          })}
         </div>
 
       </div>

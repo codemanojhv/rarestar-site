@@ -78,18 +78,20 @@ export default function RehaiHero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00C9A7] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#00C9A7]"></span>
             </span>
-            <span>Clinical Rehabilitation</span>
+            <span>Clinical Neurorehabilitation</span>
           </div>
 
           {/* Hopeful, Calm Typography Heading */}
           <h1 className="reveal-item display text-[clamp(2.4rem,6.2vw,4.6rem)] leading-[0.92] tracking-tight text-white mb-6">
             A partner in <br />
-            <span className="italic text-dust font-light">neurological recovery.</span>
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#00C9A7] via-[#8bee0f] to-[#00C9A7] font-light bg-size-200">
+              neurological recovery.
+            </span>
           </h1>
 
           {/* Core Vision Statement */}
-          <p className="reveal-item font-sans text-paper/60 text-sm md:text-base leading-relaxed max-w-md mb-8">
-            Rehai is an adaptive neurorehabilitation platform. We couple clinician expertise with personalized speech and cognitive exercises to support recovery from stroke, aphasia, and brain injuries.
+          <p className="reveal-item font-sans text-paper/60 text-sm md:text-[15px] leading-relaxed max-w-md mb-9">
+            Rehai couples clinician supervision with personalized speech and cognitive exercises to support recovery from stroke, aphasia, and brain injuries.
           </p>
 
           {/* Inline Waitlist Sign Up */}
@@ -99,14 +101,14 @@ export default function RehaiHero() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="vocalist@clinical.org"
+                placeholder="clinician@hospital.org"
                 required
-                className="flex-1 rounded-lg border border-white/10 bg-white/[0.01] px-4 py-2.5 text-[11px] text-white placeholder:text-paper/20 focus:border-[#00C9A7] focus:outline-none transition-all font-mono"
+                className="flex-1 rounded-lg border border-white/10 bg-white/[0.01] px-4 py-2.5 text-[11px] text-white placeholder:text-paper/20 focus:border-[#00C9A7] focus:outline-none focus:ring-1 focus:ring-[#00C9A7]/20 transition-all font-mono"
               />
               <Magnetic strength={0.12} radius={60}>
                 <button
                   type="submit"
-                  className="rounded-lg bg-[#00C9A7] text-ink px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider font-bold flex items-center gap-1.5 hover:opacity-90 transition-all flex-shrink-0"
+                  className="rounded-lg bg-[#00C9A7] text-ink px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider font-bold flex items-center gap-1.5 hover:opacity-90 transition-all hover:shadow-[0_0_15px_rgba(0,201,167,0.25)] flex-shrink-0 cursor-pointer"
                 >
                   <span>{submitted ? "Joined ✓" : "Join Waitlist"}</span>
                 </button>
@@ -119,55 +121,67 @@ export default function RehaiHero() {
         {/* Right Unified Mockup Column */}
         <div ref={rightCol} className="lg:col-span-7 relative flex justify-center items-center w-full">
           {/* Unified Clinical Console Mockup */}
-          <div className="w-full max-w-2xl bg-white/[0.01] border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl backdrop-blur-md relative overflow-hidden group hover:border-white/15 transition-colors duration-500">
+          <div className="w-full max-w-2xl bg-white/[0.01] border border-white/5 rounded-2xl p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-md relative overflow-hidden group hover:border-white/10 transition-colors duration-500">
             {/* Subtle glow inside card */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#00C9A7]/5 blur-[80px] pointer-events-none" />
+            <div className="absolute -top-10 -right-10 w-72 h-72 rounded-full bg-[#00C9A7]/5 blur-[80px] pointer-events-none" />
             
             {/* Console Header */}
             <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#00C9A7] animate-pulse" />
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-paper/40">Clinical Interface</span>
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00C9A7] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00C9A7]"></span>
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-paper/50">Clinician Portal v1.0</span>
               </div>
-              <span className="text-[9px] font-mono text-[#00C9A7] bg-[#00C9A7]/5 border border-[#00C9A7]/10 rounded px-2.5 py-0.5">Active Session</span>
+              <span className="text-[9px] font-mono text-[#00C9A7] bg-[#00C9A7]/5 border border-[#00C9A7]/15 rounded px-2.5 py-0.5 tracking-wider uppercase font-semibold">Live Telemetry</span>
             </div>
 
             {/* Console Layout Grid */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
               
               {/* Patient info & metrics (Left inside console) */}
-              <div className="md:col-span-5 flex flex-col justify-between gap-6">
-                <div className="flex items-center gap-3.5">
+              <div className="md:col-span-5 flex flex-col justify-between gap-5">
+                
+                {/* EHR Patient Badge */}
+                <div className="flex items-center gap-3.5 bg-white/[0.01] border border-white/[0.03] rounded-xl p-3">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-white/5 flex-shrink-0">
                     <Image src="/rehai/patient_arjun.png" alt="Arjun Shetty" fill className="object-cover" />
                   </div>
                   <div className="min-w-0">
                     <h4 className="text-xs font-bold text-white truncate">Arjun Shetty</h4>
-                    <p className="text-[10px] text-paper/40 truncate">Stroke Recovery · Day 24</p>
+                    <p className="text-[9px] font-mono text-paper/30 tracking-wider mt-0.5">STROKE RECOVERY</p>
+                    <p className="text-[9px] text-[#00C9A7] font-mono mt-0.5">Day 24 · NIMHANS</p>
                   </div>
                 </div>
 
                 {/* Progress Circle & Text */}
-                <div className="flex items-center gap-4 py-2 bg-white/[0.01] border border-white/5 rounded-xl p-3">
+                <div className="flex items-center gap-4 py-2 bg-white/[0.01] border border-white/5 rounded-xl p-3.5">
                   <svg className="w-10 h-10 flex-shrink-0" viewBox="0 0 36 36">
-                    <circle cx="18" cy="18" r="15.915" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="3" />
-                    <circle cx="18" cy="18" r="15.915" fill="none" stroke="#00C9A7" strokeWidth="3" strokeDasharray="72 28" strokeDashoffset="25" />
+                    <circle cx="18" cy="18" r="15.915" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="3.5" />
+                    <circle cx="18" cy="18" r="15.915" fill="none" stroke="url(#rehaiGradient)" strokeWidth="3.5" strokeDasharray="72 28" strokeDashoffset="25" />
+                    <defs>
+                      <linearGradient id="rehaiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#00C9A7" />
+                        <stop offset="100%" stopColor="#8bee0f" />
+                      </linearGradient>
+                    </defs>
                   </svg>
                   <div>
-                    <span className="text-[9px] text-paper/30 uppercase tracking-wider block font-mono">Accuracy</span>
-                    <span className="text-sm font-bold text-white block mt-0.5">72.8% <span className="text-[9px] text-[#00C9A7] font-normal font-mono">+4.2%</span></span>
+                    <span className="text-[9px] text-paper/30 uppercase tracking-wider block font-mono">Vocal Accuracy</span>
+                    <span className="text-sm font-bold text-white block mt-0.5">72.8% <span className="text-[9px] text-[#00C9A7] font-semibold font-mono ml-1">+4.2%</span></span>
                   </div>
                 </div>
 
                 {/* Status card */}
-                <div className="bg-white/[0.02] border border-white/5 rounded-xl p-3 flex justify-between items-center">
+                <div className="bg-white/[0.02] border border-white/5 rounded-xl p-3.5 flex justify-between items-center">
                   <div>
-                    <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Exercises Completed</span>
-                    <span className="text-xs font-bold text-white mt-0.5 block">128 Completed</span>
+                    <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Completed Exercises</span>
+                    <span className="text-[11px] font-bold text-white mt-0.5 block">128 Sessions</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Streak</span>
-                    <span className="text-xs font-bold text-[#8bee0f] mt-0.5 block">12 Days</span>
+                    <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Practice Streak</span>
+                    <span className="text-[11px] font-bold text-[#8bee0f] mt-0.5 block">12 Days</span>
                   </div>
                 </div>
               </div>
@@ -177,22 +191,35 @@ export default function RehaiHero() {
                 
                 {/* Word naming card */}
                 <div className="bg-white/[0.02] border border-white/5 rounded-xl p-4 flex flex-col items-center text-center relative flex-1 justify-center">
-                  <span className="text-[8px] font-mono uppercase tracking-[0.2em] text-[#00C9A7] mb-4">Speech Practice</span>
+                  <div className="absolute top-3 left-4 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#8bee0f] animate-pulse" />
+                    <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-[#8bee0f]">Signal Active</span>
+                  </div>
                   
                   {/* Task Object */}
-                  <div className="w-14 h-14 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xl mb-3">
+                  <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-2xl mb-3 shadow-inner">
                     🐘
                   </div>
-                  <h5 className="text-[10px] font-mono text-paper/40 uppercase tracking-widest">Active Task</h5>
-                  <p className="text-sm font-bold text-white mt-1">"Elephant"</p>
+                  <h5 className="text-[8px] font-mono text-paper/40 uppercase tracking-widest">Active Target Word</h5>
+                  <p className="text-sm font-bold text-white mt-0.5">"Elephant"</p>
+                  <p className="text-[9px] font-mono text-paper/30 italic">/ˈel.ɪ.fənt/</p>
                   
-                  {/* Live Waveform graphic */}
-                  <div className="w-full flex items-center justify-center gap-0.5 h-6 mt-4">
-                    {[15, 30, 45, 30, 60, 80, 50, 90, 75, 40, 60, 50, 75, 95, 60, 40, 20, 10].map((h, i) => (
-                      <span key={i} className="w-0.5 bg-[#8bee0f] rounded-full transition-all duration-300" style={{ height: `${h}%` }} />
+                  {/* Staggered Animated Waveform */}
+                  <div className="w-full flex items-center justify-center gap-[3px] h-8 mt-5">
+                    {[25, 45, 65, 30, 75, 95, 55, 100, 75, 45, 60, 50, 70, 90, 60, 40, 25, 15, 20, 45].map((h, i) => (
+                      <span 
+                        key={i} 
+                        className="w-[2px] bg-gradient-to-t from-[#00C9A7] to-[#8bee0f] rounded-full animate-rehai-wave" 
+                        style={{ 
+                          height: `${h}%`,
+                          animationDelay: `${i * 0.04}s`,
+                          animationDuration: `${0.65 + (i % 4) * 0.15}s`
+                        }} 
+                      />
                     ))}
                   </div>
-                  <span className="text-[8px] font-mono text-[#8bee0f] tracking-wider mt-2.5">Recording... 00:05</span>
+                  
+                  <span className="text-[8px] font-mono text-[#8bee0f] tracking-wider mt-3">Acoustic Latency: 1.4s</span>
                 </div>
 
                 {/* Bottom session label */}

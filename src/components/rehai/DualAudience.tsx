@@ -50,18 +50,18 @@ export default function DualAudience() {
             </span>
             <h2 className="display text-3xl md:text-4xl tracking-tight text-white mb-6 leading-tight">
               Actionable insights. <br />
-              <span className="italic text-dust font-light">Objective patient data.</span>
+              <span className="italic text-dust font-light">Therapist in control.</span>
             </h2>
             <p className="font-sans text-paper/60 text-sm leading-relaxed mb-8 max-w-md">
-              Rehai translates raw acoustic parameters and behavioral metrics into clean, standardized clinical insights, saving evaluation time.
+              Rehai acts as an assistant to your workflow. We translate daily home practice into standardized progress metrics, helping you monitor, personalize, and scale care. The clinical decision is always yours.
             </p>
 
             {/* Checklist */}
             <ul className="space-y-3 mb-10 w-full">
               {[
                 "Objective progress tracking metrics",
-                "Acoustic phonetic diagnostic breakdowns",
-                "Clinical dashboard export capabilities"
+                "Extend therapy reach beyond clinical visits",
+                "Personalized recommendations based on clinical data"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-xs font-sans text-paper/70">
                   <span className="font-mono text-[10px] text-[#00C9A7] font-bold">+</span>
@@ -75,7 +75,7 @@ export default function DualAudience() {
                 href="#waitlist"
                 className="group inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-transparent px-5 py-3 font-mono text-[9px] uppercase tracking-wider text-white hover:border-[#00C9A7] hover:text-[#00C9A7] transition-all"
               >
-                <span>Dashboard Features</span>
+                <span>Console Features</span>
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -85,8 +85,8 @@ export default function DualAudience() {
             {/* Minimalist Dashboard CSS Mockup */}
             <div className="w-full aspect-[1.3] bg-white/[0.01] border border-white/5 rounded-xl p-5 shadow-2xl mt-12 overflow-hidden relative">
               <div className="flex items-center justify-between border-b border-white/5 pb-3 mb-4">
-                <span className="text-[9px] uppercase tracking-wider text-paper/40 font-mono">Patient Progress // Arjun</span>
-                <span className="text-[8px] text-[#00C9A7] font-mono bg-[#00C9A7]/5 px-2 py-0.5 rounded border border-[#00C9A7]/10">72% Goal Match</span>
+                <span className="text-[9px] uppercase tracking-wider text-paper/40 font-mono">Recovery Tracking // Arjun</span>
+                <span className="text-[8px] text-[#00C9A7] font-mono bg-[#00C9A7]/5 px-2 py-0.5 rounded border border-[#00C9A7]/10">Active Pathway</span>
               </div>
 
               <div className="grid grid-cols-12 gap-4 mb-4">
@@ -100,29 +100,29 @@ export default function DualAudience() {
                   </div>
                 </div>
                 <div className="col-span-5 bg-white/[0.01] border border-white/5 rounded-xl p-3 flex flex-col justify-center">
-                  <span className="text-[8px] text-paper/30 uppercase font-mono">Session Average</span>
-                  <span className="text-xs font-bold text-white mt-0.5">85% accuracy</span>
+                  <span className="text-[8px] text-paper/30 uppercase font-mono">Exercise Accuracy</span>
+                  <span className="text-xs font-bold text-white mt-0.5">85% Session Average</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 {/* Performance Chart Detail */}
                 <div className="bg-white/[0.01] border border-white/5 rounded-xl p-3 flex flex-col justify-between">
-                  <span className="text-[8px] font-mono uppercase tracking-wider text-paper/40 block mb-3">Domain Accuracy</span>
+                  <span className="text-[8px] font-mono uppercase tracking-wider text-paper/40 block mb-3">Domain Progress</span>
                   <div className="space-y-1.5 text-[8.5px] font-mono text-paper/50">
-                    <div className="flex justify-between border-b border-white/5 pb-1"><span>Speech Acoustics</span> <span className="text-[#00C9A7] font-bold">75%</span></div>
+                    <div className="flex justify-between border-b border-white/5 pb-1"><span>Speech Exercises</span> <span className="text-[#00C9A7] font-bold">75%</span></div>
                     <div className="flex justify-between border-b border-white/5 pb-1"><span>Cognitive Recall</span> <span className="text-[#8bee0f] font-bold">62%</span></div>
-                    <div className="flex justify-between"><span>Auditory Memory</span> <span className="text-white font-bold">70%</span></div>
+                    <div className="flex justify-between"><span>Attention Span</span> <span className="text-white font-bold">70%</span></div>
                   </div>
                 </div>
 
                 {/* Recent Activities */}
                 <div className="bg-white/[0.01] border border-white/5 rounded-xl p-3 flex flex-col justify-between">
-                  <span className="text-[8px] font-mono uppercase tracking-wider text-paper/40 block mb-2">Diagnostic Log</span>
+                  <span className="text-[8px] font-mono uppercase tracking-wider text-paper/40 block mb-2">Practice Logs</span>
                   <div className="space-y-1 text-[8.5px] text-paper/50 font-mono">
                     <div className="flex justify-between"><span>Word Retrieval</span> <span className="text-white/60">Success</span></div>
-                    <div className="flex justify-between"><span>Vocal Latency</span> <span className="text-white/60">120ms</span></div>
-                    <div className="flex justify-between"><span>Phoneme Jitter</span> <span className="text-[#8bee0f]">Optimal</span></div>
+                    <div className="flex justify-between"><span>Vocal Articulation</span> <span className="text-[#8bee0f]">Optimal</span></div>
+                    <div className="flex justify-between"><span>Cognitive Logic</span> <span className="text-white/60">Completed</span></div>
                   </div>
                 </div>
               </div>

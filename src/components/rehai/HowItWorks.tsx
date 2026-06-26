@@ -5,53 +5,31 @@ import { useEffect, useRef } from "react";
 const STEPS = [
   {
     num: "01",
-    tag: "EXERCISES",
-    title: "Complete Guided Tasks",
-    desc: "Patients perform evidence‑based speech acoustic and cognitive tasks directly in the web app.",
+    tag: "ASSESSMENT",
+    title: "Clinical Assessment",
+    desc: "Therapists evaluate the patient's unique cognitive and speech needs to set up a personalized recovery path.",
     icon: (
       <svg className="w-4 h-4 text-[#00C9A7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     )
   },
   {
     num: "02",
-    tag: "CAPTURE",
-    title: "Vocal & Response Intake",
-    desc: "Vocal tones, phonetic structures, and response timings are captured securely with millisecond precision.",
+    tag: "PRACTICE",
+    title: "Vocal & Cognitive Practice",
+    desc: "Patients complete daily exercises at home, recording speech responses and performing cognitive tasks.",
     icon: (
       <svg className="w-4 h-4 text-[#8bee0f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
       </svg>
     )
   },
   {
     num: "03",
-    tag: "ANALYSIS",
-    title: "Neural Engine Audit",
-    desc: "Rehai's clinical model parses auditory patterns to isolate speech markers and track phoneme accuracy.",
-    icon: (
-      <svg className="w-4 h-4 text-[#00C9A7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-      </svg>
-    )
-  },
-  {
-    num: "04",
-    tag: "TRACKING",
-    title: "Objective Progress Charting",
-    desc: "Translates acoustic data into clean, visual progress charts and metrics for cognitive tracking.",
-    icon: (
-      <svg className="w-4 h-4 text-[#8bee0f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    )
-  },
-  {
-    num: "05",
     tag: "ADAPTATION",
-    title: "Dynamic Progression",
-    desc: "AI adjusts task difficulties in real time, serving exercises tailored to the patient's immediate capacity.",
+    title: "Adaptive Calibration",
+    desc: "The platform dynamically adjusts task complexities in real time based on vocal latency and performance.",
     icon: (
       <svg className="w-4 h-4 text-[#00C9A7]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17" />
@@ -59,10 +37,10 @@ const STEPS = [
     )
   },
   {
-    num: "06",
+    num: "04",
     tag: "SUPERVISION",
-    title: "Clinical Calibration",
-    desc: "Therapists review acoustic logs, adjust target parameters, and guide recovery remotely.",
+    title: "Therapist Review",
+    desc: "Clinicians monitor objective recovery metrics, track progress over time, and recalibrate plans remotely.",
     icon: (
       <svg className="w-4 h-4 text-[#8bee0f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -117,14 +95,14 @@ export default function HowItWorks() {
             <span className="italic text-dust font-light">clinically‑guided recovery.</span>
           </h2>
           <p className="font-sans text-paper/60 text-sm md:text-base leading-relaxed max-w-xl">
-            Rehai couples acoustic tracking models with adaptive cognitive exercises, maintaining a tight loop between clinical evaluation and home practice.
+            Rehai couples clinician supervision with home‑based practice, creating a continuous feedback loop that accelerates neurological recovery.
           </p>
         </div>
 
-        {/* 1px Grid Layout for Steps */}
-        <div className="steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
+        {/* 1px Grid Layout for Steps (4-column grid on desktop) */}
+        <div className="steps-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
           {STEPS.map((step, idx) => (
-            <div key={idx} className="step-cell group bg-ink p-8 hover:bg-white/[0.015] transition-colors duration-300 flex flex-col justify-between min-h-[220px]">
+            <div key={idx} className="step-cell group bg-ink p-8 hover:bg-white/[0.015] transition-colors duration-300 flex flex-col justify-between min-h-[240px]">
               
               {/* Card Header */}
               <div className="flex justify-between items-center mb-6">

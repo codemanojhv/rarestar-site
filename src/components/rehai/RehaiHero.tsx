@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Magnetic from "@/components/Magnetic";
 
@@ -9,6 +9,9 @@ export default function RehaiHero() {
   const leftCol = useRef<HTMLDivElement>(null);
   const rightCol = useRef<HTMLDivElement>(null);
   const trustBar = useRef<HTMLDivElement>(null);
+
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     let ctx: gsap.Context;
@@ -43,13 +46,22 @@ export default function RehaiHero() {
     return () => ctx?.revert();
   }, []);
 
+  const handleWaitlist = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => {
+      setEmail("");
+      setSubmitted(false);
+    }, 4000);
+  };
+
   return (
     <section
       ref={container}
       id="top"
       className="relative min-h-[100dvh] bg-ink pt-32 pb-20 px-6 md:px-10 overflow-hidden flex flex-col justify-between"
     >
-      {/* Subtle Atmospheric Glows */}
+      {/* Softer Atmospheric Glows */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
         <div className="absolute top-10 right-10 w-[500px] h-[500px] rounded-full bg-[#00C9A7]/10 blur-[130px] mix-blend-screen" />
         <div className="absolute bottom-20 left-10 w-[400px] h-[400px] rounded-full bg-[#8bee0f]/5 blur-[130px] mix-blend-screen" />
@@ -61,51 +73,46 @@ export default function RehaiHero() {
         <div ref={leftCol} className="lg:col-span-5 flex flex-col items-start text-left">
           
           {/* Refined Pill Badge */}
-          <div className="reveal-item mb-8 inline-flex items-center gap-2 rounded-full border border-[#00C9A7]/20 bg-[#00C9A7]/5 px-3 py-1.5 text-[9px] font-mono uppercase tracking-[0.2em] text-[#00C9A7]">
+          <div className="reveal-item mb-8 inline-flex items-center gap-2.5 rounded-full border border-[#00C9A7]/20 bg-[#00C9A7]/5 px-3 py-1.5 text-[9px] font-mono uppercase tracking-[0.2em] text-[#00C9A7]">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00C9A7] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#00C9A7]"></span>
             </span>
-            <span>AI-Powered Neuro Recovery</span>
+            <span>Clinical Rehabilitation</span>
           </div>
 
-          {/* Typography Heading */}
-          <h1 className="reveal-item display text-[clamp(2.5rem,6vw,4.8rem)] leading-[0.92] tracking-tight text-white mb-6">
-            Rehabilitation. <br />
-            <span className="italic text-dust font-light">Reimagined.</span> <br />
-            <span className="text-[#00C9A7]">Personalized.</span>
+          {/* Hopeful, Calm Typography Heading */}
+          <h1 className="reveal-item display text-[clamp(2.4rem,6.2vw,4.6rem)] leading-[0.92] tracking-tight text-white mb-6">
+            A partner in <br />
+            <span className="italic text-dust font-light">neurological recovery.</span>
           </h1>
 
-          {/* Description */}
-          <p className="reveal-item font-sans text-paper/60 text-base leading-relaxed max-w-md mb-10">
-            Rehai couples clinical expertise with adaptive AI to deliver speech and cognitive therapy for stroke, aphasia, and brain injury recovery.
+          {/* Core Vision Statement */}
+          <p className="reveal-item font-sans text-paper/60 text-sm md:text-base leading-relaxed max-w-md mb-8">
+            Rehai is an adaptive neurorehabilitation platform. We couple clinician expertise with personalized speech and cognitive exercises to support recovery from stroke, aphasia, and brain injuries.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="reveal-item flex flex-wrap gap-4 items-center">
-            <Magnetic strength={0.15} radius={70}>
-              <a
-                href="#waitlist"
-                className="group inline-flex items-center gap-2 rounded-full bg-[#00C9A7] px-6 py-3.5 font-mono text-[10px] uppercase tracking-wider text-ink font-bold hover:opacity-95 transition-all shadow-[0_0_20px_rgba(0,201,167,0.15)]"
-              >
-                <span>Request Access</span>
-                <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </Magnetic>
-
-            <Magnetic strength={0.12} radius={60}>
-              <a
-                href="#dual-audience"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-transparent px-6 py-3.5 font-mono text-[10px] uppercase tracking-wider text-white hover:border-white/30 hover:text-white transition-all"
-              >
-                <span>For Therapists</span>
-                <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </Magnetic>
+          {/* Inline Waitlist Sign Up */}
+          <div className="reveal-item w-full max-w-sm">
+            <form onSubmit={handleWaitlist} className="flex gap-2 w-full items-center">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="vocalist@clinical.org"
+                required
+                className="flex-1 rounded-lg border border-white/10 bg-white/[0.01] px-4 py-2.5 text-[11px] text-white placeholder:text-paper/20 focus:border-[#00C9A7] focus:outline-none transition-all font-mono"
+              />
+              <Magnetic strength={0.12} radius={60}>
+                <button
+                  type="submit"
+                  className="rounded-lg bg-[#00C9A7] text-ink px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider font-bold flex items-center gap-1.5 hover:opacity-90 transition-all flex-shrink-0"
+                >
+                  <span>{submitted ? "Joined ✓" : "Join Waitlist"}</span>
+                </button>
+              </Magnetic>
+            </form>
+            <span className="text-[9px] font-mono text-paper/30 mt-2 block pl-1">Join the waitlist for clinician access.</span>
           </div>
         </div>
 
@@ -120,7 +127,7 @@ export default function RehaiHero() {
             <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
               <div className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#00C9A7] animate-pulse" />
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-paper/40">Clinical Console v1.0</span>
+                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-paper/40">Clinical Interface</span>
               </div>
               <span className="text-[9px] font-mono text-[#00C9A7] bg-[#00C9A7]/5 border border-[#00C9A7]/10 rounded px-2.5 py-0.5">Active Session</span>
             </div>
@@ -147,7 +154,7 @@ export default function RehaiHero() {
                     <circle cx="18" cy="18" r="15.915" fill="none" stroke="#00C9A7" strokeWidth="3" strokeDasharray="72 28" strokeDashoffset="25" />
                   </svg>
                   <div>
-                    <span className="text-[9px] text-paper/30 uppercase tracking-wider block font-mono">Performance</span>
+                    <span className="text-[9px] text-paper/30 uppercase tracking-wider block font-mono">Accuracy</span>
                     <span className="text-sm font-bold text-white block mt-0.5">72.8% <span className="text-[9px] text-[#00C9A7] font-normal font-mono">+4.2%</span></span>
                   </div>
                 </div>
@@ -155,8 +162,8 @@ export default function RehaiHero() {
                 {/* Status card */}
                 <div className="bg-white/[0.02] border border-white/5 rounded-xl p-3 flex justify-between items-center">
                   <div>
-                    <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Completed</span>
-                    <span className="text-xs font-bold text-white mt-0.5 block">128 Exercises</span>
+                    <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Exercises Completed</span>
+                    <span className="text-xs font-bold text-white mt-0.5 block">128 Completed</span>
                   </div>
                   <div className="text-right">
                     <span className="text-[8px] text-paper/30 uppercase tracking-wider block font-mono">Streak</span>
@@ -170,13 +177,13 @@ export default function RehaiHero() {
                 
                 {/* Word naming card */}
                 <div className="bg-white/[0.02] border border-white/5 rounded-xl p-4 flex flex-col items-center text-center relative flex-1 justify-center">
-                  <span className="text-[8px] font-mono uppercase tracking-[0.2em] text-[#00C9A7] mb-4">Acoustic Analysis</span>
+                  <span className="text-[8px] font-mono uppercase tracking-[0.2em] text-[#00C9A7] mb-4">Speech Practice</span>
                   
                   {/* Task Object */}
                   <div className="w-14 h-14 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xl mb-3">
                     🐘
                   </div>
-                  <h5 className="text-[10px] font-mono text-paper/40 uppercase tracking-widest">Target Vocalization</h5>
+                  <h5 className="text-[10px] font-mono text-paper/40 uppercase tracking-widest">Active Task</h5>
                   <p className="text-sm font-bold text-white mt-1">"Elephant"</p>
                   
                   {/* Live Waveform graphic */}
@@ -205,32 +212,32 @@ export default function RehaiHero() {
       {/* Clean Trust Features Bar (Bottom) */}
       <div ref={trustBar} className="relative z-10 mx-auto max-w-7xl w-full border-t border-white/5 pt-12 mt-16 lg:mt-0">
         <p className="text-center font-mono text-[9px] uppercase tracking-[0.25em] text-paper/30 mb-8">
-          Key pillars of the rehabilitation platform
+          The core pillars of the recovery loop
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 items-start">
           {/* Feature 1 */}
           <div className="flex flex-col items-start gap-2 pl-6 border-l border-white/5">
-            <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">01 / Adaptive AI</h4>
-            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Tailored cognitive pathways that dynamic‑update based on response times and accuracy.</p>
+            <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">01 / Personalization</h4>
+            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Tailored cognitive pathways that adapt based on verbal response times and accuracy.</p>
           </div>
 
           {/* Feature 2 */}
           <div className="flex flex-col items-start gap-2 pl-6 border-l border-white/5">
             <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">02 / Dual Modality</h4>
-            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Integrates speech acoustics and neurological cognitive tasks in a single interface.</p>
+            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Integrates speech acoustics and neurological cognitive exercises in a unified patient app.</p>
           </div>
 
           {/* Feature 3 */}
           <div className="flex flex-col items-start gap-2 pl-6 border-l border-white/5">
-            <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">03 / Analytics</h4>
-            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Empowers therapists with clinical metric summaries, vocal markers, and objective charting.</p>
+            <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">03 / Recovery Tracking</h4>
+            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Empowers therapists with clinical logs, vocal markers, and objective charting data.</p>
           </div>
 
           {/* Feature 4 */}
           <div className="flex flex-col items-start gap-2 pl-6 border-l border-white/5">
-            <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">04 / Supervision</h4>
-            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Connects clinical settings with home‑based exercise sessions under remote monitoring.</p>
+            <h4 className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">04 / Therapist Control</h4>
+            <p className="text-[11px] text-paper/40 leading-relaxed max-w-[200px]">Connects clinical visits with daily home practice, keeping the therapist in control.</p>
           </div>
         </div>
       </div>

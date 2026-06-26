@@ -256,10 +256,10 @@ export default function SolutionsSection() {
           <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-[#00C9A7]/5 blur-[60px] pointer-events-none" />
           
           <div className="flex items-center gap-4 flex-1">
-            <span className="font-mono text-[10px] text-[#00C9A7] font-bold mt-0.5">// BROCHURE</span>
+            <span className="font-mono text-[10px] text-[#00C9A7] font-bold mt-0.5">// WAITLIST</span>
             <div>
-              <h3 className="font-sans font-bold text-sm text-white">Clinical Overview Brochure</h3>
-              <p className="font-sans text-[11px] text-paper/40 mt-0.5">Read case studies, neural metrics, and platform requirements.</p>
+              <h3 className="font-sans font-bold text-sm text-white">Join the Rehai Waitlist</h3>
+              <p className="font-sans text-[11px] text-paper/40 mt-0.5">Request clinician access or get enrollment details for your recovery center.</p>
             </div>
           </div>
 
@@ -277,12 +277,7 @@ export default function SolutionsSection() {
                 type="submit"
                 className="rounded-lg bg-[#00C9A7] text-ink px-4 py-2.5 font-mono text-[9px] uppercase tracking-wider font-bold flex items-center gap-2 hover:opacity-90 transition-all flex-shrink-0"
               >
-                <span>{downloaded ? "Sent" : "Download"}</span>
-                {!downloaded && (
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                )}
+                <span>{downloaded ? "Joined ✓" : "Join Waitlist"}</span>
               </button>
             </Magnetic>
           </form>

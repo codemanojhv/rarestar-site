@@ -1,4 +1,4 @@
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -25,9 +25,13 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: "#050505",
   width: "device-width",
   initialScale: 1
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://rarestar.studio")
 };
 
 /**

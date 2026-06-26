@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function StudioHero() {
   const container = useRef<HTMLDivElement>(null);
-  const title1 = useRef<HTMLDivElement>(null);
-  const title2 = useRef<HTMLDivElement>(null);
+  const lockup = useRef<HTMLDivElement>(null);
+  const title = useRef<HTMLHeadingElement>(null);
   const desc = useRef<HTMLParagraphElement>(null);
-  const eyebrow = useRef<HTMLParagraphElement>(null);
+  const details = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let ctx: gsap.Context;
@@ -16,12 +16,12 @@ export default function StudioHero() {
       const gsap = (await import("gsap")).default;
 
       ctx = gsap.context(() => {
-        const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
-
-        tl.to(eyebrow.current, { y: 0, opacity: 1, duration: 1, delay: 0.2 })
-          .to(title1.current, { y: 0, opacity: 1, duration: 1.2 }, "-=0.8")
-          .to(title2.current, { y: 0, opacity: 1, duration: 1.2 }, "-=1")
-          .to(desc.current, { y: 0, opacity: 1, duration: 1 }, "-=0.8");
+        gsap
+          .timeline({ defaults: { ease: "power4.out" } })
+          .to(lockup.current, { y: 0, opacity: 1, duration: 1, delay: 0.15 })
+          .to(title.current, { y: 0, opacity: 1, duration: 1.1 }, "-=0.72")
+          .to(desc.current, { y: 0, opacity: 1, duration: 0.9 }, "-=0.62")
+          .to(details.current, { y: 0, opacity: 1, duration: 0.9 }, "-=0.55");
       }, container);
     };
 
@@ -34,40 +34,62 @@ export default function StudioHero() {
       ref={container}
       id="top"
       data-cursor-section="hero"
-      className="relative flex min-h-[100dvh] flex-col items-center justify-center px-5 pt-32 pb-20 text-center md:px-10"
+      className="relative flex min-h-[92svh] items-center overflow-hidden px-5 pb-20 pt-32 md:px-10 md:pb-24 md:pt-36"
     >
-      <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute inset-x-0 top-0 h-px bg-paper/10" />
+      <div className="absolute bottom-10 right-[-8vw] hidden opacity-[0.08] md:block">
         <Image
-          src="/brand/mark-large.png"
+          src="/brand/mark-red.png"
           alt=""
-          fill
-          className="object-contain"
+          width={520}
+          height={510}
           priority
+          className="h-auto w-[34vw] max-w-[520px]"
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl">
-        <div className="overflow-hidden mb-6">
-          <p ref={eyebrow} className="eyebrow reveal-up text-paper/60">
-            RARESTAR STUDIO
-          </p>
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-16 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+        <div>
+          <div ref={lockup} className="reveal-up mb-14">
+            <Image
+              src="/brand/studio-lockup-paper.png"
+              alt="Rarestar Studio"
+              width={460}
+              height={115}
+              priority
+              className="h-auto w-full max-w-[360px] md:max-w-[460px]"
+            />
+          </div>
+
+          <h1
+            ref={title}
+            className="display reveal-up max-w-4xl text-[clamp(2.75rem,12vw,4rem)] leading-[0.92] text-paper md:text-[clamp(3.8rem,10vw,8.8rem)]"
+          >
+            Products with a point of view.
+          </h1>
         </div>
 
-        <h1 className="display text-[clamp(3.5rem,10vw,8rem)] leading-[0.9]">
-          <div className="overflow-hidden">
-            <div ref={title1} className="reveal-up">We build</div>
-          </div>
-          <div className="overflow-hidden">
-            <div ref={title2} className="reveal-up">
-              <span className="accent-italic">products</span> that matter.
-            </div>
-          </div>
-        </h1>
-
-        <div className="overflow-hidden mt-10">
-          <p ref={desc} className="reveal-up mx-auto max-w-xl font-sans text-lg text-paper/70 md:text-xl">
-            Rarestar Studio is a product studio operating ventures in software, AI, and digital products. We identify meaningful problems and build scalable solutions.
+        <div className="flex flex-col gap-10">
+          <p ref={desc} className="reveal-up max-w-xl font-sans text-lg leading-relaxed text-paper/70 md:text-xl">
+            Rarestar Studio builds focused software, AI systems, and digital ventures under one sharp operating brand.
           </p>
+
+          <div
+            ref={details}
+            className="reveal-up grid grid-cols-2 gap-px border border-paper/10 bg-paper/10 text-left"
+          >
+            {[
+              ["01", "Software"],
+              ["02", "AI Systems"],
+              ["03", "Venture Builds"],
+              ["04", "Studio Ops"]
+            ].map(([number, label]) => (
+              <div key={number} className="bg-ink p-5">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ember">{number}</p>
+                <p className="mt-3 font-sans text-sm text-paper/70">{label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

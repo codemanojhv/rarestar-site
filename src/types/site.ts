@@ -18,7 +18,7 @@ export const SITES: Record<SiteKey, SiteConfig> = {
     tagline: "Building products that matter",
     domain: "rarestar.studio",
     baseUrl: "https://rarestar.studio",
-    themeColor: "#0a0a0a"
+    themeColor: "#050505"
   },
   agency: {
     key: "agency",
@@ -26,7 +26,7 @@ export const SITES: Record<SiteKey, SiteConfig> = {
     tagline: "Design, development, and AI solutions",
     domain: "agency.rarestar.studio",
     baseUrl: "https://agency.rarestar.studio",
-    themeColor: "#0a0a0a"
+    themeColor: "#050505"
   },
   rehai: {
     key: "rehai",
@@ -34,6 +34,6 @@ export const SITES: Record<SiteKey, SiteConfig> = {
     tagline: "AI-powered neurological rehabilitation",
     domain: "rehai.rarestar.studio",
     baseUrl: "https://rehai.rarestar.studio",
-    themeColor: "#0a0a0a"
+    themeColor: "#050505"
   }
 } as const;

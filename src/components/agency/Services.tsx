@@ -73,7 +73,7 @@ export default function Services() {
             <span>§02 · Services</span>
           </div>
           <h2 className="display max-w-3xl text-[9vw] leading-[0.95] md:text-[5vw]">
-            What we <span style={{ WebkitTextStroke: "1px #0a0a0a", color: "transparent" }}>deliver.</span>
+            What we <span style={{ WebkitTextStroke: "1px #050505", color: "transparent" }}>deliver.</span>
           </h2>
         </div>
 

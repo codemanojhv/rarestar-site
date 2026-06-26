@@ -2,25 +2,27 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-// Node runtime (not edge) because we read TTFs from disk. These files live
-// under src/app/_fonts/ and are copied into the build via Next's tracing.
-// Satori (the engine powering ImageResponse) only accepts TTF/OTF/WOFF,
-// NOT WOFF2, which is why we commit TTFs instead of pulling via CSS.
 export const runtime = "nodejs";
-export const alt = "RareStar — Creative agency";
+export const alt = "Rarestar Studio";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 async function loadFontFile(name: string): Promise<Buffer> {
-  // process.cwd() is the rarestar-site package root in dev and prod.
   const p = path.join(process.cwd(), "src", "app", "_fonts", name);
   return readFile(p);
 }
 
+async function loadAssetDataUrl(name: string): Promise<string> {
+  const p = path.join(process.cwd(), "public", "brand", name);
+  const data = await readFile(p);
+  return `data:image/png;base64,${data.toString("base64")}`;
+}
+
 export default async function OpenGraphImage() {
-  const [fraunces, mono] = await Promise.all([
+  const [fraunces, mono, studioLockup] = await Promise.all([
     loadFontFile("Fraunces-Regular.ttf"),
-    loadFontFile("JetBrainsMono-Medium.ttf")
+    loadFontFile("JetBrainsMono-Medium.ttf"),
+    loadAssetDataUrl("studio-lockup-paper.png")
   ]);
 
   return new ImageResponse(
@@ -32,16 +34,35 @@ export default async function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: "64px 80px",
-          background:
-            "radial-gradient(70% 90% at 15% 115%, rgba(255,74,28,0.35) 0%, rgba(255,74,28,0) 55%), #0a0a0a",
-          color: "#f2efe8",
-          // Satori default sans handles the paragraph; display + labels have
-          // their own TTFs loaded below.
-          fontFamily: "Fraunces"
+          padding: "62px 76px",
+          background: "#050505",
+          color: "#f7f7f4",
+          fontFamily: "Fraunces",
+          position: "relative"
         }}
       >
-        {/* top row */}
+        <div
+          style={{
+            position: "absolute",
+            right: -70,
+            bottom: -80,
+            width: 440,
+            height: 440,
+            border: "1px solid rgba(207,0,0,0.38)",
+            borderRadius: 999
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            right: 118,
+            bottom: 116,
+            width: 18,
+            height: 18,
+            background: "#cf0000"
+          }}
+        />
+
         <div
           style={{
             display: "flex",
@@ -50,111 +71,76 @@ export default async function OpenGraphImage() {
             width: "100%"
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              fontFamily: "JetBrains Mono",
-              fontSize: 18,
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "#e8e3d6"
-            }}
-          >
-            <div
-              style={{
-                width: 10,
-                height: 10,
-                borderRadius: 999,
-                background: "#ff4a1c"
-              }}
-            />
-            <div>RareStar</div>
-          </div>
+          <img src={studioLockup} alt="" width={338} height={85} style={{ objectFit: "contain" }} />
           <div
             style={{
               display: "flex",
               fontFamily: "JetBrains Mono",
-              fontSize: 16,
+              fontSize: 15,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(242,239,232,0.55)"
+              color: "rgba(247,247,244,0.52)"
             }}
           >
             rarestar.studio
           </div>
         </div>
 
-        {/* main title */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            fontFamily: "Fraunces"
-          }}
-        >
+        <div style={{ display: "flex", flexDirection: "column", maxWidth: 910 }}>
           <div
             style={{
               display: "flex",
-              fontSize: 150,
-              lineHeight: 0.92,
-              letterSpacing: "-0.025em",
-              color: "#f2efe8"
+              fontSize: 116,
+              lineHeight: 0.94,
+              letterSpacing: 0,
+              color: "#f7f7f4"
             }}
           >
-            We design
+            Products with a
           </div>
           <div
             style={{
               display: "flex",
-              fontSize: 136,
-              lineHeight: 0.92,
-              letterSpacing: "-0.028em",
-              color: "#ff4a1c"
+              fontSize: 116,
+              lineHeight: 0.94,
+              letterSpacing: 0,
+              color: "#cf0000"
             }}
           >
-            websites and commerce.
+            point of view.
           </div>
         </div>
 
-        {/* bottom row */}
         <div
           style={{
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "space-between",
-            width: "100%"
+            width: "100%",
+            fontFamily: "JetBrains Mono"
           }}
         >
           <div
             style={{
               display: "flex",
-              maxWidth: 640,
-              fontFamily: "JetBrains Mono",
+              maxWidth: 610,
               fontSize: 16,
               lineHeight: 1.55,
-              letterSpacing: "0.02em",
-              color: "rgba(242,239,232,0.78)"
+              color: "rgba(247,247,244,0.72)"
             }}
           >
-            RareStar is a creative agency for brand identity, marketing websites,
-            and headless Shopify stores.
+            A focused product studio building software, AI systems, and new ventures.
           </div>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-              gap: 8,
-              fontFamily: "JetBrains Mono",
               fontSize: 14,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(242,239,232,0.6)"
+              color: "rgba(247,247,244,0.48)"
             }}
           >
-            <div style={{ display: "flex" }}>Brand · Web · Commerce</div>
+            Software / AI / Ventures
           </div>
         </div>
       </div>

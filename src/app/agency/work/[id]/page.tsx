@@ -3,6 +3,41 @@ import Link from "next/link";
 import Image from "next/image";
 import projects from "@/data/case-studies.json";
 import type { CaseStudy } from "@/types/case-study";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const project = (projects as CaseStudy[]).find((p) => p.id === id);
+
+  if (!project) return {};
+
+  return {
+    title: `${project.client} Case Study | Rarestar Agency`,
+    description: project.description || `Read about our work with ${project.client} in design, development, and AI solutions.`,
+    openGraph: {
+      title: `${project.client} Case Study | Rarestar Agency`,
+      description: project.description || `Read about our work with ${project.client} in design, development, and AI solutions.`,
+      url: `https://agency.rarestar.studio/work/${id}`,
+      type: "website",
+      images: [
+        {
+          url: project.image || "/opengraph-image",
+          alt: `${project.client} Case Study`
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.client} Case Study | Rarestar Agency`,
+      description: project.description || `Read about our work with ${project.client} in design, development, and AI solutions.`,
+      images: [project.image || "/twitter-image"]
+    }
+  };
+}
 
 /**
  * Dynamic Project Template

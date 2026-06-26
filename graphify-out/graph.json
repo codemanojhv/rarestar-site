@@ -1,0 +1,4969 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L1",
+      "id": "next_config",
+      "community": 18,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "id": "next_config_nextconfig",
+      "community": 18,
+      "norm_label": "nextconfig"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package",
+      "community": 2,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "package_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "package_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "package_private",
+      "community": 2,
+      "norm_label": "private"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "package_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "package_scripts_dev",
+      "community": 2,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "package_scripts_build",
+      "community": 2,
+      "norm_label": "build"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "package_scripts_start",
+      "community": 2,
+      "norm_label": "start"
+    },
+    {
+      "label": "typecheck",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "package_scripts_typecheck",
+      "community": 2,
+      "norm_label": "typecheck"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "id": "package_dependencies",
+      "community": 2,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "gsap",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "package_dependencies_gsap",
+      "community": 2,
+      "norm_label": "gsap"
+    },
+    {
+      "label": "lenis",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "package_dependencies_lenis",
+      "community": 2,
+      "norm_label": "lenis"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "package_dependencies_next",
+      "community": 2,
+      "norm_label": "next"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "package_dependencies_react",
+      "community": 2,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "package_dependencies_react_dom",
+      "community": 2,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "three",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "package_dependencies_three",
+      "community": 2,
+      "norm_label": "three"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "package_devdependencies",
+      "community": 2,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "package_devdependencies_tailwindcss_postcss",
+      "community": 2,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "package_devdependencies_types_node",
+      "community": 2,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "package_devdependencies_types_react",
+      "community": 2,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "package_devdependencies_types_react_dom",
+      "community": 2,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@types/three",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "package_devdependencies_types_three",
+      "community": 2,
+      "norm_label": "@types/three"
+    },
+    {
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "id": "package_devdependencies_postcss",
+      "community": 2,
+      "norm_label": "postcss"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "package_devdependencies_tailwindcss",
+      "community": 2,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "package_devdependencies_typescript",
+      "community": 2,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config",
+      "community": 19,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config_config",
+      "community": 19,
+      "norm_label": "config"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L1",
+      "id": "case_studies_page",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "emptyRow()",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L7",
+      "id": "case_studies_page_emptyrow",
+      "community": 1,
+      "norm_label": "emptyrow()"
+    },
+    {
+      "label": "CaseStudiesDashboardPage()",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L26",
+      "id": "case_studies_page_casestudiesdashboardpage",
+      "community": 1,
+      "norm_label": "casestudiesdashboardpage()"
+    },
+    {
+      "label": "Field()",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L337",
+      "id": "case_studies_page_field",
+      "community": 1,
+      "norm_label": "field()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/layout.tsx",
+      "source_location": "L1",
+      "id": "dashboard_layout",
+      "community": 15,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/layout.tsx",
+      "source_location": "L3",
+      "id": "dashboard_layout_metadata",
+      "community": 15,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "DashboardLayout()",
+      "file_type": "code",
+      "source_file": "src/app/agency/dashboard/layout.tsx",
+      "source_location": "L8",
+      "id": "dashboard_layout_dashboardlayout",
+      "community": 15,
+      "norm_label": "dashboardlayout()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L1",
+      "id": "agency_layout",
+      "community": 0,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L8",
+      "id": "agency_layout_metadata",
+      "community": 0,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "jsonLd",
+      "file_type": "code",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L75",
+      "id": "agency_layout_jsonld",
+      "community": 0,
+      "norm_label": "jsonld"
+    },
+    {
+      "label": "AgencyLayout()",
+      "file_type": "code",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L179",
+      "id": "agency_layout_agencylayout",
+      "community": 0,
+      "norm_label": "agencylayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L1",
+      "id": "agency_page",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L13",
+      "id": "agency_page_home",
+      "community": 1,
+      "norm_label": "home()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L1",
+      "id": "id_page",
+      "community": 1,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "ProjectPage()",
+      "file_type": "code",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L11",
+      "id": "id_page_projectpage",
+      "community": 1,
+      "norm_label": "projectpage()"
+    },
+    {
+      "label": "generateStaticParams()",
+      "file_type": "code",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L127",
+      "id": "id_page_generatestaticparams",
+      "community": 1,
+      "norm_label": "generatestaticparams()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L1",
+      "id": "case_studies_route",
+      "community": 11,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "isCaseStudy()",
+      "file_type": "code",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L9",
+      "id": "case_studies_route_iscasestudy",
+      "community": 11,
+      "norm_label": "iscasestudy()"
+    },
+    {
+      "label": "validateList()",
+      "file_type": "code",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L23",
+      "id": "case_studies_route_validatelist",
+      "community": 11,
+      "norm_label": "validatelist()"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L33",
+      "id": "case_studies_route_get",
+      "community": 11,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L53",
+      "id": "case_studies_route_post",
+      "community": 11,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L1",
+      "id": "contact_route",
+      "community": 14,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "ContactBody",
+      "file_type": "code",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L19",
+      "id": "contact_route_contactbody",
+      "community": 14,
+      "norm_label": "contactbody"
+    },
+    {
+      "label": "isValidEmail()",
+      "file_type": "code",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L28",
+      "id": "contact_route_isvalidemail",
+      "community": 14,
+      "norm_label": "isvalidemail()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L32",
+      "id": "contact_route_post",
+      "community": 14,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/upload/route.ts",
+      "source_location": "L1",
+      "id": "upload_route",
+      "community": 21,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "src/app/api/upload/route.ts",
+      "source_location": "L11",
+      "id": "upload_route_post",
+      "community": 21,
+      "norm_label": "post()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L1",
+      "id": "app_layout",
+      "community": 10,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "fraunces",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "id": "app_layout_fraunces",
+      "community": 10,
+      "norm_label": "fraunces"
+    },
+    {
+      "label": "inter",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L13",
+      "id": "app_layout_inter",
+      "community": 10,
+      "norm_label": "inter"
+    },
+    {
+      "label": "jetbrains",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L20",
+      "id": "app_layout_jetbrains",
+      "community": 10,
+      "norm_label": "jetbrains"
+    },
+    {
+      "label": "viewport",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L27",
+      "id": "app_layout_viewport",
+      "community": 10,
+      "norm_label": "viewport"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L33",
+      "id": "app_layout_metadata",
+      "community": 10,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L42",
+      "id": "app_layout_rootlayout",
+      "community": 10,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "manifest.ts",
+      "file_type": "code",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L1",
+      "id": "app_manifest",
+      "community": 6,
+      "norm_label": "manifest.ts"
+    },
+    {
+      "label": "manifest()",
+      "file_type": "code",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L6",
+      "id": "app_manifest_manifest",
+      "community": 6,
+      "norm_label": "manifest()"
+    },
+    {
+      "label": "opengraph-image.tsx",
+      "file_type": "code",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L1",
+      "id": "app_opengraph_image",
+      "community": 12,
+      "norm_label": "opengraph-image.tsx"
+    },
+    {
+      "label": "size",
+      "file_type": "code",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L7",
+      "id": "app_opengraph_image_size",
+      "community": 12,
+      "norm_label": "size"
+    },
+    {
+      "label": "loadFontFile()",
+      "file_type": "code",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L10",
+      "id": "app_opengraph_image_loadfontfile",
+      "community": 12,
+      "norm_label": "loadfontfile()"
+    },
+    {
+      "label": "loadAssetDataUrl()",
+      "file_type": "code",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L15",
+      "id": "app_opengraph_image_loadassetdataurl",
+      "community": 12,
+      "norm_label": "loadassetdataurl()"
+    },
+    {
+      "label": "OpenGraphImage()",
+      "file_type": "code",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L21",
+      "id": "app_opengraph_image_opengraphimage",
+      "community": 12,
+      "norm_label": "opengraphimage()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L1",
+      "id": "rehai_layout",
+      "community": 0,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L8",
+      "id": "rehai_layout_metadata",
+      "community": 0,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "jsonLd",
+      "file_type": "code",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L32",
+      "id": "rehai_layout_jsonld",
+      "community": 0,
+      "norm_label": "jsonld"
+    },
+    {
+      "label": "RehaiLayout()",
+      "file_type": "code",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L63",
+      "id": "rehai_layout_rehailayout",
+      "community": 0,
+      "norm_label": "rehailayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L1",
+      "id": "rehai_page",
+      "community": 3,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "RehaiHome()",
+      "file_type": "code",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L6",
+      "id": "rehai_page_rehaihome",
+      "community": 3,
+      "norm_label": "rehaihome()"
+    },
+    {
+      "label": "robots.ts",
+      "file_type": "code",
+      "source_file": "src/app/robots.ts",
+      "source_location": "L1",
+      "id": "app_robots",
+      "community": 17,
+      "norm_label": "robots.ts"
+    },
+    {
+      "label": "robots()",
+      "file_type": "code",
+      "source_file": "src/app/robots.ts",
+      "source_location": "L3",
+      "id": "app_robots_robots",
+      "community": 17,
+      "norm_label": "robots()"
+    },
+    {
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L1",
+      "id": "app_sitemap",
+      "community": 1,
+      "norm_label": "sitemap.ts"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L11",
+      "id": "app_sitemap_sitemap",
+      "community": 1,
+      "norm_label": "sitemap()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L1",
+      "id": "studio_layout",
+      "community": 7,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L8",
+      "id": "studio_layout_metadata",
+      "community": 7,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "jsonLd",
+      "file_type": "code",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L46",
+      "id": "studio_layout_jsonld",
+      "community": 7,
+      "norm_label": "jsonld"
+    },
+    {
+      "label": "StudioLayout()",
+      "file_type": "code",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L64",
+      "id": "studio_layout_studiolayout",
+      "community": 7,
+      "norm_label": "studiolayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "src/app/studio/page.tsx",
+      "source_location": "L1",
+      "id": "studio_page",
+      "community": 9,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "StudioHome()",
+      "file_type": "code",
+      "source_file": "src/app/studio/page.tsx",
+      "source_location": "L5",
+      "id": "studio_page_studiohome",
+      "community": 9,
+      "norm_label": "studiohome()"
+    },
+    {
+      "label": "twitter-image.tsx",
+      "file_type": "code",
+      "source_file": "src/app/twitter-image.tsx",
+      "source_location": "L1",
+      "id": "app_twitter_image",
+      "community": 12,
+      "norm_label": "twitter-image.tsx"
+    },
+    {
+      "label": "Cursor.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Cursor.tsx",
+      "source_location": "L1",
+      "id": "components_cursor",
+      "community": 7,
+      "norm_label": "cursor.tsx"
+    },
+    {
+      "label": "CursorMode",
+      "file_type": "code",
+      "source_file": "src/components/Cursor.tsx",
+      "source_location": "L23",
+      "id": "components_cursor_cursormode",
+      "community": 7,
+      "norm_label": "cursormode"
+    },
+    {
+      "label": "Cursor()",
+      "file_type": "code",
+      "source_file": "src/components/Cursor.tsx",
+      "source_location": "L24",
+      "id": "components_cursor_cursor",
+      "community": 7,
+      "norm_label": "cursor()"
+    },
+    {
+      "label": "Magnetic.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Magnetic.tsx",
+      "source_location": "L1",
+      "id": "components_magnetic",
+      "community": 3,
+      "norm_label": "magnetic.tsx"
+    },
+    {
+      "label": "MagneticProps",
+      "file_type": "code",
+      "source_file": "src/components/Magnetic.tsx",
+      "source_location": "L22",
+      "id": "components_magnetic_magneticprops",
+      "community": 3,
+      "norm_label": "magneticprops"
+    },
+    {
+      "label": "Magnetic()",
+      "file_type": "code",
+      "source_file": "src/components/Magnetic.tsx",
+      "source_location": "L32",
+      "id": "components_magnetic_magnetic",
+      "community": 3,
+      "norm_label": "magnetic()"
+    },
+    {
+      "label": "ScrollProgress.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ScrollProgress.tsx",
+      "source_location": "L1",
+      "id": "components_scrollprogress",
+      "community": 0,
+      "norm_label": "scrollprogress.tsx"
+    },
+    {
+      "label": "ScrollProgress()",
+      "file_type": "code",
+      "source_file": "src/components/ScrollProgress.tsx",
+      "source_location": "L15",
+      "id": "components_scrollprogress_scrollprogress",
+      "community": 0,
+      "norm_label": "scrollprogress()"
+    },
+    {
+      "label": "SmoothScroll.tsx",
+      "file_type": "code",
+      "source_file": "src/components/SmoothScroll.tsx",
+      "source_location": "L1",
+      "id": "components_smoothscroll",
+      "community": 0,
+      "norm_label": "smoothscroll.tsx"
+    },
+    {
+      "label": "SmoothScroll()",
+      "file_type": "code",
+      "source_file": "src/components/SmoothScroll.tsx",
+      "source_location": "L18",
+      "id": "components_smoothscroll_smoothscroll",
+      "community": 0,
+      "norm_label": "smoothscroll()"
+    },
+    {
+      "label": "Contact.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L1",
+      "id": "agency_contact",
+      "community": 3,
+      "norm_label": "contact.tsx"
+    },
+    {
+      "label": "Status",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L7",
+      "id": "agency_contact_status",
+      "community": 3,
+      "norm_label": "status"
+    },
+    {
+      "label": "Contact()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L37",
+      "id": "agency_contact_contact",
+      "community": 3,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "FieldProps",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L344",
+      "id": "agency_contact_fieldprops",
+      "community": 3,
+      "norm_label": "fieldprops"
+    },
+    {
+      "label": "Field()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L352",
+      "id": "agency_contact_field",
+      "community": 3,
+      "norm_label": "field()"
+    },
+    {
+      "label": "CalendarIcon()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L370",
+      "id": "agency_contact_calendaricon",
+      "community": 3,
+      "norm_label": "calendaricon()"
+    },
+    {
+      "label": "humanError()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L391",
+      "id": "agency_contact_humanerror",
+      "community": 3,
+      "norm_label": "humanerror()"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L1",
+      "id": "agency_footer",
+      "community": 0,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "NAV_LINKS",
+      "file_type": "code",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L10",
+      "id": "agency_footer_nav_links",
+      "community": 0,
+      "norm_label": "nav_links"
+    },
+    {
+      "label": "SOCIAL_LINKS",
+      "file_type": "code",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L17",
+      "id": "agency_footer_social_links",
+      "community": 0,
+      "norm_label": "social_links"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L23",
+      "id": "agency_footer_footer",
+      "community": 0,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L1",
+      "id": "agency_hero",
+      "community": 0,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "splitChars()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L13",
+      "id": "agency_hero_splitchars",
+      "community": 0,
+      "norm_label": "splitchars()"
+    },
+    {
+      "label": "HeroContent()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L21",
+      "id": "agency_hero_herocontent",
+      "community": 0,
+      "norm_label": "herocontent()"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L102",
+      "id": "agency_hero_hero",
+      "community": 0,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "HeroVideo.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/HeroVideo.tsx",
+      "source_location": "L1",
+      "id": "agency_herovideo",
+      "community": 0,
+      "norm_label": "herovideo.tsx"
+    },
+    {
+      "label": "HeroVideo()",
+      "file_type": "code",
+      "source_file": "src/components/agency/HeroVideo.tsx",
+      "source_location": "L19",
+      "id": "agency_herovideo_herovideo",
+      "community": 0,
+      "norm_label": "herovideo()"
+    },
+    {
+      "label": "Manifesto.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Manifesto.tsx",
+      "source_location": "L1",
+      "id": "agency_manifesto",
+      "community": 1,
+      "norm_label": "manifesto.tsx"
+    },
+    {
+      "label": "Manifesto()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Manifesto.tsx",
+      "source_location": "L5",
+      "id": "agency_manifesto_manifesto",
+      "community": 1,
+      "norm_label": "manifesto()"
+    },
+    {
+      "label": "Nav.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L1",
+      "id": "agency_nav",
+      "community": 0,
+      "norm_label": "nav.tsx"
+    },
+    {
+      "label": "LINKS",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L8",
+      "id": "agency_nav_links",
+      "community": 0,
+      "norm_label": "links"
+    },
+    {
+      "label": "Visibility",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L38",
+      "id": "agency_nav_visibility",
+      "community": 0,
+      "norm_label": "visibility"
+    },
+    {
+      "label": "Skin",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L39",
+      "id": "agency_nav_skin",
+      "community": 0,
+      "norm_label": "skin"
+    },
+    {
+      "label": "Nav()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L41",
+      "id": "agency_nav_nav",
+      "community": 0,
+      "norm_label": "nav()"
+    },
+    {
+      "label": "MobileMenuProps",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L279",
+      "id": "agency_nav_mobilemenuprops",
+      "community": 0,
+      "norm_label": "mobilemenuprops"
+    },
+    {
+      "label": "MobileMenu()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L286",
+      "id": "agency_nav_mobilemenu",
+      "community": 0,
+      "norm_label": "mobilemenu()"
+    },
+    {
+      "label": "Process.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Process.tsx",
+      "source_location": "L1",
+      "id": "agency_process",
+      "community": 1,
+      "norm_label": "process.tsx"
+    },
+    {
+      "label": "steps",
+      "file_type": "code",
+      "source_file": "src/components/agency/Process.tsx",
+      "source_location": "L5",
+      "id": "agency_process_steps",
+      "community": 1,
+      "norm_label": "steps"
+    },
+    {
+      "label": "Process()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Process.tsx",
+      "source_location": "L32",
+      "id": "agency_process_process",
+      "community": 1,
+      "norm_label": "process()"
+    },
+    {
+      "label": "Services.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Services.tsx",
+      "source_location": "L1",
+      "id": "agency_services",
+      "community": 1,
+      "norm_label": "services.tsx"
+    },
+    {
+      "label": "Services",
+      "file_type": "code",
+      "source_file": "src/components/agency/Services.tsx",
+      "source_location": "L38",
+      "id": "agency_services_services",
+      "community": 1,
+      "norm_label": "services"
+    },
+    {
+      "label": "SoundDesign.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L1",
+      "id": "agency_sounddesign",
+      "community": 13,
+      "norm_label": "sounddesign.tsx"
+    },
+    {
+      "label": "ensureCtx()",
+      "file_type": "code",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L22",
+      "id": "agency_sounddesign_ensurectx",
+      "community": 13,
+      "norm_label": "ensurectx()"
+    },
+    {
+      "label": "playTick()",
+      "file_type": "code",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L35",
+      "id": "agency_sounddesign_playtick",
+      "community": 13,
+      "norm_label": "playtick()"
+    },
+    {
+      "label": "playWhoosh()",
+      "file_type": "code",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L53",
+      "id": "agency_sounddesign_playwhoosh",
+      "community": 13,
+      "norm_label": "playwhoosh()"
+    },
+    {
+      "label": "SoundDesign()",
+      "file_type": "code",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L86",
+      "id": "agency_sounddesign_sounddesign",
+      "community": 13,
+      "norm_label": "sounddesign()"
+    },
+    {
+      "label": "StackMarquee.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/StackMarquee.tsx",
+      "source_location": "L1",
+      "id": "agency_stackmarquee",
+      "community": 1,
+      "norm_label": "stackmarquee.tsx"
+    },
+    {
+      "label": "stack",
+      "file_type": "code",
+      "source_file": "src/components/agency/StackMarquee.tsx",
+      "source_location": "L3",
+      "id": "agency_stackmarquee_stack",
+      "community": 1,
+      "norm_label": "stack"
+    },
+    {
+      "label": "StackMarquee()",
+      "file_type": "code",
+      "source_file": "src/components/agency/StackMarquee.tsx",
+      "source_location": "L15",
+      "id": "agency_stackmarquee_stackmarquee",
+      "community": 1,
+      "norm_label": "stackmarquee()"
+    },
+    {
+      "label": "Testimonials.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L1",
+      "id": "agency_testimonials",
+      "community": 1,
+      "norm_label": "testimonials.tsx"
+    },
+    {
+      "label": "testimonials",
+      "file_type": "code",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L16",
+      "id": "agency_testimonials_testimonials",
+      "community": 1,
+      "norm_label": "testimonials"
+    },
+    {
+      "label": "TestimonialCardProps",
+      "file_type": "code",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L134",
+      "id": "agency_testimonials_testimonialcardprops",
+      "community": 1,
+      "norm_label": "testimonialcardprops"
+    },
+    {
+      "label": "TestimonialCard()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L138",
+      "id": "agency_testimonials_testimonialcard",
+      "community": 1,
+      "norm_label": "testimonialcard()"
+    },
+    {
+      "label": "Work.tsx",
+      "file_type": "code",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L1",
+      "id": "agency_work",
+      "community": 1,
+      "norm_label": "work.tsx"
+    },
+    {
+      "label": "Work()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L9",
+      "id": "agency_work_work",
+      "community": 1,
+      "norm_label": "work()"
+    },
+    {
+      "label": "projectPageLink()",
+      "file_type": "code",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L121",
+      "id": "agency_work_projectpagelink",
+      "community": 1,
+      "norm_label": "projectpagelink()"
+    },
+    {
+      "label": "DualAudience.tsx",
+      "file_type": "code",
+      "source_file": "src/components/rehai/DualAudience.tsx",
+      "source_location": "L1",
+      "id": "rehai_dualaudience",
+      "community": 3,
+      "norm_label": "dualaudience.tsx"
+    },
+    {
+      "label": "DualAudience()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/DualAudience.tsx",
+      "source_location": "L7",
+      "id": "rehai_dualaudience_dualaudience",
+      "community": 3,
+      "norm_label": "dualaudience()"
+    },
+    {
+      "label": "HowItWorks.tsx",
+      "file_type": "code",
+      "source_file": "src/components/rehai/HowItWorks.tsx",
+      "source_location": "L1",
+      "id": "rehai_howitworks",
+      "community": 3,
+      "norm_label": "howitworks.tsx"
+    },
+    {
+      "label": "STEPS",
+      "file_type": "code",
+      "source_file": "src/components/rehai/HowItWorks.tsx",
+      "source_location": "L5",
+      "id": "rehai_howitworks_steps",
+      "community": 3,
+      "norm_label": "steps"
+    },
+    {
+      "label": "HowItWorks()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/HowItWorks.tsx",
+      "source_location": "L68",
+      "id": "rehai_howitworks_howitworks",
+      "community": 3,
+      "norm_label": "howitworks()"
+    },
+    {
+      "label": "RehaiFooter.tsx",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiFooter.tsx",
+      "source_location": "L1",
+      "id": "rehai_rehaifooter",
+      "community": 0,
+      "norm_label": "rehaifooter.tsx"
+    },
+    {
+      "label": "RehaiFooter()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiFooter.tsx",
+      "source_location": "L1",
+      "id": "rehai_rehaifooter_rehaifooter",
+      "community": 0,
+      "norm_label": "rehaifooter()"
+    },
+    {
+      "label": "RehaiHero.tsx",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiHero.tsx",
+      "source_location": "L1",
+      "id": "rehai_rehaihero",
+      "community": 3,
+      "norm_label": "rehaihero.tsx"
+    },
+    {
+      "label": "RehaiHero()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiHero.tsx",
+      "source_location": "L7",
+      "id": "rehai_rehaihero_rehaihero",
+      "community": 3,
+      "norm_label": "rehaihero()"
+    },
+    {
+      "label": "RehaiNav.tsx",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiNav.tsx",
+      "source_location": "L1",
+      "id": "rehai_rehainav",
+      "community": 3,
+      "norm_label": "rehainav.tsx"
+    },
+    {
+      "label": "RehaiNav()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiNav.tsx",
+      "source_location": "L6",
+      "id": "rehai_rehainav_rehainav",
+      "community": 3,
+      "norm_label": "rehainav()"
+    },
+    {
+      "label": "SolutionsSection.tsx",
+      "file_type": "code",
+      "source_file": "src/components/rehai/SolutionsSection.tsx",
+      "source_location": "L1",
+      "id": "rehai_solutionssection",
+      "community": 3,
+      "norm_label": "solutionssection.tsx"
+    },
+    {
+      "label": "SolutionsSection()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/SolutionsSection.tsx",
+      "source_location": "L7",
+      "id": "rehai_solutionssection_solutionssection",
+      "community": 3,
+      "norm_label": "solutionssection()"
+    },
+    {
+      "label": "Mission.tsx",
+      "file_type": "code",
+      "source_file": "src/components/studio/Mission.tsx",
+      "source_location": "L1",
+      "id": "studio_mission",
+      "community": 9,
+      "norm_label": "mission.tsx"
+    },
+    {
+      "label": "Mission()",
+      "file_type": "code",
+      "source_file": "src/components/studio/Mission.tsx",
+      "source_location": "L5",
+      "id": "studio_mission_mission",
+      "community": 9,
+      "norm_label": "mission()"
+    },
+    {
+      "label": "StudioFooter.tsx",
+      "file_type": "code",
+      "source_file": "src/components/studio/StudioFooter.tsx",
+      "source_location": "L1",
+      "id": "studio_studiofooter",
+      "community": 7,
+      "norm_label": "studiofooter.tsx"
+    },
+    {
+      "label": "StudioFooter()",
+      "file_type": "code",
+      "source_file": "src/components/studio/StudioFooter.tsx",
+      "source_location": "L3",
+      "id": "studio_studiofooter_studiofooter",
+      "community": 7,
+      "norm_label": "studiofooter()"
+    },
+    {
+      "label": "StudioHero.tsx",
+      "file_type": "code",
+      "source_file": "src/components/studio/StudioHero.tsx",
+      "source_location": "L1",
+      "id": "studio_studiohero",
+      "community": 9,
+      "norm_label": "studiohero.tsx"
+    },
+    {
+      "label": "StudioHero()",
+      "file_type": "code",
+      "source_file": "src/components/studio/StudioHero.tsx",
+      "source_location": "L6",
+      "id": "studio_studiohero_studiohero",
+      "community": 9,
+      "norm_label": "studiohero()"
+    },
+    {
+      "label": "StudioNav.tsx",
+      "file_type": "code",
+      "source_file": "src/components/studio/StudioNav.tsx",
+      "source_location": "L1",
+      "id": "studio_studionav",
+      "community": 7,
+      "norm_label": "studionav.tsx"
+    },
+    {
+      "label": "StudioNav()",
+      "file_type": "code",
+      "source_file": "src/components/studio/StudioNav.tsx",
+      "source_location": "L6",
+      "id": "studio_studionav_studionav",
+      "community": 7,
+      "norm_label": "studionav()"
+    },
+    {
+      "label": "Ventures.tsx",
+      "file_type": "code",
+      "source_file": "src/components/studio/Ventures.tsx",
+      "source_location": "L1",
+      "id": "studio_ventures",
+      "community": 9,
+      "norm_label": "ventures.tsx"
+    },
+    {
+      "label": "VENTURES",
+      "file_type": "code",
+      "source_file": "src/components/studio/Ventures.tsx",
+      "source_location": "L7",
+      "id": "studio_ventures_ventures",
+      "community": 9,
+      "norm_label": "ventures"
+    },
+    {
+      "label": "case-studies.json",
+      "file_type": "code",
+      "source_file": "src/data/case-studies.json",
+      "source_location": "L1",
+      "id": "data_case_studies",
+      "community": 1,
+      "norm_label": "case-studies.json"
+    },
+    {
+      "label": "case-studies-path.ts",
+      "file_type": "code",
+      "source_file": "src/lib/case-studies-path.ts",
+      "source_location": "L1",
+      "id": "lib_case_studies_path",
+      "community": 11,
+      "norm_label": "case-studies-path.ts"
+    },
+    {
+      "label": "getCaseStudiesFilePath()",
+      "file_type": "code",
+      "source_file": "src/lib/case-studies-path.ts",
+      "source_location": "L4",
+      "id": "lib_case_studies_path_getcasestudiesfilepath",
+      "community": 11,
+      "norm_label": "getcasestudiesfilepath()"
+    },
+    {
+      "label": "lenisSingleton.ts",
+      "file_type": "code",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L1",
+      "id": "lib_lenissingleton",
+      "community": 0,
+      "norm_label": "lenissingleton.ts"
+    },
+    {
+      "label": "setLenis()",
+      "file_type": "code",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L7",
+      "id": "lib_lenissingleton_setlenis",
+      "community": 0,
+      "norm_label": "setlenis()"
+    },
+    {
+      "label": "getLenis()",
+      "file_type": "code",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L11",
+      "id": "lib_lenissingleton_getlenis",
+      "community": 0,
+      "norm_label": "getlenis()"
+    },
+    {
+      "label": "scrollToId()",
+      "file_type": "code",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L15",
+      "id": "lib_lenissingleton_scrolltoid",
+      "community": 0,
+      "norm_label": "scrolltoid()"
+    },
+    {
+      "label": "subdomain.ts",
+      "file_type": "code",
+      "source_file": "src/lib/subdomain.ts",
+      "source_location": "L1",
+      "id": "lib_subdomain",
+      "community": 6,
+      "norm_label": "subdomain.ts"
+    },
+    {
+      "label": "getSiteFromHostname()",
+      "file_type": "code",
+      "source_file": "src/lib/subdomain.ts",
+      "source_location": "L15",
+      "id": "lib_subdomain_getsitefromhostname",
+      "community": 6,
+      "norm_label": "getsitefromhostname()"
+    },
+    {
+      "label": "middleware.ts",
+      "file_type": "code",
+      "source_file": "src/middleware.ts",
+      "source_location": "L1",
+      "id": "src_middleware",
+      "community": 6,
+      "norm_label": "middleware.ts"
+    },
+    {
+      "label": "middleware()",
+      "file_type": "code",
+      "source_file": "src/middleware.ts",
+      "source_location": "L18",
+      "id": "src_middleware_middleware",
+      "community": 6,
+      "norm_label": "middleware()"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "src/middleware.ts",
+      "source_location": "L60",
+      "id": "src_middleware_config",
+      "community": 6,
+      "norm_label": "config"
+    },
+    {
+      "label": "case-study.ts",
+      "file_type": "code",
+      "source_file": "src/types/case-study.ts",
+      "source_location": "L1",
+      "id": "types_case_study",
+      "community": 1,
+      "norm_label": "case-study.ts"
+    },
+    {
+      "label": "CaseStudy",
+      "file_type": "code",
+      "source_file": "src/types/case-study.ts",
+      "source_location": "L1",
+      "id": "types_case_study_casestudy",
+      "community": 1,
+      "norm_label": "casestudy"
+    },
+    {
+      "label": "site.ts",
+      "file_type": "code",
+      "source_file": "src/types/site.ts",
+      "source_location": "L1",
+      "id": "types_site",
+      "community": 6,
+      "norm_label": "site.ts"
+    },
+    {
+      "label": "SiteKey",
+      "file_type": "code",
+      "source_file": "src/types/site.ts",
+      "source_location": "L2",
+      "id": "types_site_sitekey",
+      "community": 6,
+      "norm_label": "sitekey"
+    },
+    {
+      "label": "SiteConfig",
+      "file_type": "code",
+      "source_file": "src/types/site.ts",
+      "source_location": "L4",
+      "id": "types_site_siteconfig",
+      "community": 6,
+      "norm_label": "siteconfig"
+    },
+    {
+      "label": "SITES",
+      "file_type": "code",
+      "source_file": "src/types/site.ts",
+      "source_location": "L14",
+      "id": "types_site_sites",
+      "community": 6,
+      "norm_label": "sites"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig",
+      "community": 4,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "tsconfig_compileroptions",
+      "community": 4,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "tsconfig_compileroptions_target",
+      "community": 4,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "id": "tsconfig_compileroptions_lib",
+      "community": 4,
+      "norm_label": "lib"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "id": "tsconfig_compileroptions_allowjs",
+      "community": 4,
+      "norm_label": "allowjs"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "community": 4,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "id": "tsconfig_compileroptions_strict",
+      "community": 4,
+      "norm_label": "strict"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "id": "tsconfig_compileroptions_noemit",
+      "community": 4,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "id": "tsconfig_compileroptions_esmoduleinterop",
+      "community": 4,
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "id": "tsconfig_compileroptions_module",
+      "community": 4,
+      "norm_label": "module"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "community": 4,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "ignoreDeprecations",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "id": "tsconfig_compileroptions_ignoredeprecations",
+      "community": 4,
+      "norm_label": "ignoredeprecations"
+    },
+    {
+      "label": "baseUrl",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "id": "tsconfig_compileroptions_baseurl",
+      "community": 4,
+      "norm_label": "baseurl"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "id": "tsconfig_compileroptions_paths",
+      "community": 4,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "id": "tsconfig_paths",
+      "community": 4,
+      "norm_label": "@/*"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "id": "tsconfig_compileroptions_resolvejsonmodule",
+      "community": 4,
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L18",
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "community": 4,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "id": "tsconfig_compileroptions_jsx",
+      "community": 4,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "id": "tsconfig_compileroptions_incremental",
+      "community": 4,
+      "norm_label": "incremental"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "id": "tsconfig_compileroptions_plugins",
+      "community": 4,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L23",
+      "id": "tsconfig_include",
+      "community": 4,
+      "norm_label": "include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L24",
+      "id": "tsconfig_exclude",
+      "community": 4,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L1",
+      "id": "rules_graphify",
+      "community": 20,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "id": "rules_graphify_graphify",
+      "community": 20,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L1",
+      "id": "workflows_graphify",
+      "community": 22,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "Workflow: graphify",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "id": "workflows_graphify_workflow_graphify",
+      "community": 22,
+      "norm_label": "workflow: graphify"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents",
+      "community": 16,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents_graphify",
+      "community": 16,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "GRAPHIFY.md",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L1",
+      "id": "graphify",
+      "community": 8,
+      "norm_label": "graphify.md"
+    },
+    {
+      "label": "GRAPHIFY \u2014 rarestar.studio codebase context",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L1",
+      "id": "graphify_graphify_rarestar_studio_codebase_context",
+      "community": 8,
+      "norm_label": "graphify \u2014 rarestar.studio codebase context"
+    },
+    {
+      "label": "Technical Core",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L8",
+      "id": "graphify_technical_core",
+      "community": 8,
+      "norm_label": "technical core"
+    },
+    {
+      "label": "UI Architecture",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L21",
+      "id": "graphify_ui_architecture",
+      "community": 8,
+      "norm_label": "ui architecture"
+    },
+    {
+      "label": "1. Global Components (Layout)",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L23",
+      "id": "graphify_1_global_components_layout",
+      "community": 8,
+      "norm_label": "1. global components (layout)"
+    },
+    {
+      "label": "2. Homepage Sections (`src/app/page.tsx`)",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L32",
+      "id": "graphify_2_homepage_sections_src_app_page_tsx",
+      "community": 8,
+      "norm_label": "2. homepage sections (`src/app/page.tsx`)"
+    },
+    {
+      "label": "Feature Systems",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L42",
+      "id": "graphify_feature_systems",
+      "community": 8,
+      "norm_label": "feature systems"
+    },
+    {
+      "label": "Case Study Dashboard",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L44",
+      "id": "graphify_case_study_dashboard",
+      "community": 8,
+      "norm_label": "case study dashboard"
+    },
+    {
+      "label": "Contact Engine",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L54",
+      "id": "graphify_contact_engine",
+      "community": 8,
+      "norm_label": "contact engine"
+    },
+    {
+      "label": "Design Tokens & Utilities",
+      "file_type": "document",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L62",
+      "id": "graphify_design_tokens_utilities",
+      "community": 8,
+      "norm_label": "design tokens & utilities"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 5,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Rarestar.studio \u2014 Standalone Deployment Guide",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_rarestar_studio_standalone_deployment_guide",
+      "community": 5,
+      "norm_label": "rarestar.studio \u2014 standalone deployment guide"
+    },
+    {
+      "label": "1. Extract from Monorepo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "readme_1_extract_from_monorepo",
+      "community": 5,
+      "norm_label": "1. extract from monorepo"
+    },
+    {
+      "label": "Copy these files/folders to new repo root:",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "id": "readme_copy_these_files_folders_to_new_repo_root",
+      "community": 5,
+      "norm_label": "copy these files/folders to new repo root:"
+    },
+    {
+      "label": "Create missing config files:",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "id": "readme_create_missing_config_files",
+      "community": 5,
+      "norm_label": "create missing config files:"
+    },
+    {
+      "label": "2. Update package.json",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L78",
+      "id": "readme_2_update_package_json",
+      "community": 5,
+      "norm_label": "2. update package.json"
+    },
+    {
+      "label": "3. Environment Variables (Optional)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "id": "readme_3_environment_variables_optional",
+      "community": 5,
+      "norm_label": "3. environment variables (optional)"
+    },
+    {
+      "label": "4. Local Test",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L132",
+      "id": "readme_4_local_test",
+      "community": 5,
+      "norm_label": "4. local test"
+    },
+    {
+      "label": "5. Deploy to Vercel",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L147",
+      "id": "readme_5_deploy_to_vercel",
+      "community": 5,
+      "norm_label": "5. deploy to vercel"
+    },
+    {
+      "label": "Option A: Git Push + Vercel Dashboard",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L149",
+      "id": "readme_option_a_git_push_vercel_dashboard",
+      "community": 5,
+      "norm_label": "option a: git push + vercel dashboard"
+    },
+    {
+      "label": "Option B: Vercel CLI",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L160",
+      "id": "readme_option_b_vercel_cli",
+      "community": 5,
+      "norm_label": "option b: vercel cli"
+    },
+    {
+      "label": "6. Post-Deploy Checklist",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L175",
+      "id": "readme_6_post_deploy_checklist",
+      "community": 5,
+      "norm_label": "6. post-deploy checklist"
+    },
+    {
+      "label": "7. Domain Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L190",
+      "id": "readme_7_domain_setup",
+      "community": 5,
+      "norm_label": "7. domain setup"
+    },
+    {
+      "label": "8. Troubleshooting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L199",
+      "id": "readme_8_troubleshooting",
+      "community": 5,
+      "norm_label": "8. troubleshooting"
+    },
+    {
+      "label": "File Notes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L211",
+      "id": "readme_file_notes",
+      "community": 5,
+      "norm_label": "file notes"
+    },
+    {
+      "label": "Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L220",
+      "id": "readme_stack",
+      "community": 5,
+      "norm_label": "stack"
+    },
+    {
+      "label": "redirect.md",
+      "file_type": "document",
+      "source_file": "docs/app/api-reference/functions/redirect.md",
+      "source_location": "L1",
+      "id": "functions_redirect",
+      "community": 26,
+      "norm_label": "redirect.md"
+    },
+    {
+      "label": "revalidating.md",
+      "file_type": "document",
+      "source_file": "docs/app/getting-started/revalidating.md",
+      "source_location": "L1",
+      "id": "getting_started_revalidating",
+      "community": 27,
+      "norm_label": "revalidating.md"
+    },
+    {
+      "label": "alt",
+      "file_type": "code",
+      "source_file": "src/app/twitter-image.tsx",
+      "source_location": "L7",
+      "id": "app_twitter_image_alt",
+      "community": 23,
+      "norm_label": "alt"
+    },
+    {
+      "label": "size",
+      "file_type": "code",
+      "source_file": "src/app/twitter-image.tsx",
+      "source_location": "L8",
+      "id": "app_twitter_image_size",
+      "community": 25,
+      "norm_label": "size"
+    },
+    {
+      "label": "contentType",
+      "file_type": "code",
+      "source_file": "src/app/twitter-image.tsx",
+      "source_location": "L9",
+      "id": "app_twitter_image_contenttype",
+      "community": 24,
+      "norm_label": "contenttype"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "next_config",
+      "target": "next_config_nextconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_typecheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_gsap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_lenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_three",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_three",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "postcss_config",
+      "target": "postcss_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "case_studies_page",
+      "target": "case_studies_page_casestudiesdashboardpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "case_studies_page",
+      "target": "case_studies_page_emptyrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L337",
+      "weight": 1.0,
+      "source": "case_studies_page",
+      "target": "case_studies_page_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "case_studies_page",
+      "target": "types_case_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/case-studies/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "case_studies_page",
+      "target": "types_case_study_casestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_layout",
+      "target": "dashboard_layout_dashboardlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/dashboard/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "dashboard_layout",
+      "target": "dashboard_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "agency_layout_agencylayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "agency_layout_jsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "agency_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "agency_nav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "agency_sounddesign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "components_cursor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "components_scrollprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/layout.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "agency_layout",
+      "target": "components_smoothscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_manifesto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_services",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_stackmarquee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_testimonials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "agency_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "data_case_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "types_case_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "agency_page",
+      "target": "types_case_study_casestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "id_page",
+      "target": "data_case_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "id_page",
+      "target": "id_page_generatestaticparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "id_page",
+      "target": "id_page_projectpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "id_page",
+      "target": "types_case_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/agency/work/[id]/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "id_page",
+      "target": "types_case_study_casestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "case_studies_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "case_studies_route_iscasestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "case_studies_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "case_studies_route_validatelist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "lib_case_studies_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "lib_case_studies_path_getcasestudiesfilepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "types_case_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "case_studies_route",
+      "target": "types_case_study_casestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "case_studies_route_get",
+      "target": "case_studies_route_validatelist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "case_studies_route_post",
+      "target": "case_studies_route_validatelist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "case_studies_route_get",
+      "target": "lib_case_studies_path_getcasestudiesfilepath"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/case-studies/route.ts",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "case_studies_route_post",
+      "target": "lib_case_studies_path_getcasestudiesfilepath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "contact_route",
+      "target": "contact_route_contactbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "contact_route",
+      "target": "contact_route_isvalidemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "contact_route",
+      "target": "contact_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/contact/route.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "contact_route_post",
+      "target": "contact_route_isvalidemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/upload/route.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "upload_route",
+      "target": "upload_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_fraunces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_inter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_jetbrains",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "app_layout",
+      "target": "app_layout_viewport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_manifest",
+      "target": "app_manifest_manifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_manifest",
+      "target": "lib_subdomain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_manifest",
+      "target": "lib_subdomain_getsitefromhostname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_manifest",
+      "target": "types_site",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_manifest",
+      "target": "types_site_sites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/manifest.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_manifest_manifest",
+      "target": "lib_subdomain_getsitefromhostname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "app_opengraph_image",
+      "target": "app_opengraph_image_loadassetdataurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_opengraph_image",
+      "target": "app_opengraph_image_loadfontfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "app_opengraph_image",
+      "target": "app_opengraph_image_opengraphimage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_opengraph_image",
+      "target": "app_opengraph_image_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/twitter-image.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_twitter_image",
+      "target": "app_opengraph_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/twitter-image.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_twitter_image",
+      "target": "app_opengraph_image_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_opengraph_image_opengraphimage",
+      "target": "app_opengraph_image_loadfontfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/opengraph-image.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "app_opengraph_image_opengraphimage",
+      "target": "app_opengraph_image_loadassetdataurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "components_cursor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "components_scrollprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "components_smoothscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "rehai_layout_jsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "rehai_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "rehai_layout_rehailayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "rehai_rehaifooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rehai_layout",
+      "target": "rehai_rehainav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "rehai_page",
+      "target": "rehai_dualaudience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "rehai_page",
+      "target": "rehai_howitworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rehai_page",
+      "target": "rehai_page_rehaihome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "rehai_page",
+      "target": "rehai_rehaihero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/rehai/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "rehai_page",
+      "target": "rehai_solutionssection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/robots.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_robots",
+      "target": "app_robots_robots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_sitemap",
+      "target": "app_sitemap_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_sitemap",
+      "target": "data_case_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "components_cursor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "components_scrollprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "components_smoothscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "studio_layout_jsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "studio_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "studio_layout_studiolayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "studio_studiofooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "studio_layout",
+      "target": "studio_studionav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "studio_page",
+      "target": "studio_mission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "studio_page",
+      "target": "studio_page_studiohome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "studio_page",
+      "target": "studio_studiohero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/studio/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "studio_page",
+      "target": "studio_ventures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Cursor.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_cursor",
+      "target": "components_cursor_cursor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Cursor.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "components_cursor",
+      "target": "components_cursor_cursormode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Magnetic.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "components_magnetic",
+      "target": "components_magnetic_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Magnetic.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "components_magnetic",
+      "target": "components_magnetic_magneticprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/DualAudience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rehai_dualaudience",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/RehaiHero.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rehai_rehaihero",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/RehaiNav.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "rehai_rehainav",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/SolutionsSection.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rehai_solutionssection",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/studio/Ventures.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "studio_ventures",
+      "target": "components_magnetic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ScrollProgress.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_scrollprogress",
+      "target": "components_scrollprogress_scrollprogress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ScrollProgress.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_scrollprogress",
+      "target": "lib_lenissingleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ScrollProgress.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_scrollprogress",
+      "target": "lib_lenissingleton_getlenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SmoothScroll.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "components_smoothscroll",
+      "target": "components_smoothscroll_smoothscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SmoothScroll.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_smoothscroll",
+      "target": "lib_lenissingleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SmoothScroll.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_smoothscroll",
+      "target": "lib_lenissingleton_setlenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L370",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "agency_contact_calendaricon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "agency_contact_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L352",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "agency_contact_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L344",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "agency_contact_fieldprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L391",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "agency_contact_humanerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Contact.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agency_contact",
+      "target": "agency_contact_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "agency_footer",
+      "target": "agency_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "agency_footer",
+      "target": "agency_footer_nav_links",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "agency_footer",
+      "target": "agency_footer_social_links",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "agency_footer",
+      "target": "lib_lenissingleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Footer.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "agency_footer",
+      "target": "lib_lenissingleton_scrolltoid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "agency_hero",
+      "target": "agency_hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "agency_hero",
+      "target": "agency_hero_herocontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "agency_hero",
+      "target": "agency_hero_splitchars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "agency_hero",
+      "target": "agency_herovideo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_hero",
+      "target": "lib_lenissingleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_hero",
+      "target": "lib_lenissingleton_scrolltoid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "agency_hero_herocontent",
+      "target": "agency_hero_splitchars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Hero.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "agency_hero_herocontent",
+      "target": "lib_lenissingleton_scrolltoid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/HeroVideo.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "agency_herovideo",
+      "target": "agency_herovideo_herovideo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Manifesto.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_manifesto",
+      "target": "agency_manifesto_manifesto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "agency_nav_links",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L286",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "agency_nav_mobilemenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L279",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "agency_nav_mobilemenuprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "agency_nav_nav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "agency_nav_skin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "agency_nav_visibility",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "lib_lenissingleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "lib_lenissingleton_getlenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Nav.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_nav",
+      "target": "lib_lenissingleton_scrolltoid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Process.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "agency_process",
+      "target": "agency_process_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Process.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agency_process",
+      "target": "agency_process_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Services.tsx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "agency_services",
+      "target": "agency_services_services",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "agency_sounddesign",
+      "target": "agency_sounddesign_ensurectx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "agency_sounddesign",
+      "target": "agency_sounddesign_playtick",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "agency_sounddesign",
+      "target": "agency_sounddesign_playwhoosh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "agency_sounddesign",
+      "target": "agency_sounddesign_sounddesign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "agency_sounddesign_playtick",
+      "target": "agency_sounddesign_ensurectx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/SoundDesign.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "agency_sounddesign_playwhoosh",
+      "target": "agency_sounddesign_ensurectx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/StackMarquee.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agency_stackmarquee",
+      "target": "agency_stackmarquee_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/StackMarquee.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "agency_stackmarquee",
+      "target": "agency_stackmarquee_stackmarquee",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "agency_testimonials",
+      "target": "agency_testimonials_testimonialcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "agency_testimonials",
+      "target": "agency_testimonials_testimonialcardprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Testimonials.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "agency_testimonials",
+      "target": "agency_testimonials_testimonials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "agency_work",
+      "target": "agency_work_projectpagelink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agency_work",
+      "target": "agency_work_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agency_work",
+      "target": "lib_lenissingleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agency_work",
+      "target": "lib_lenissingleton_scrolltoid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "agency_work",
+      "target": "types_case_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/agency/Work.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "agency_work",
+      "target": "types_case_study_casestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/DualAudience.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "rehai_dualaudience",
+      "target": "rehai_dualaudience_dualaudience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/HowItWorks.tsx",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "rehai_howitworks",
+      "target": "rehai_howitworks_howitworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/HowItWorks.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rehai_howitworks",
+      "target": "rehai_howitworks_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/RehaiFooter.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "rehai_rehaifooter",
+      "target": "rehai_rehaifooter_rehaifooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/RehaiHero.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "rehai_rehaihero",
+      "target": "rehai_rehaihero_rehaihero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/RehaiNav.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rehai_rehainav",
+      "target": "rehai_rehainav_rehainav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/SolutionsSection.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "rehai_solutionssection",
+      "target": "rehai_solutionssection_solutionssection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/studio/Mission.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "studio_mission",
+      "target": "studio_mission_mission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/studio/StudioFooter.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "studio_studiofooter",
+      "target": "studio_studiofooter_studiofooter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/studio/StudioHero.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "studio_studiohero",
+      "target": "studio_studiohero_studiohero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/studio/StudioNav.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "studio_studionav",
+      "target": "studio_studionav_studionav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/studio/Ventures.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "studio_ventures",
+      "target": "studio_ventures_ventures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/case-studies-path.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_case_studies_path",
+      "target": "lib_case_studies_path_getcasestudiesfilepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "lib_lenissingleton",
+      "target": "lib_lenissingleton_getlenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "lib_lenissingleton",
+      "target": "lib_lenissingleton_scrolltoid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "lib_lenissingleton",
+      "target": "lib_lenissingleton_setlenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/lenisSingleton.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "lib_lenissingleton_scrolltoid",
+      "target": "lib_lenissingleton_getlenis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/subdomain.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "lib_subdomain",
+      "target": "lib_subdomain_getsitefromhostname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/subdomain.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_subdomain",
+      "target": "types_site",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/subdomain.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_subdomain",
+      "target": "types_site_sitekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_middleware",
+      "target": "lib_subdomain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/middleware.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_middleware",
+      "target": "lib_subdomain_getsitefromhostname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/middleware.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "src_middleware_middleware",
+      "target": "lib_subdomain_getsitefromhostname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/middleware.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "src_middleware",
+      "target": "src_middleware_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/middleware.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_middleware",
+      "target": "src_middleware_middleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/case-study.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "types_case_study",
+      "target": "types_case_study_casestudy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/site.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "types_site",
+      "target": "types_site_siteconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/site.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "types_site",
+      "target": "types_site_sitekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/site.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "types_site",
+      "target": "types_site_sites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_allowjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_baseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_esmoduleinterop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_ignoredeprecations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_incremental",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_resolvejsonmodule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tsconfig_compileroptions_paths",
+      "target": "tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rules_graphify",
+      "target": "rules_graphify_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "workflows_graphify",
+      "target": "workflows_graphify_workflow_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents",
+      "target": "agents_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "graphify",
+      "target": "graphify_graphify_rarestar_studio_codebase_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "graphify_graphify_rarestar_studio_codebase_context",
+      "target": "graphify_design_tokens_utilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "graphify_graphify_rarestar_studio_codebase_context",
+      "target": "graphify_feature_systems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "graphify_graphify_rarestar_studio_codebase_context",
+      "target": "graphify_technical_core",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "graphify_graphify_rarestar_studio_codebase_context",
+      "target": "graphify_ui_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "graphify_ui_architecture",
+      "target": "graphify_1_global_components_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "graphify_ui_architecture",
+      "target": "graphify_2_homepage_sections_src_app_page_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "graphify_feature_systems",
+      "target": "graphify_case_study_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GRAPHIFY.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "graphify_feature_systems",
+      "target": "graphify_contact_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_rarestar_studio_standalone_deployment_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_1_extract_from_monorepo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_2_update_package_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_3_environment_variables_optional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_4_local_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_5_deploy_to_vercel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_6_post_deploy_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_7_domain_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_8_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_file_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "readme_rarestar_studio_standalone_deployment_guide",
+      "target": "readme_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "readme_1_extract_from_monorepo",
+      "target": "readme_copy_these_files_folders_to_new_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "readme_1_extract_from_monorepo",
+      "target": "readme_create_missing_config_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "readme_5_deploy_to_vercel",
+      "target": "readme_option_a_git_push_vercel_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "readme_5_deploy_to_vercel",
+      "target": "readme_option_b_vercel_cli",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "6051897b1ae7e1b47b1d36edf78cf2208cb4aba8"
+}

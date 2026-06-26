@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import Magnetic from "@/components/Magnetic";
 
 const VENTURES = [
@@ -10,7 +11,8 @@ const VENTURES = [
     description: "Design, development, and AI solutions for modern brands.",
     href: process.env.NODE_ENV === "development" ? "/?site=agency" : "https://agency.rarestar.studio",
     label: "SERVICES",
-    color: "ember"
+    color: "ember",
+    logo: "/brand/agency-lockup-paper.png"
   },
   {
     id: "rehai",
@@ -18,7 +20,8 @@ const VENTURES = [
     description: "AI-powered neurological rehabilitation focused on speech and cognitive recovery.",
     href: process.env.NODE_ENV === "development" ? "/?site=rehai" : "https://rehai.rarestar.studio",
     label: "PLATFORM",
-    color: "rehai-primary"
+    color: "rehai-primary",
+    logo: null
   }
 ];
 
@@ -63,28 +66,43 @@ export default function Ventures() {
           {VENTURES.map((v, i) => (
             <Magnetic key={v.id} strength={0.05}>
               <a
-                ref={(el) => { cardsRef.current[i] = el; }}
+                ref={(el) => {
+                  cardsRef.current[i] = el;
+                }}
                 href={v.href}
                 className="product-card group block p-8 md:p-12"
-                style={{ 
-                  "--hover-glow": v.color === "ember" ? "rgba(255, 74, 28, 0.08)" : "rgba(0, 201, 167, 0.08)" 
-                } as React.CSSProperties}
+                style={
+                  {
+                    "--hover-glow":
+                      v.color === "ember"
+                        ? "rgba(207, 0, 0, 0.1)"
+                        : "rgba(0, 201, 167, 0.08)"
+                  } as React.CSSProperties
+                }
               >
                 <div className="flex h-full flex-col justify-between gap-12">
                   <div>
                     <p className="eyebrow mb-6 text-paper/50">{v.label}</p>
-                    <h3 className="display mb-4 text-4xl md:text-5xl">{v.name}</h3>
-                    <p className="font-sans text-lg text-paper/70 max-w-sm">
-                      {v.description}
-                    </p>
+                    {v.logo ? (
+                      <Image
+                        src={v.logo}
+                        alt={v.name}
+                        width={300}
+                        height={75}
+                        className="mb-8 h-10 w-auto"
+                      />
+                    ) : (
+                      <h3 className="display mb-8 text-4xl md:text-5xl">{v.name}</h3>
+                    )}
+                    <p className="max-w-sm font-sans text-lg text-paper/70">{v.description}</p>
                   </div>
-                  
+
                   <div className="flex items-center gap-3">
                     <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-paper/90 transition-colors group-hover:text-paper">
                       Explore
                     </span>
                     <span className="font-mono text-[12px] text-paper/50 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-paper">
-                      →
+                      -&gt;
                     </span>
                   </div>
                 </div>

@@ -181,19 +181,17 @@ export default function Nav() {
             <a
               href="#top"
               onClick={handleHome}
-              aria-label="RareStar home"
+              aria-label="Rarestar Agency home"
               className="group flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/85 transition-colors hover:text-paper md:text-[11px]"
             >
               <Image
-                src="/brand/mark.png"
-                alt="RareStar"
-                width={22}
-                height={22}
+                src="/brand/agency-lockup-paper.png"
+                alt="Rarestar Agency"
+                width={180}
+                height={45}
                 priority
-                className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-45 md:h-[22px] md:w-[22px]"
+                className="h-7 w-auto transition-opacity duration-300 group-hover:opacity-80 md:h-8"
               />
-              <span className="hidden sm:inline">RareStar</span>
-              <span className="sm:hidden">RareStar</span>
             </a>
 
             <nav className="hidden items-center gap-8 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/70 md:flex">

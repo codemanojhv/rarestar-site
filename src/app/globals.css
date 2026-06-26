@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0a0a0a;
-  --color-paper: #f2efe8;
-  --color-bone: #e8e3d6;
-  --color-ember: #ff4a1c;
-  --color-dust: #8a857a;
-  --color-smoke: #1a1a1a;
+  --color-ink: #050505;
+  --color-paper: #f7f7f4;
+  --color-bone: #e9e9e3;
+  --color-ember: #cf0000;
+  --color-dust: #8b8b84;
+  --color-smoke: #151515;
 
   --color-rehai-primary: #00C9A7;
   --color-rehai-accent: #6366F1;
@@ -19,7 +19,7 @@
 
 :root {
   color-scheme: dark;
-  --grain-opacity: 0.06;
+  --grain-opacity: 0.035;
 }
 
 html,
@@ -157,11 +157,11 @@ html.lenis body {
 }
 
 [data-cursor-root][data-mode="paper"] [data-cursor-ring] {
-  border-color: #0a0a0a;
+  border-color: #050505;
 }
 
 [data-cursor-root][data-mode="paper"] [data-cursor-dot] {
-  background: #0a0a0a;
+  background: #050505;
 }
 
 [data-cursor-root][data-scope="interactive"] [data-cursor-ring],
@@ -181,7 +181,7 @@ html.lenis body {
 .display {
   font-family: var(--font-display);
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   line-height: 0.92;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -223,7 +223,7 @@ html.lenis body {
 .accent-italic {
   font-style: italic;
   color: var(--color-ember);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 /* ==========================================================================
@@ -232,7 +232,7 @@ html.lenis body {
 .product-card {
   position: relative;
   border: 1px solid rgba(242, 239, 232, 0.06);
-  border-radius: 16px;
+  border-radius: 8px;
   background: rgba(242, 239, 232, 0.02);
   transition:
     border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),

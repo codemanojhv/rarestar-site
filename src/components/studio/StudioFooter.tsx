@@ -7,14 +7,17 @@ export default function StudioFooter() {
     <footer className="border-t border-paper/10 bg-ink px-5 py-16 md:px-10">
       <div className="mx-auto flex max-w-7xl flex-col gap-12 md:flex-row md:justify-between">
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2">
-            <Image src="/brand/mark.png" alt="Rarestar" width={20} height={20} />
-            <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-paper/90">
-              Rarestar Studio
-            </span>
+          <div className="flex items-center">
+            <Image
+              src="/brand/studio-lockup-paper.png"
+              alt="Rarestar Studio"
+              width={230}
+              height={58}
+              className="h-10 w-auto"
+            />
           </div>
           <p className="max-w-xs font-sans text-sm text-paper/50">
-            A product studio building meaningful software and AI solutions.
+            A focused product studio building software, AI systems, and new ventures.
           </p>
         </div>
 
@@ -69,7 +72,7 @@ export default function StudioFooter() {
 
       <div className="mx-auto mt-16 max-w-7xl border-t border-paper/10 pt-8 text-center md:text-left">
         <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-paper/30">
-          © {year} Rarestar Creative Studio LLP. All rights reserved.
+          (c) {year} Rarestar Creative Studio LLP. All rights reserved.
         </p>
       </div>
     </footer>

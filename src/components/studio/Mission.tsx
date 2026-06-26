@@ -17,7 +17,7 @@ export default function Mission() {
       ctx = gsap.context(() => {
         if (!textRef.current) return;
         const words = textRef.current.querySelectorAll(".word");
-        
+
         gsap.fromTo(
           words,
           { opacity: 0.2 },
@@ -50,14 +50,15 @@ export default function Mission() {
     return () => ctx?.revert();
   }, []);
 
-  const statement = "We identify meaningful problems, build innovative technology-driven solutions, and grow them into scalable products and businesses.";
+  const statement =
+    "We turn clear problems into precise products, then keep building until the product has a reason to exist in the market.";
 
   return (
     <section ref={container} className="px-5 py-32 md:px-10 md:py-48">
       <div className="mx-auto max-w-5xl text-center">
-        <p ref={textRef} className="display text-[clamp(2rem,6vw,4rem)] leading-[1.1] text-paper">
+        <p ref={textRef} className="display text-[clamp(2rem,6vw,4rem)] leading-[1.08] text-paper">
           {statement.split(" ").map((word, i) => (
-            <span key={i} className="word inline-block mr-[0.25em]">
+            <span key={i} className="word mr-[0.25em] inline-block">
               {word}
             </span>
           ))}
@@ -65,7 +66,7 @@ export default function Mission() {
 
         <div className="mt-20 overflow-hidden">
           <p ref={legalRef} className="font-mono text-[10px] uppercase tracking-[0.22em] text-paper/40">
-            Operated by Rarestar Creative Studio LLP · India
+            Operated by Rarestar Creative Studio LLP / India
           </p>
         </div>
       </div>

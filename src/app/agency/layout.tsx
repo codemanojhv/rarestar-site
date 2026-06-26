@@ -8,8 +8,8 @@ import SoundDesign from "@/components/agency/SoundDesign";
 export const metadata: Metadata = {
   metadataBase: new URL("https://agency.rarestar.studio"),
   title: {
-    default: "Rarestar Agency — Design, Development & AI Solutions",
-    template: "%s · Rarestar Agency"
+    default: "Rarestar Agency - Design, Development & AI Solutions",
+    template: "%s | Rarestar Agency"
   },
   description:
     "Rarestar Agency is a creative agency for brand identity, marketing websites, headless Shopify commerce, and AI solutions. Design through launch.",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://agency.rarestar.studio",
-    title: "Rarestar Agency — Design, Development & AI Solutions",
+    title: "Rarestar Agency - Design, Development & AI Solutions",
     description:
       "Brand systems, marketing sites, headless commerce, and AI solutions. Clear process and production-ready delivery.",
     siteName: "Rarestar Agency",
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Rarestar Agency — Creative agency for brand, web, commerce & AI"
+        alt: "Rarestar Agency - Creative agency for brand, web, commerce & AI"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rarestar Agency — Design, Development & AI Solutions",
+    title: "Rarestar Agency - Design, Development & AI Solutions",
     description:
       "Brand identity, websites, headless commerce, and AI solutions from design through launch.",
     creator: "@rarestarstudio",
@@ -82,9 +82,9 @@ const jsonLd = {
       url: "https://agency.rarestar.studio",
       logo: {
         "@type": "ImageObject",
-        url: "https://agency.rarestar.studio/brand/mark.png",
-        width: "512",
-        height: "512"
+        url: "https://agency.rarestar.studio/brand/agency-lockup-red-bg.png",
+        width: "2516",
+        height: "631"
       },
       image: "https://agency.rarestar.studio/opengraph-image",
       contactPoint: {
@@ -162,7 +162,7 @@ const jsonLd = {
       author: { "@type": "Person", name: "Arjun Mehta" },
       reviewRating: { "@type": "Rating", ratingValue: "5" },
       reviewBody:
-        "RareStar delivered our brand system and site on schedule with clear handoffs.",
+        "Rarestar delivered our brand system and site on schedule with clear handoffs.",
       itemReviewed: { "@id": "https://agency.rarestar.studio#organization" }
     },
     {
@@ -176,10 +176,6 @@ const jsonLd = {
   ]
 };
 
-/**
- * Agency layout — wraps the agency subdomain (agency.rarestar.studio).
- * Contains all agency-specific SEO, JSON-LD, and UI chrome (nav, cursor, etc.).
- */
 export default function AgencyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>

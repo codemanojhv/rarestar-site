@@ -46,7 +46,7 @@ function HeroContent({
         <div
           data-reveal-target={ink ? undefined : ""}
           data-hover={ink ? undefined : "reveal"}
-          className={`${revealUp} mb-8`}
+          className={`${revealUp} mb-8 md:hidden`}
         >
           <Image
             src={ink ? "/brand/agency-lockup-ink.png" : "/brand/agency-lockup-paper.png"}

@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import SmoothScroll from "@/components/SmoothScroll";
-import Cursor from "@/components/Cursor";
-import ScrollProgress from "@/components/ScrollProgress";
 import RehaiNav from "@/components/rehai/RehaiNav";
 import RehaiFooter from "@/components/rehai/RehaiFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rehai.rarestar.studio"),
-  title: "Rehai — AI-Powered Neurological Rehabilitation",
+  title: "Rehai - AI-Powered Neurological Rehabilitation",
   description:
-    "Rehai is an AI-powered neurological rehabilitation platform focused on speech and cognitive recovery. Adapts to each patient's unique journey.",
+    "Rehai is an AI-powered neurological rehabilitation platform focused on speech and cognitive recovery.",
   keywords: [
     "neurological rehabilitation",
     "speech therapy AI",
@@ -21,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://rehai.rarestar.studio",
-    title: "Rehai — AI-Powered Neurological Rehabilitation",
+    title: "Rehai - AI-Powered Neurological Rehabilitation",
     description: "AI-powered neurological rehabilitation focused on speech and cognitive recovery.",
     siteName: "Rehai",
     locale: "en_US",
@@ -45,17 +43,6 @@ const jsonLd = {
         name: "Rarestar Studio",
         url: "https://rarestar.studio"
       }
-    },
-    {
-      "@type": "MedicalOrganization",
-      "@id": "https://rehai.rarestar.studio#organization",
-      name: "Rehai",
-      url: "https://rehai.rarestar.studio",
-      parentOrganization: {
-        "@type": "Organization",
-        name: "Rarestar Creative Studio LLP",
-        url: "https://rarestar.studio"
-      }
     }
   ]
 };
@@ -68,11 +55,9 @@ export default function RehaiLayout({ children }: { children: React.ReactNode })
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SmoothScroll />
-      <ScrollProgress />
       <RehaiNav />
       {children}
       <RehaiFooter />
-      <Cursor />
     </>
   );
 }

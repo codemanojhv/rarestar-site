@@ -13,6 +13,7 @@
   --color-rehai-glow: #00E5BF;
 
   --font-display: var(--font-fraunces), "Times New Roman", serif;
+  --font-rehai-display: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
@@ -20,6 +21,13 @@
 :root {
   color-scheme: dark;
   --grain-opacity: 0.035;
+}
+
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dialog-overlay],
+[data-nextjs-dev-overlay] {
+  display: none !important;
 }
 
 html,
@@ -365,4 +373,3 @@ html.lenis body {
 .animate-rehai-glow {
   animation: rehai-glow-pulse 2.5s ease-in-out infinite;
 }
-

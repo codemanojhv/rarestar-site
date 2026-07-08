@@ -36,6 +36,7 @@ next-env.d.ts
 .obsidian/
 
 # local agent and scratch files
+.tmp/
 .kiro/
 .opencode/
 caveman/

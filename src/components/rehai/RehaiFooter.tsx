@@ -13,7 +13,7 @@ export default function RehaiFooter() {
           <span className="text-[31px] font-semibold tracking-[0.02em]">REHAI</span>
         </a>
 
-        <p className="text-[12px] text-[#969da2]">© Rehai Care 2025. All rights reserved.</p>
+        <p className="text-[12px] text-[#969da2]">© Rehai 2026. All rights reserved.</p>
 
         <nav className="flex flex-wrap items-center justify-center gap-8">
           {links.map((link) => (

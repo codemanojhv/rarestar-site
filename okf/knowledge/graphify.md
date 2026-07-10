@@ -4,7 +4,7 @@ title: "Graphify Codebase Graph"
 description: "Graphify extracts codebase relationships into graphify-out and powers scoped codebase queries."
 resource: "file:///E:/rarestar-site/graphify-out/graph.json"
 tags: ["graphify", "knowledge-graph", "code-navigation"]
-timestamp: "2026-07-08T06:56:02.371Z"
+timestamp: "2026-07-10T01:09:02.263Z"
 graph_nodes: 613
 graph_edges: 713
 ---

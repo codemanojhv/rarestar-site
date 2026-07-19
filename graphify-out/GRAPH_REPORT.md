@@ -1,16 +1,16 @@
-# Graph Report - rarestar-site  (2026-07-08)
+# Graph Report - rarestar-site  (2026-07-20)
 
 ## Corpus Check
-- 135 files · ~181,746 words
+- 137 files · ~543,895 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 613 nodes · 713 edges · 99 communities (83 shown, 16 thin omitted)
+- 636 nodes · 740 edges · 100 communities (85 shown, 15 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `16ba22d1`
+- Built from commit: `5d4e69c2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,7 +28,6 @@
 - [[_COMMUNITY_Community 10|Community 10]]
 - [[_COMMUNITY_Community 11|Community 11]]
 - [[_COMMUNITY_Community 12|Community 12]]
-- [[_COMMUNITY_Community 13|Community 13]]
 - [[_COMMUNITY_Community 14|Community 14]]
 - [[_COMMUNITY_Community 15|Community 15]]
 - [[_COMMUNITY_Community 16|Community 16]]
@@ -110,6 +109,7 @@
 - [[_COMMUNITY_Community 95|Community 95]]
 - [[_COMMUNITY_Community 96|Community 96]]
 - [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 99|Community 99]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 18 edges
@@ -138,11 +138,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (99 total, 16 thin omitted)
+## Communities (100 total, 15 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.08
-Nodes (28): Footer(), NAV_LINKS, SOCIAL_LINKS, Hero(), HeroContent(), splitChars(), HeroVideo(), AgencyLayout() (+20 more)
+Cohesion: 0.13
+Nodes (18): Footer(), NAV_LINKS, SOCIAL_LINKS, Hero(), HeroContent(), splitChars(), HeroVideo(), LINKS (+10 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.07
@@ -150,7 +150,7 @@ Nodes (25): Manifesto(), Home(), Process(), steps, Services, stack, StackMarquee
 
 ### Community 2 - "Community 2"
 Cohesion: 0.06
-Nodes (33): dependencies, framer-motion, gsap, lenis, lucide-react, next, react, react-dom (+25 more)
+Nodes (34): dependencies, framer-motion, gsap, lenis, lucide-react, next, react, react-dom (+26 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.07
@@ -169,8 +169,8 @@ Cohesion: 0.30
 Nodes (7): manifest(), getSiteFromHostname(), config, middleware(), SiteConfig, SiteKey, SITES
 
 ### Community 7 - "Community 7"
-Cohesion: 0.23
-Nodes (7): jsonLd, metadata, RehaiLayout(), links, RehaiFooter(), links, RehaiNav()
+Cohesion: 0.09
+Nodes (19): AgencyLayout(), jsonLd, metadata, ensureCtx(), playTick(), playWhoosh(), SoundDesign(), Cursor() (+11 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.20
@@ -181,8 +181,8 @@ Cohesion: 0.40
 Nodes (4): Architecture, Citations, Entrypoints, Knowledge System
 
 ### Community 10 - "Community 10"
-Cohesion: 0.39
-Nodes (7): fraunces, inter, jetbrains, metadata, playfair, RootLayout(), viewport
+Cohesion: 0.33
+Nodes (8): fraunces, inter, jetbrains, manrope, metadata, playfair, RootLayout(), viewport
 
 ### Community 11 - "Community 11"
 Cohesion: 0.40
@@ -192,17 +192,13 @@ Nodes (4): Citations, Implementation, Producer, Update Flow
 Cohesion: 0.50
 Nodes (4): loadAssetDataUrl(), loadFontFile(), OpenGraphImage(), size
 
-### Community 13 - "Community 13"
-Cohesion: 0.67
-Nodes (4): ensureCtx(), playTick(), playWhoosh(), SoundDesign()
-
 ### Community 14 - "Community 14"
 Cohesion: 0.70
 Nodes (3): ContactBody, isValidEmail(), POST()
 
 ### Community 28 - "Community 28"
-Cohesion: 0.40
-Nodes (8): benefits, fade(), faq, process, RehaiLanding(), SectionTitle(), testimonials, trustedLogos
+Cohesion: 0.11
+Nodes (18): RehaiIconName, benefits, capabilities, Capability, Challenge, challenges, fade(), faq (+10 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.17
@@ -456,10 +452,18 @@ Nodes (3): Exports, Local Imports, Role
 Cohesion: 0.50
 Nodes (3): Exports, Local Imports, Role
 
+### Community 96 - "Community 96"
+Cohesion: 0.50
+Nodes (3): 2026-07-08, 2026-07-10, OKF Update Log
+
+### Community 99 - "Community 99"
+Cohesion: 0.36
+Nodes (6): createParticleGeometry(), createProgram(), createShader(), links, RehaiFooter(), seeded()
+
 ## Knowledge Gaps
-- **279 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+274 more)
+- **291 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+286 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -467,13 +471,13 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `scrollToId()` connect `Community 0` to `Community 1`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
-  _279 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _291 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.07616892911010557 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12903225806451613 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.07239819004524888 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.07179487179487179 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

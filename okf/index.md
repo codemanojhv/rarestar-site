@@ -9,6 +9,6 @@
 
 ## Source Areas
 * [Routes](routes/index.md) - 13 route and layout concepts.
-* [Components](components/index.md) - 28 component concepts.
+* [Components](components/index.md) - 29 component concepts.
 * [API Endpoints](api/index.md) - 3 endpoint concepts.
 * [Package Manifest](dependencies/package.md) - Scripts and dependencies.

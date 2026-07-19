@@ -4,7 +4,7 @@ title: "RehaiFooter"
 description: "React Component at src/components/rehai/RehaiFooter.tsx."
 resource: "file:///E:/rarestar-site/src/components/rehai/RehaiFooter.tsx"
 tags: ["react-component", "components"]
-timestamp: "2026-07-08T06:58:55.827Z"
+timestamp: "2026-07-19T19:55:45.276Z"
 source_path: "src/components/rehai/RehaiFooter.tsx"
 ---
 # Role
@@ -17,4 +17,4 @@ source_path: "src/components/rehai/RehaiFooter.tsx"
 
 # Local Imports
 
-* No local imports detected.
+* `./RehaiIcon`

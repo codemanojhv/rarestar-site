@@ -14,6 +14,7 @@
 
   --font-display: var(--font-fraunces), "Times New Roman", serif;
   --font-rehai-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-rehai: var(--font-manrope), system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
@@ -48,15 +49,15 @@ body {
   cursor: default;
 }
 
-/* Hide native cursor on fine pointers where the custom cursor shows. */
+/* Hide the native cursor only for pages that mount the custom cursor. */
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  body,
-  a,
-  button,
-  [role="button"],
-  input,
-  textarea,
-  select {
+  body:has([data-cursor-root]),
+  body:has([data-cursor-root]) a,
+  body:has([data-cursor-root]) button,
+  body:has([data-cursor-root]) [role="button"],
+  body:has([data-cursor-root]) input,
+  body:has([data-cursor-root]) textarea,
+  body:has([data-cursor-root]) select {
     cursor: none;
   }
 }
@@ -372,4 +373,697 @@ html.lenis body {
 
 .animate-rehai-glow {
   animation: rehai-glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* Rehai visual system */
+.rehai-page {
+  --rehai-bg: #f0f7ff;
+  --rehai-cobalt: #315a9d;
+  --rehai-deep: #173e82;
+  --rehai-ink: #132049;
+  --rehai-muted: #66738c;
+  --rehai-coral: #f27d92;
+  --rehai-pale-coral: #ffb1be;
+  --rehai-line: rgba(45, 84, 145, 0.13);
+  --rehai-glass: rgba(255, 255, 255, 0.68);
+  background: var(--rehai-bg);
+  color: var(--rehai-ink);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  overflow: hidden;
+}
+
+body:has(.rehai-page) {
+  background: var(--rehai-bg);
+}
+
+.rehai-shell {
+  width: min(88vw, 1280px);
+  margin-inline: auto;
+}
+
+.rehai-section {
+  padding: 76px 0;
+}
+
+.rehai-reveal {
+  will-change: transform, opacity;
+}
+
+.rehai-icon {
+  display: block;
+  flex: none;
+}
+
+.rehai-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: max(720px, 100dvh);
+  overflow: hidden;
+  border-radius: 0 0 26px 26px;
+  background: var(--rehai-deep);
+  color: #fff;
+}
+
+.rehai-hero::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 auto;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(8, 20, 48, 0.42), rgba(8, 20, 48, 0.15) 52%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.rehai-hero-art,
+.rehai-audience-art,
+.rehai-why-art,
+.rehai-final-art {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rehai-hero-art {
+  object-position: center top;
+}
+
+.rehai-hero-mark {
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -50%);
+  opacity: 0.09;
+  filter: brightness(0) invert(1);
+}
+
+.rehai-petal {
+  position: absolute;
+  z-index: 3;
+  width: 12px;
+  height: 7px;
+  border-radius: 90% 10% 90% 10%;
+  background: var(--rehai-pale-coral);
+  opacity: 0.72;
+  transform: rotate(28deg);
+}
+
+.rehai-petal--one { left: 37%; top: 28%; }
+.rehai-petal--two { right: 29%; top: 48%; transform: rotate(-32deg); }
+.rehai-petal--three { left: 56%; top: 36%; width: 9px; height: 5px; opacity: 0.52; transform: rotate(-18deg); }
+.rehai-petal--four { right: 43%; top: 63%; width: 8px; height: 5px; opacity: 0.48; transform: rotate(42deg); }
+
+.rehai-hero-inner {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  min-height: max(720px, 100dvh);
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.62fr);
+  align-items: end;
+  gap: 72px;
+  padding-top: 160px;
+  padding-bottom: 108px;
+}
+
+.rehai-hero-copy h1 {
+  max-width: 740px;
+  margin: 18px 0 0;
+  font-size: clamp(42px, 4.45vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.rehai-hero-copy h1 span { color: var(--rehai-pale-coral); }
+.rehai-hero-copy h1 em { color: #fff; font-style: normal; }
+
+.rehai-eyebrow {
+  margin: 0;
+  color: var(--rehai-coral);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.rehai-eyebrow--light { color: var(--rehai-pale-coral); }
+
+.rehai-hero-aside {
+  max-width: 360px;
+  justify-self: end;
+  padding-bottom: 3px;
+}
+
+.rehai-hero-aside > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.rehai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.rehai-button,
+.rehai-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.rehai-button:hover,
+.rehai-link:hover { transform: translateY(-2px); }
+
+.rehai-button--light {
+  padding: 12px 18px;
+  background: #fff;
+  color: var(--rehai-deep);
+}
+
+.rehai-hero-cta {
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: transparent;
+  color: #fff;
+  backdrop-filter: none;
+}
+
+.rehai-link { padding: 10px 4px; }
+.rehai-link--light { color: rgba(255, 255, 255, 0.92); }
+
+.rehai-nav {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+}
+
+.rehai-nav .rehai-button--light { color: #173e82; }
+
+.rehai-nav-inner {
+  display: flex;
+  height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.rehai-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+}
+
+.rehai-brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(12px);
+}
+
+.rehai-brand-mark img { width: 25px; height: 25px; object-fit: contain; }
+
+.rehai-nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.8vw, 42px);
+  margin-left: auto;
+}
+
+.rehai-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.rehai-nav-links a:hover { color: #fff; }
+.rehai-nav-actions { display: flex; align-items: center; gap: 12px; }
+.rehai-nav-cta { min-height: 40px; padding: 10px 15px; }
+.rehai-menu-button { display: none; border: 0; background: transparent; color: #fff; }
+
+.rehai-problem-section { position: relative; padding-top: 66px; padding-bottom: 48px; }
+
+.rehai-problem-grid {
+  position: relative;
+  display: grid;
+  min-height: 430px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.rehai-problem-copy { position: relative; z-index: 2; max-width: 520px; }
+.rehai-problem-copy h2,
+.rehai-why-copy h2,
+.rehai-waitlist-copy h2,
+.rehai-faq-intro h2 {
+  margin: 15px 0 0;
+  color: var(--rehai-ink);
+  font-size: clamp(30px, 3vw, 43px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.rehai-problem-copy > p:last-child,
+.rehai-why-copy > p,
+.rehai-waitlist-copy > p {
+  max-width: 510px;
+  margin: 24px 0 0;
+  color: var(--rehai-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.rehai-problem-art {
+  position: relative;
+  min-height: 280px;
+  margin-right: -7vw;
+}
+
+.rehai-problem-art img {
+  object-fit: contain;
+  object-position: right center;
+  mix-blend-mode: multiply;
+}
+
+.rehai-challenges {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: -20px;
+}
+
+.rehai-challenge {
+  min-height: 80px;
+  padding-left: 16px;
+  border-left: 1px solid var(--rehai-line);
+}
+
+.rehai-challenge-icon { display: inline-flex; color: var(--rehai-cobalt); }
+.rehai-challenge p { margin: 10px 0 0; color: var(--rehai-ink); font-size: 11px; font-weight: 800; line-height: 1.35; }
+.rehai-challenge p span { color: var(--rehai-muted); font-weight: 600; }
+
+.rehai-process-section { padding-top: 32px; }
+
+.rehai-glass {
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.56));
+  box-shadow: 0 20px 60px rgba(36, 75, 135, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+
+.rehai-process-panel { padding: 40px 42px 38px; border-radius: 8px; }
+
+.rehai-section-heading { max-width: 760px; margin: 0 auto; text-align: center; }
+.rehai-section-heading h2 { margin: 13px 0 0; color: var(--rehai-ink); font-size: clamp(27px, 2.65vw, 38px); font-weight: 750; letter-spacing: -0.035em; line-height: 1.08; }
+.rehai-section-copy { max-width: 580px; margin: 14px auto 0; color: var(--rehai-muted); font-size: 14px; line-height: 1.6; }
+
+.rehai-process-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.rehai-process-steps::before {
+  position: absolute;
+  top: 64px;
+  right: 7%;
+  left: 7%;
+  height: 1px;
+  background: repeating-linear-gradient(90deg, rgba(49, 90, 157, 0.2) 0 3px, transparent 3px 8px);
+  content: "";
+}
+
+.rehai-step { position: relative; z-index: 1; text-align: center; }
+.rehai-step-number { display: grid; width: 26px; height: 26px; margin: 0 auto; place-items: center; border-radius: 50%; background: var(--rehai-coral); color: #fff; font-size: 9px; font-weight: 800; }
+.rehai-step-icon,
+.rehai-capability-icon,
+.rehai-card-icon {
+  display: inline-grid;
+  place-items: center;
+  color: var(--rehai-cobalt);
+}
+
+.rehai-step-icon { width: 56px; height: 56px; margin-top: 10px; border-radius: 50%; background: rgba(236, 244, 255, 0.94); }
+.rehai-step,
+.rehai-capability,
+.rehai-waitlist-card { transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease; }
+.rehai-step:hover { transform: translateY(-5px); }
+.rehai-step:hover .rehai-step-icon { background: rgba(255, 221, 228, 0.96); }
+.rehai-step h3 { min-height: 32px; margin: 13px 0 0; color: var(--rehai-ink); font-size: 12px; font-weight: 800; line-height: 1.3; }
+.rehai-step p { margin: 10px auto 0; color: var(--rehai-muted); font-size: 10px; line-height: 1.55; }
+
+.rehai-audience-section { padding-top: 34px; }
+.rehai-audience-panel { position: relative; display: grid; min-height: 325px; grid-template-columns: 1fr 1fr; overflow: hidden; border-radius: 8px; background: var(--rehai-deep); color: #fff; }
+.rehai-audience-art { object-position: center top; opacity: 0.28; mix-blend-mode: screen; }
+.rehai-audience-column { position: relative; z-index: 1; padding: 38px 44px; }
+.rehai-audience-column + .rehai-audience-column { border-left: 1px solid rgba(255, 255, 255, 0.2); }
+.rehai-audience-column h2 { margin: 13px 0 0; font-size: clamp(32px, 3vw, 46px); font-weight: 600; letter-spacing: -0.045em; line-height: 1; }
+.rehai-audience-column ul { display: grid; gap: 10px; margin: 27px 0 0; padding: 0; list-style: none; }
+.rehai-audience-column li { display: flex; align-items: flex-start; gap: 10px; color: rgba(255, 255, 255, 0.91); font-size: 12px; line-height: 1.4; }
+.rehai-audience-column li .rehai-icon { color: var(--rehai-pale-coral); }
+.rehai-audience-column .rehai-button { margin-top: 26px; }
+.rehai-audience-divider { position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.rehai-audience-divider span { display: grid; width: 58px; height: 58px; place-items: center; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 50%; background: rgba(119, 173, 243, 0.55); box-shadow: 0 8px 24px rgba(4, 32, 90, 0.22); backdrop-filter: blur(10px); }
+.rehai-audience-divider img { width: 35px; height: 35px; object-fit: contain; filter: brightness(0) invert(1); }
+
+.rehai-capabilities-section { padding-top: 64px; }
+.rehai-capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 34px; }
+.rehai-capability { display: flex; min-height: 126px; gap: 14px; padding: 20px; border-radius: 8px; }
+.rehai-capability:hover,
+.rehai-waitlist-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(36, 75, 135, 0.12); }
+.rehai-capability-icon { width: 44px; height: 44px; flex: none; border-radius: 50%; background: rgba(235, 243, 255, 0.96); }
+.rehai-capability h3 { margin: 2px 0 0; color: var(--rehai-ink); font-size: 13px; font-weight: 800; }
+.rehai-capability p { margin: 8px 0 0; color: var(--rehai-muted); font-size: 11px; line-height: 1.5; }
+
+.rehai-why-section { padding-top: 22px; }
+.rehai-why-panel { position: relative; display: grid; min-height: 350px; grid-template-columns: 0.92fr 1.08fr; overflow: hidden; border-radius: 8px; background: transparent; }
+.rehai-why-art { object-position: center; opacity: 1; mix-blend-mode: normal; transform: scaleX(-1); }
+.rehai-why-copy { position: relative; z-index: 1; grid-column: 2; padding: 54px 52px 42px 18px; }
+.rehai-proof-points { display: flex; flex-wrap: wrap; gap: 15px 24px; margin-top: 27px; }
+.rehai-proof-points span { display: inline-flex; align-items: center; gap: 7px; color: #cc687d; font-size: 10px; font-weight: 800; }
+
+.rehai-waitlist-section { padding-top: 66px; padding-bottom: 66px; }
+.rehai-waitlist-grid { display: grid; grid-template-columns: 0.83fr 1.17fr; gap: 48px; align-items: center; }
+.rehai-waitlist-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.rehai-waitlist-card { min-height: 228px; padding: 20px; border-radius: 8px; }
+.rehai-card-icon { width: 42px; height: 42px; border-radius: 50%; background: rgba(235, 243, 255, 0.96); }
+.rehai-waitlist-card h3 { margin: 15px 0 0; color: var(--rehai-ink); font-size: 13px; font-weight: 800; line-height: 1.3; }
+.rehai-waitlist-card p { min-height: 34px; margin: 8px 0 0; color: var(--rehai-muted); font-size: 11px; line-height: 1.45; }
+.rehai-waitlist-note { grid-column: 1 / -1; margin: 0; color: #8a96ad; font-size: 10px; text-align: center; }
+.rehai-waitlist-form { display: flex; max-width: 420px; gap: 7px; margin-top: 26px; }
+.rehai-waitlist-form--compact { max-width: none; margin-top: 16px; }
+.rehai-waitlist-form input { min-width: 0; flex: 1; height: 40px; padding: 0 12px; border: 1px solid #d8e3f1; border-radius: 6px; background: rgba(255, 255, 255, 0.88); color: var(--rehai-ink); font: inherit; font-size: 11px; outline: none; }
+.rehai-waitlist-form input:focus { border-color: var(--rehai-coral); box-shadow: 0 0 0 3px rgba(242, 125, 146, 0.15); }
+.rehai-waitlist-form button { height: 40px; padding: 0 14px; border: 0; border-radius: 6px; background: var(--rehai-cobalt); color: #fff; cursor: pointer; font: inherit; font-size: 11px; font-weight: 800; white-space: nowrap; }
+
+.rehai-faq-section { padding-top: 12px; padding-bottom: 38px; }
+.rehai-faq-panel { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 42px; padding: 34px 40px; overflow: hidden; border-radius: 8px; }
+.rehai-faq-intro { position: relative; overflow: hidden; min-height: 360px; }
+.rehai-faq-intro h2 em { color: var(--rehai-coral); font-family: var(--font-fraunces); font-style: italic; font-weight: 400; }
+.rehai-faq-intro-copy { max-width: 220px; margin: 20px 0 0; color: var(--rehai-muted); font-size: 12px; line-height: 1.6; }
+.rehai-faq-signal { position: absolute; z-index: 1; bottom: 18px; left: 0; display: flex; align-items: baseline; gap: 10px; color: var(--rehai-muted); }
+.rehai-faq-signal strong { color: var(--rehai-coral); font-size: 34px; font-weight: 700; letter-spacing: -0.06em; }
+.rehai-faq-signal span { max-width: 110px; font-size: 9px; font-weight: 800; line-height: 1.3; text-transform: uppercase; }
+.rehai-faq-art { position: absolute; left: -130px; bottom: -100px; width: 560px; max-width: none; height: auto; opacity: 0.36; mix-blend-mode: multiply; transform: scaleX(-1); }
+.rehai-faq-list { position: relative; z-index: 1; }
+.rehai-faq-item { border-top: 1px solid var(--rehai-line); transition: background-color 220ms ease; }
+.rehai-faq-item:last-child { border-bottom: 1px solid var(--rehai-line); }
+.rehai-faq-item--open { background: rgba(236, 244, 255, 0.72); }
+.rehai-faq-item button { display: grid; width: 100%; min-height: 66px; grid-template-columns: 38px 1fr auto; align-items: center; gap: 14px; padding: 15px 16px; border: 0; background: transparent; color: var(--rehai-ink); cursor: pointer; font: inherit; font-size: 12px; font-weight: 800; text-align: left; }
+.rehai-faq-index { color: var(--rehai-coral); font-size: 10px; font-weight: 800; letter-spacing: 0.08em; }
+.rehai-faq-question { line-height: 1.35; }
+.rehai-faq-toggle { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid rgba(49, 90, 157, 0.16); border-radius: 50%; color: var(--rehai-cobalt); transition: transform 220ms ease, background-color 220ms ease, color 220ms ease; }
+.rehai-faq-item--open .rehai-faq-toggle { background: var(--rehai-deep); color: #fff; transform: rotate(180deg); }
+.rehai-faq-answer { padding: 0 60px 22px 68px; animation: rehai-faq-answer-in 360ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rehai-faq-answer p { max-width: 600px; margin: 0; color: var(--rehai-muted); font-size: 11px; line-height: 1.65; }
+.rehai-faq-answer span { display: inline-block; margin-top: 15px; color: var(--rehai-coral); font-size: 8px; font-weight: 800; letter-spacing: 0.14em; }
+
+@keyframes rehai-faq-answer-in { from { opacity: 0; transform: translateY(-7px); } to { opacity: 1; transform: translateY(0); } }
+
+.rehai-final-section { padding-top: 0; padding-bottom: 40px; }
+.rehai-final-panel { position: relative; min-height: 270px; overflow: hidden; border-radius: 8px; background: transparent; color: #fff; }
+.rehai-final-art { opacity: 1; object-position: right center; mix-blend-mode: normal; }
+.rehai-final-copy { position: relative; z-index: 1; max-width: 680px; padding: 48px 52px; }
+.rehai-final-copy h2 { margin: 0; font-size: clamp(30px, 3.1vw, 47px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.03; }
+.rehai-final-copy p { margin: 15px 0 0; color: rgba(255, 255, 255, 0.82); font-size: 13px; }
+.rehai-final-copy .rehai-actions { margin-top: 24px; }
+.rehai-final-cta { padding: 12px 18px; border: 1px solid rgba(255, 255, 255, 0.72); background: transparent; color: #fff; backdrop-filter: none; }
+
+@supports not (backdrop-filter: blur(1px)) {
+  .rehai-glass { background: rgba(255, 255, 255, 0.94); }
+  .rehai-brand-mark,
+  .rehai-audience-divider span { background: rgba(44, 83, 150, 0.9); }
+}
+
+@media (max-width: 900px) {
+  .rehai-shell { width: min(92vw, 720px); }
+  .rehai-section { padding: 58px 0; }
+  .rehai-nav-inner { height: 72px; }
+  .rehai-nav-links { position: absolute; top: 66px; right: 4vw; left: 4vw; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 8px; background: rgba(17, 53, 116, 0.9); backdrop-filter: blur(18px); }
+  .rehai-nav-links--open { display: flex; }
+  .rehai-nav-links a { padding: 12px; }
+  .rehai-nav-cta { display: none; }
+  .rehai-menu-button { display: block; padding: 8px; }
+  .rehai-hero { min-height: max(660px, 100dvh); }
+  .rehai-hero-inner { min-height: max(660px, 100dvh); grid-template-columns: 1fr; align-content: end; gap: 26px; padding-top: 120px; padding-bottom: 70px; }
+  .rehai-hero-aside { justify-self: start; }
+  .rehai-problem-grid { grid-template-columns: 1fr; }
+  .rehai-problem-art { min-height: 240px; margin: -40px -12vw -40px 4vw; }
+  .rehai-challenges { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 8px; }
+  .rehai-challenge:last-child { grid-column: 1 / -1; }
+  .rehai-process-panel { padding: 32px 22px; }
+  .rehai-process-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 20px; }
+  .rehai-process-steps::before { display: none; }
+  .rehai-audience-panel { grid-template-columns: 1fr; }
+  .rehai-audience-column + .rehai-audience-column { border-top: 1px solid rgba(255, 255, 255, 0.2); border-left: 0; }
+  .rehai-audience-divider { top: 50%; }
+  .rehai-capability-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rehai-why-panel { min-height: 500px; grid-template-columns: 1fr; }
+  .rehai-why-copy { grid-column: 1; align-self: end; padding: 42px 28px 34px; }
+  .rehai-waitlist-grid { grid-template-columns: 1fr; gap: 30px; }
+  .rehai-faq-panel { grid-template-columns: 1fr; gap: 18px; padding: 28px 24px; }
+  .rehai-faq-intro { min-height: 210px; }
+}
+
+@media (max-width: 560px) {
+  .rehai-shell { width: calc(100% - 36px); }
+  .rehai-hero-copy h1 { font-size: clamp(38px, 11vw, 58px); }
+  .rehai-hero-aside > p { font-size: 13px; }
+  .rehai-actions { gap: 10px; }
+  .rehai-button--light { padding-inline: 14px; }
+  .rehai-problem-copy h2,
+  .rehai-why-copy h2,
+  .rehai-waitlist-copy h2,
+  .rehai-faq-intro h2 { font-size: 30px; }
+  .rehai-process-steps { grid-template-columns: 1fr; }
+  .rehai-audience-column { padding: 32px 25px; }
+  .rehai-audience-column h2 { font-size: 38px; }
+  .rehai-capability-grid { grid-template-columns: 1fr; }
+  .rehai-waitlist-cards { grid-template-columns: 1fr; }
+  .rehai-waitlist-note { grid-column: auto; }
+  .rehai-final-copy { padding: 36px 25px; }
+  .rehai-final-copy h2 { font-size: 31px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rehai-button,
+  .rehai-link { transition: none; }
+}
+
+/* Rehai signature layer: a small set of authored moments over the existing system. */
+.rehai-page { position: relative; overflow: clip; }
+.rehai-hero-copy h1 em { font-family: var(--font-fraunces); font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+
+.rehai-intro {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: #153b7b;
+  color: #fff;
+}
+
+.rehai-intro::before,
+.rehai-intro::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.rehai-intro::before {
+  z-index: -2;
+  background: linear-gradient(135deg, rgba(255, 178, 194, 0.18), transparent 36%), linear-gradient(315deg, rgba(73, 139, 211, 0.3), transparent 55%);
+}
+
+.rehai-intro::after {
+  z-index: -1;
+  opacity: 0.16;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.32) 0.6px, transparent 0.6px);
+  background-size: 5px 5px;
+  mix-blend-mode: soft-light;
+}
+
+.rehai-intro-ring {
+  position: absolute;
+  width: min(72vw, 840px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(255, 255, 255, 0.025), 0 0 0 35px rgba(255, 255, 255, 0.08);
+}
+
+.rehai-intro-mark { width: 54px; height: 54px; margin: -230px 0 0; filter: brightness(0) invert(1); opacity: 0.9; }
+.rehai-intro-kicker { position: absolute; top: 38px; left: 42px; margin: 0; color: rgba(255, 255, 255, 0.62); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; }
+.rehai-intro-title { margin: -54px 0 0; font-size: clamp(54px, 8vw, 112px); font-weight: 500; letter-spacing: -0.065em; line-height: 0.88; text-align: center; }
+.rehai-intro-title em { color: var(--rehai-pale-coral); font-family: var(--font-fraunces); font-style: italic; font-weight: 400; }
+.rehai-intro-copy { position: absolute; bottom: 124px; max-width: 270px; margin: 0; color: rgba(255, 255, 255, 0.72); font-size: 12px; line-height: 1.55; text-align: center; }
+.rehai-intro-enter { display: inline-flex; align-items: center; gap: 9px; margin: 154px 0 0; padding: 13px 17px; border: 1px solid rgba(255, 255, 255, 0.34); border-radius: 999px; background: rgba(255, 255, 255, 0.12); color: #fff; cursor: pointer; font: inherit; font-size: 11px; font-weight: 800; backdrop-filter: blur(14px); }
+.rehai-intro-enter:hover { background: rgba(255, 255, 255, 0.2); }
+.rehai-intro-skip { position: absolute; right: 42px; bottom: 38px; padding: 7px 0; border: 0; background: transparent; color: rgba(255, 255, 255, 0.62); cursor: pointer; font: inherit; font-size: 10px; }
+.rehai-intro-skip:hover { color: #fff; }
+.rehai-intro-progress { position: absolute; right: 42px; bottom: 24px; left: 42px; height: 1px; overflow: hidden; background: rgba(255, 255, 255, 0.18); transform-origin: left; }
+.rehai-intro-progress::after { display: block; width: 100%; height: 100%; background: var(--rehai-pale-coral); content: ""; transform: scaleX(0); transform-origin: left; animation: rehai-intro-progress 2.4s linear forwards; }
+
+@keyframes rehai-intro-progress { to { transform: scaleX(1); } }
+
+.rehai-nav { transition: top 260ms ease, width 260ms ease, color 260ms ease, background-color 260ms ease, box-shadow 260ms ease; }
+.rehai-nav--scrolled { position: fixed; top: 12px; right: auto; left: 50%; width: min(1180px, calc(100% - 32px)); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 999px; background: rgba(18, 51, 112, 0.74); box-shadow: 0 14px 38px rgba(8, 35, 80, 0.2); transform: translateX(-50%); backdrop-filter: blur(18px) saturate(130%); }
+.rehai-nav--scrolled .rehai-nav-inner { width: 100%; max-width: none; height: 62px; margin-inline: 0; padding-inline: 18px; }
+
+.rehai-process-track { position: relative; margin-top: 40px; }
+.rehai-process-path { position: absolute; z-index: 0; top: 21px; right: 3%; left: 3%; width: 94%; height: 92px; overflow: visible; pointer-events: none; }
+.rehai-process-path path { fill: none; stroke: rgba(242, 125, 146, 0.75); stroke-linecap: round; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.rehai-process-track .rehai-process-steps { z-index: 1; margin-top: 0; }
+.rehai-step-number { box-shadow: 0 4px 12px rgba(242, 125, 146, 0.2); }
+.rehai-step-icon { border: 1px solid rgba(49, 90, 157, 0.08); }
+.rehai-step h3 { position: relative; }
+
+.rehai-audience-panel { transition: grid-template-columns 500ms cubic-bezier(0.22, 1, 0.36, 1); }
+.rehai-audience-panel:hover .rehai-audience-column { opacity: 0.72; transition: opacity 300ms ease; }
+.rehai-audience-panel .rehai-audience-column:hover { opacity: 1; }
+
+.rehai-waitlist-cards { grid-template-columns: 1fr; }
+.rehai-waitlist-card--primary { min-height: 252px; padding: 22px 24px 20px; }
+.rehai-role-switch { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid rgba(49, 90, 157, 0.1); border-radius: 999px; background: rgba(235, 243, 255, 0.72); }
+.rehai-role-switch button { min-height: 28px; padding: 6px 11px; border: 0; border-radius: 999px; background: transparent; color: var(--rehai-muted); cursor: pointer; font: inherit; font-size: 10px; font-weight: 800; }
+.rehai-role-switch button.is-active { background: var(--rehai-deep); color: #fff; box-shadow: 0 4px 10px rgba(23, 62, 130, 0.16); }
+.rehai-waitlist-card--primary .rehai-card-icon { margin-top: 18px; }
+
+@media (max-width: 900px) {
+  .rehai-nav--scrolled { top: 8px; width: calc(100% - 24px); }
+  .rehai-nav--scrolled .rehai-nav-inner { padding-inline: 12px; }
+  .rehai-process-path { display: none; }
+  .rehai-process-track { margin-top: 34px; }
+}
+
+@media (max-width: 560px) {
+  .rehai-intro-kicker { top: 24px; left: 22px; }
+  .rehai-intro-skip { right: 22px; bottom: 30px; }
+  .rehai-intro-progress { right: 22px; bottom: 18px; left: 22px; }
+  .rehai-intro-ring { width: 118vw; }
+  .rehai-intro-mark { margin-top: -190px; }
+  .rehai-intro-title { font-size: 60px; }
+  .rehai-intro-copy { bottom: 104px; }
+  .rehai-intro-enter { margin-top: 140px; }
+  .rehai-role-switch button { padding-inline: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rehai-intro-progress::after { animation: none; transform: scaleX(1); }
+  .rehai-nav,
+  .rehai-audience-panel,
+  .rehai-audience-panel .rehai-audience-column { transition: none; }
+  .rehai-step:hover,
+  .rehai-capability:hover,
+  .rehai-waitlist-card:hover { transform: none; }
+}
+
+.rehai-footer {
+  --rehai-footer-bg: #071536;
+  --rehai-footer-ink: #f3f7ff;
+  --rehai-footer-muted: rgba(227, 237, 255, 0.68);
+  --rehai-footer-coral: #ff9bad;
+  position: relative;
+  overflow: hidden;
+  background: var(--rehai-footer-bg);
+  color: var(--rehai-footer-ink);
+}
+.rehai-footer-stage { position: relative; min-height: max(720px, 100dvh); overflow: hidden; }
+.rehai-footer-webgl { position: absolute; z-index: 0; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
+.rehai-footer-branch { position: absolute !important; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right top; opacity: 0.24; mix-blend-mode: screen; pointer-events: none; transform: scale(1.15) translateX(6%); }
+.rehai-footer-stage-inner { position: relative; z-index: 2; display: grid; min-height: max(720px, 100dvh); grid-template-rows: auto 1fr auto; padding-top: 94px; padding-bottom: 24px; }
+.rehai-footer-intro { max-width: 430px; }
+.rehai-footer-kicker { margin: 0; color: var(--rehai-footer-coral); font-size: 10px; font-weight: 800; letter-spacing: 0.16em; line-height: 1.2; text-transform: uppercase; }
+.rehai-footer-intro h2 { margin: 18px 0 0; color: #132049; font-size: 58px; font-weight: 500; letter-spacing: 0; line-height: 0.94; text-shadow: 0 1px 18px rgba(255, 255, 255, 0.22); }
+.rehai-footer-intro h2 em { color: var(--rehai-footer-coral); font-family: var(--font-fraunces); font-style: italic; font-weight: 400; }
+.rehai-footer-intro-copy { margin: 18px 0 0; color: rgba(19, 32, 73, 0.68); font-size: 13px; line-height: 1.5; }
+.rehai-footer-cta { display: inline-flex; align-items: center; gap: 9px; margin-top: 25px; padding: 12px 16px; border: 1px solid rgba(19, 32, 73, 0.3); border-radius: 999px; background: rgba(255, 255, 255, 0.22); color: #132049; font-size: 11px; font-weight: 800; text-decoration: none; backdrop-filter: blur(12px); transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease; }
+.rehai-footer-cta:hover { border-color: rgba(19, 32, 73, 0.58); background: rgba(255, 255, 255, 0.42); transform: translateY(-2px); }
+.rehai-footer-word { display: flex; align-self: end; justify-content: center; color: rgba(245, 249, 255, 0.92); font-size: 260px; font-weight: 800; letter-spacing: 0; line-height: 0.74; text-shadow: 0 18px 70px rgba(0, 0, 0, 0.24); white-space: nowrap; }
+.rehai-footer-letter { display: block; padding: 0 0.012em; will-change: transform; }
+.rehai-footer-content { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; padding-top: 18px; border-top: 1px solid rgba(225, 237, 255, 0.2); }
+.rehai-footer-brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: 0; text-decoration: none; }
+.rehai-footer-mark { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50%; background: rgba(255, 255, 255, 0.13); }
+.rehai-footer-mark img { width: 21px; height: 21px; filter: brightness(0) invert(1); object-fit: contain; }
+.rehai-footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 26px; }
+.rehai-footer-links a,
+.rehai-footer-top { display: inline-flex; align-items: center; gap: 7px; color: var(--rehai-footer-muted); font-size: 11px; font-weight: 700; text-decoration: none; transition: color 180ms ease, transform 180ms ease; }
+.rehai-footer-links a:hover,
+.rehai-footer-top:hover { color: #fff; transform: translateY(-2px); }
+.rehai-footer-legal { grid-column: 1 / -1; margin: 2px 0 0; color: rgba(227, 237, 255, 0.48); font-size: 10px; }
+
+@media (max-width: 900px) {
+  .rehai-footer-stage-inner { padding-top: 52px; }
+  .rehai-footer-intro h2 { font-size: 48px; }
+  .rehai-footer-word { font-size: 160px; }
+  .rehai-footer-content { grid-template-columns: 1fr auto; }
+  .rehai-footer-links { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; }
+  .rehai-footer-legal { grid-row: 3; }
+}
+
+@media (max-width: 560px) {
+  .rehai-footer-stage,
+  .rehai-footer-stage-inner { min-height: max(660px, 100dvh); }
+  .rehai-footer-stage-inner { padding-top: 86px; padding-bottom: 18px; }
+  .rehai-footer-intro { max-width: 290px; }
+  .rehai-footer-intro h2 { margin-top: 14px; font-size: 38px; }
+  .rehai-footer-intro-copy { margin-top: 13px; font-size: 12px; }
+  .rehai-footer-cta { margin-top: 18px; }
+  .rehai-footer-word { font-size: 82px; }
+  .rehai-footer-content { grid-template-columns: 1fr; gap: 16px; }
+  .rehai-footer-links { grid-column: auto; grid-row: auto; justify-content: flex-start; gap: 12px 18px; }
+  .rehai-footer-top { justify-self: start; }
+  .rehai-footer-legal { grid-column: auto; grid-row: auto; }
+  .rehai-footer-branch { transform: scale(1.35) translateX(14%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rehai-faq-item,
+  .rehai-faq-toggle,
+  .rehai-footer-cta,
+  .rehai-footer-links a,
+  .rehai-footer-top { transition: none; }
+  .rehai-faq-answer { animation: none; }
 }

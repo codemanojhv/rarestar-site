@@ -4,7 +4,7 @@ title: "Tsconfig"
 description: "Source File at tsconfig.json."
 resource: "file:///E:/rarestar-site/tsconfig.json"
 tags: ["source-file", "root"]
-timestamp: "2026-04-18T08:51:30.755Z"
+timestamp: "2026-07-19T13:35:02.631Z"
 source_path: "tsconfig.json"
 ---
 # Role

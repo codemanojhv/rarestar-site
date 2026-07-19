@@ -1,37 +1,40 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import RehaiIcon from "./RehaiIcon";
 
-const links = ["How It Works", "Technology", "For Therapists", "About Us"];
+const links = [
+  ["How It Works", "#how-it-works"],
+  ["About Us", "#about-us"],
+  ["Resources", "#technology"],
+  ["For Therapists", "#for-therapists"]
+];
 
 export default function RehaiNav() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 56);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/45 bg-[#fdfbf8]/72 backdrop-blur-xl">
-      <div className="mx-auto flex h-[78px] max-w-[1180px] items-center justify-between px-6">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="Rehai home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#23aaa6]">
-            <Image src="/rehai/logo.png" alt="" width={24} height={24} className="h-6 w-6 object-contain brightness-0 invert" />
-          </span>
-          <span className="text-[31px] font-semibold tracking-[0.02em] text-[#1c2235]">REHAI</span>
+    <header className={scrolled ? "rehai-nav rehai-nav--scrolled" : "rehai-nav"}>
+      <div className="rehai-shell rehai-nav-inner">
+        <a href="#top" className="rehai-brand" aria-label="Rehai home" onClick={() => setOpen(false)}>
+          <span className="rehai-brand-mark"><Image src="/rehai/logo.png" alt="" width={38} height={38} className="brightness-0 invert" /></span>
+          <span>REHAI</span>
         </a>
-
-        <nav className="hidden items-center gap-9 md:flex">
-          {links.map((link) => (
-            <a key={link} href={`#${link.toLowerCase().replaceAll(" ", "-")}`} className="text-[13px] font-medium text-[#1c2235]/80 transition-colors hover:text-[#23aaa6]">
-              {link}
-            </a>
-          ))}
+        <nav className={open ? "rehai-nav-links rehai-nav-links--open" : "rehai-nav-links"}>
+          {links.map(([label, href]) => <a href={href} key={label} onClick={() => setOpen(false)}>{label}{label === "Resources" ? <RehaiIcon name="chevron-down" size={13} /> : null}</a>)}
         </nav>
-
-        <div className="flex items-center gap-3">
-          <a href="#login" className="hidden rounded-full border border-[#d9e5e4] bg-white/65 px-6 py-3 text-[13px] font-medium text-[#1c2235] shadow-[0_12px_35px_rgba(28,34,53,0.04)] md:inline-flex">
-            Login
-          </a>
-          <a href="#waitlist" className="inline-flex items-center gap-2 rounded-full bg-[#23aaa6] px-6 py-3 text-[13px] font-semibold text-white shadow-[0_16px_38px_rgba(35,170,166,0.22)] transition-transform hover:scale-[1.03]">
-            Join Waitlist
-            <ChevronRight size={16} strokeWidth={2.6} />
-          </a>
+        <div className="rehai-nav-actions">
+          <a className="rehai-button rehai-button--light rehai-nav-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={15} /></a>
+          <button className="rehai-menu-button" type="button" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen(!open)}><RehaiIcon name="menu" size={23} /></button>
         </div>
       </div>
     </header>

@@ -4,7 +4,7 @@ title: "Obsidian Vault Export"
 description: "The graphify Obsidian vault is regenerated at E:/rarestar-site-vault."
 resource: "file:///E:/rarestar-site-vault"
 tags: ["obsidian", "vault", "graphify"]
-timestamp: "2026-07-10T01:09:02.263Z"
+timestamp: "2026-07-19T20:24:35.613Z"
 ---
 # Vault
 

@@ -31,6 +31,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/three": "^0.160.0",
+    "hytrax": "^0.1.0-alpha.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^4.0.0",
     "typescript": "latest"

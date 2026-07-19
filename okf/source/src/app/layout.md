@@ -4,7 +4,7 @@ title: "src / app layout"
 description: "Route Layout at src/app/layout.tsx."
 resource: "file:///E:/rarestar-site/src/app/layout.tsx"
 tags: ["route-layout", "app"]
-timestamp: "2026-06-29T11:38:08.011Z"
+timestamp: "2026-07-19T13:26:36.014Z"
 source_path: "src/app/layout.tsx"
 ---
 # Role

@@ -4,7 +4,7 @@ title: "Package"
 description: "Source File at package.json."
 resource: "file:///E:/rarestar-site/package.json"
 tags: ["source-file", "root"]
-timestamp: "2026-07-08T06:36:19.272Z"
+timestamp: "2026-07-13T03:34:32.857Z"
 source_path: "package.json"
 ---
 # Role

@@ -1,362 +1,394 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  BarChart3,
-  CalendarDays,
-  ChevronDown,
-  ChevronRight,
-  CircleGauge,
-  Mic,
-  RefreshCw,
-  ShieldCheck,
-  Sparkles,
-  UserRoundCheck,
-  UsersRound,
-  Volume2
-} from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RehaiIcon, { RehaiIconName } from "./RehaiIcon";
 
-const trustedLogos = ["LBS", "JEANS", "TAKKO", "vodafone"];
+gsap.registerPlugin(ScrollTrigger);
 
-const process = [
-  { n: "01", title: "Speak", desc: "Patient completes rehabilitation exercise", icon: Mic },
-  { n: "02", title: "AI Understands", desc: "Speech and cognitive responses are captured digitally", icon: Volume2 },
-  { n: "03", title: "Measures", desc: "AI generates clinical metrics and tracks performance", icon: BarChart3 },
-  { n: "04", title: "Adapts", desc: "Adaptive engine recommends the next best task", icon: Sparkles },
-  { n: "05", title: "Therapist Reviews", desc: "Therapist reviews progress and provides guidance", icon: UserRoundCheck },
-  { n: "06", title: "Recovery Continues", desc: "Personalized therapy continues for better outcomes", icon: RefreshCw }
+type Step = { number: string; title: string; copy: string; icon: RehaiIconName };
+type Challenge = { title: string; detail: string; icon: RehaiIconName };
+type Capability = { title: string; copy: string; icon: RehaiIconName };
+type RehaiRole = "patient" | "therapist";
+
+const steps: Step[] = [
+  { number: "01", title: "Complete Exercises", copy: "Speech and cognitive exercises tailored to your needs.", icon: "waveform" },
+  { number: "02", title: "Capture Responses", copy: "Your responses are recorded securely and instantly.", icon: "mic" },
+  { number: "03", title: "AI Generates Metrics", copy: "Advanced models analyze performance and extract insights.", icon: "chart" },
+  { number: "04", title: "Adaptive Recommendations", copy: "Rehai adapts the next tasks to maximize your recovery.", icon: "brain" },
+  { number: "05", title: "Therapist Reviews", copy: "Therapists supervise, review and guide your journey.", icon: "therapist" },
+  { number: "06", title: "Recovery Continues", copy: "Track progress over time with consistent, personalised support.", icon: "heart" }
 ];
 
-const benefits = [
-  { title: "Daily Guided Sessions", desc: "Structured exercises that build consistency.", icon: CalendarDays },
-  { title: "Objective Insights", desc: "Data-driven progress you can trust.", icon: BarChart3 },
-  { title: "Safe & Secure", desc: "Enterprise-grade security and privacy.", icon: ShieldCheck },
-  { title: "Better Outcomes", desc: "More engagement. Better recovery. Together.", icon: UsersRound }
+const challenges: Challenge[] = [
+  { title: "Severe shortage", detail: "of specialists", icon: "person" },
+  { title: "High therapy", detail: "costs", icon: "cost" },
+  { title: "Limited access", detail: "outside cities", icon: "location" },
+  { title: "Manual tracking", detail: "is slow & inconsistent", icon: "clock" },
+  { title: "Therapy is not", detail: "personalized", icon: "sliders" }
 ];
 
-const testimonials = [
-  {
-    quote: "Rehai keeps me motivated every day. The exercises are simple and really helpful.",
-    name: "Larry, 62",
-    avatar: "/rehai/patient_arjun.png"
+const capabilities: Capability[] = [
+  { title: "Speech Recovery", copy: "Exercises that help improve pronunciation, fluency, naming and communication.", icon: "speech" },
+  { title: "Cognitive Recovery", copy: "Tasks to strengthen memory, attention, problem solving and executive function.", icon: "brain" },
+  { title: "Adaptive Therapy", copy: "AI adapts difficulty and content based on performance and recovery patterns.", icon: "sparkles" },
+  { title: "Progress Intelligence", copy: "Objective metrics and trend analysis to track meaningful improvement.", icon: "chart" },
+  { title: "Indian Languages", copy: "Built for India. Supporting Kannada, Tamil and more languages.", icon: "globe" },
+  { title: "Therapist Oversight", copy: "Therapists stay in control with insights, reviews and clinical supervision.", icon: "shield" }
+];
+
+const faqs = [
+  ["Is Rehai available to use right now?", "Rehai is being built with clinicians and patients. Join the waitlist to receive access updates."],
+  ["Who is Rehai for?", "People recovering from stroke, aphasia, traumatic brain injury and related cognitive conditions."],
+  ["Which languages will Rehai support?", "Rehai is designed for India, starting with English and Indian-language support."],
+  ["How is my data protected?", "We use privacy-first workflows and secure clinical data handling."],
+  ["How can therapists get involved?", "Therapists and clinics can join the waitlist to pilot Rehai with their patients."]
+] as const;
+
+const roleCopy: Record<RehaiRole, { label: string; copy: string; icon: RehaiIconName }> = {
+  patient: {
+    label: "I am seeking rehabilitation support",
+    copy: "Join the waitlist to be among the first to access Rehai.",
+    icon: "heart"
   },
-  {
-    quote: "I can see real improvement in my speech and memory after using Rehai.",
-    name: "Michael, 76",
-    avatar: "/rehai/patient_arjun.png"
-  },
-  {
-    quote: "As a therapist, Rehai helps me deliver smarter and more personalised care.",
-    name: "Dr. Neha Sharma",
-    role: "Speech Therapist",
-    avatar: "/rehai/doctor_priya.png"
+  therapist: {
+    label: "I am a therapist or clinician",
+    copy: "Collaborate with us, get early access and help shape Rehai.",
+    icon: "users"
   }
-];
+};
 
-const faq = [
-  {
-    q: "Does my insurance cover Rehai?",
-    a: "Rehai is a digital therapeutic platform. Coverage depends on your provider. Please check with your insurance or contact us - we're happy to help."
-  },
-  { q: "Is Rehai easy to use?", a: "Yes. Sessions are guided, simple, and built for patients and caregivers." },
-  { q: "Do I need a therapist to use Rehai?", a: "Rehai works best with therapist guidance, but daily practice can happen at home." },
-  { q: "Is my data safe and private?", a: "Rehai is designed with secure clinical workflows and privacy-first data handling." }
-];
+function WaitlistForm({ compact = false, idSuffix = "final" }: { compact?: boolean; idSuffix?: string }) {
+  const [email, setEmail] = useState("");
+  const [done, setDone] = useState(false);
 
-function fade(delay = 0) {
-  return {
-    initial: { opacity: 1, y: 0 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: "-80px" },
-    transition: { duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] as const }
-  };
+  function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setDone(true);
+    setEmail("");
+  }
+
+  return (
+    <form onSubmit={submit} className={compact ? "rehai-waitlist-form rehai-waitlist-form--compact" : "rehai-waitlist-form"}>
+      <label className="sr-only" htmlFor={`rehai-email-${idSuffix}`}>Email address</label>
+      <input
+        id={`rehai-email-${idSuffix}`}
+        aria-label="Email address"
+        type="email"
+        required
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+        placeholder="Enter your email"
+      />
+      <button type="submit">{done ? "You're in" : "Join Waitlist"}</button>
+    </form>
+  );
 }
 
-function SectionTitle({
-  title,
-  subtitle
-}: {
-  title: string;
-  subtitle: string;
-}) {
+function SectionHeading({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
   return (
-    <motion.div {...fade()} className="mx-auto mb-10 max-w-[640px] text-center">
-      <h2 className="font-rehai-display text-[36px] leading-tight text-[#202237] md:text-[47px]">
-        {title}
-      </h2>
-      <p className="mt-3 text-[13px] font-medium text-[#9aa0a4]">{subtitle}</p>
-    </motion.div>
+    <div className="rehai-section-heading rehai-reveal">
+      <p className="rehai-eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {copy ? <p className="rehai-section-copy">{copy}</p> : null}
+    </div>
   );
 }
 
 export default function RehaiLanding() {
-  const [openFaq, setOpenFaq] = useState(0);
+  const rootRef = useRef<HTMLElement>(null);
+  const introRef = useRef<HTMLDivElement>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [waitlistRole, setWaitlistRole] = useState<RehaiRole>("patient");
+  const [introOpen, setIntroOpen] = useState(false);
+
+  function finishIntro() {
+    if (typeof window === "undefined") return;
+    window.sessionStorage.setItem("rehai-intro-seen", "1");
+    const intro = introRef.current;
+    if (!intro) {
+      setIntroOpen(false);
+      return;
+    }
+    gsap.to(intro, { autoAlpha: 0, duration: 0.5, ease: "power2.inOut", onComplete: () => setIntroOpen(false) });
+  }
 
   useEffect(() => {
-    const previous = document.documentElement.style.getPropertyValue("--grain-opacity");
-    document.documentElement.style.setProperty("--grain-opacity", "0");
-    return () => {
-      document.documentElement.style.setProperty("--grain-opacity", previous || "0.035");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (window.sessionStorage.getItem("rehai-intro-seen") || reducedMotion) return;
+    setIntroOpen(true);
+  }, []);
+
+  useEffect(() => {
+    if (!introOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") finishIntro();
     };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [introOpen]);
+
+  useLayoutEffect(() => {
+    if (!introOpen) return;
+    const context = gsap.context(() => {
+      gsap.from(".rehai-intro-mark, .rehai-intro-kicker, .rehai-intro-title, .rehai-intro-copy, .rehai-intro-enter", {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: "power3.out"
+      });
+      gsap.from(".rehai-intro-ring", { scale: 0.68, opacity: 0, duration: 1.25, ease: "power3.out" });
+    }, introRef);
+    const timer = window.setTimeout(finishIntro, 2400);
+    return () => {
+      window.clearTimeout(timer);
+      context.revert();
+    };
+  }, [introOpen]);
+
+  useLayoutEffect(() => {
+    const context = gsap.context(() => {
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reducedMotion) return;
+
+      gsap.from(".rehai-hero-copy > *", { duration: 0.8, y: 22, opacity: 0, stagger: 0.1, ease: "power3.out", delay: 0.12 });
+      gsap.from(".rehai-hero-aside > *", { duration: 0.75, y: 18, opacity: 0, stagger: 0.1, ease: "power3.out", delay: 0.42 });
+      gsap.to(".rehai-hero-art", {
+        yPercent: 7,
+        ease: "none",
+        scrollTrigger: { trigger: ".rehai-hero", start: "top top", end: "bottom top", scrub: true }
+      });
+      const processPath = rootRef.current?.querySelector<SVGPathElement>(".rehai-process-path path");
+      const processTrack = rootRef.current?.querySelector<HTMLElement>(".rehai-process-track");
+      if (processPath && processTrack) {
+        const length = processPath.getTotalLength();
+        gsap.set(processPath, { strokeDasharray: length, strokeDashoffset: length });
+        gsap.to(processPath, {
+          strokeDashoffset: 0,
+          ease: "none",
+          scrollTrigger: { trigger: processTrack, start: "top 78%", end: "bottom 68%", scrub: 1 }
+        });
+      }
+      gsap.utils.toArray<HTMLElement>(".rehai-reveal").forEach((element) => {
+        gsap.from(element, {
+          y: 24,
+          opacity: 0,
+          duration: 0.7,
+          ease: "power2.out",
+          scrollTrigger: { trigger: element, start: "top 86%", once: true }
+        });
+      });
+      gsap.to(".rehai-petal", { y: -12, x: 8, rotation: 8, duration: 4.5, ease: "sine.inOut", repeat: -1, yoyo: true, stagger: 0.9 });
+    }, rootRef);
+
+    return () => context.revert();
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#fdfbf8] text-[#1c2235]">
-      <section id="top" className="relative min-h-[700px] overflow-hidden px-5 pb-20 pt-[118px] md:min-h-[760px] md:px-6 md:pt-[132px]">
-        <Image src="/rehai/hero-garden.png" alt="" fill priority loading="eager" sizes="100vw" className="scale-105 object-cover object-center" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,.82),rgba(253,251,248,.2)_42%,rgba(253,251,248,.92)_78%),linear-gradient(180deg,rgba(253,251,248,.1)_0%,#fdfbf8_96%)]" />
-        <div className="relative z-10 mx-auto max-w-[1120px] text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55 }}
-            className="mx-auto mb-6 inline-flex rounded-full border border-[#d8eeee] bg-white/55 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#77b9b7] shadow-[0_14px_45px_rgba(33,184,181,0.07)] backdrop-blur-md"
-          >
-            AI-powered neurological rehabilitation
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.08 }}
-            className="mx-auto max-w-[780px] font-rehai-display text-[52px] leading-[1.02] text-[#202237] md:text-[72px]"
-          >
-            Recovery.
-            <br />
-            Made <span className="text-[#1caaa7]">Intelligent.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.16 }}
-            className="mx-auto mt-8 max-w-[470px] text-[19px] leading-[1.6] text-[#323848]"
-          >
-            AI-powered speech and cognitive rehabilitation that adapts to every patient's recovery.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.24 }}
-            className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
-          >
-            <a href="#waitlist" className="inline-flex items-center gap-4 rounded-full bg-[#23aaa6] px-8 py-4 text-[15px] font-semibold text-white shadow-[0_22px_45px_rgba(35,170,166,.24)] transition-transform hover:scale-[1.03]">
-              Join Waitlist <ChevronRight size={17} strokeWidth={3} />
-            </a>
-            <a href="#how-it-works" className="inline-flex items-center gap-4 rounded-full bg-white/90 px-8 py-4 text-[15px] font-semibold text-[#1c2235] shadow-[0_22px_55px_rgba(28,34,53,.08)] transition-transform hover:scale-[1.03]">
-              See How It Works <ChevronRight size={16} fill="#1c2235" strokeWidth={2.6} />
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.32 }}
-            className="mx-auto mt-20 max-w-[640px] md:mt-[148px]"
-          >
-            <p className="mb-6 text-[12px] font-medium text-[#b1b5b6]">Trusted by rehabilitation professionals</p>
-            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-[16px] font-bold tracking-tight text-[#2a3039]/38 grayscale md:gap-x-16 md:text-[18px]">
-              {trustedLogos.map((logo) => (
-                <span key={logo}>{logo}</span>
-              ))}
-            </div>
-          </motion.div>
+    <>
+      {introOpen ? (
+        <div ref={introRef} className="rehai-intro" role="dialog" aria-modal="true" aria-label="Rehai introduction">
+          <div className="rehai-intro-ring" aria-hidden="true" />
+          <Image src="/rehai/logo.png" alt="" width={88} height={88} className="rehai-intro-mark" />
+          <p className="rehai-intro-kicker">REHAI / 01</p>
+          <h2 className="rehai-intro-title">Recovery,<br /><em>in bloom.</em></h2>
+          <p className="rehai-intro-copy">A new rhythm for speech, cognition and the people who guide recovery.</p>
+          <button type="button" className="rehai-intro-enter" onClick={finishIntro}>Enter Rehai <RehaiIcon name="arrow" size={16} /></button>
+          <button type="button" className="rehai-intro-skip" onClick={finishIntro}>Skip intro</button>
+          <span className="rehai-intro-progress" aria-hidden="true" />
         </div>
-      </section>
-
-      <section id="how-it-works" className="px-6 pb-16 pt-10">
-        <div className="mx-auto max-w-[1120px]">
-          <SectionTitle title="Here's How It Works" subtitle="Intelligent. Adaptive. Therapist-guided." />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
-            {process.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <motion.div key={item.n} {...fade(i * 0.04)} className="relative">
-                  <div className="min-h-[250px] rounded-[18px] border border-white bg-white/88 p-6 text-center shadow-[0_24px_70px_rgba(33,184,181,0.08)] transition-transform hover:-translate-y-1">
-                    <div className="mx-auto mb-9 flex h-10 w-10 items-center justify-center rounded-full bg-[#e9f8f6] text-[13px] font-bold text-[#9ccfcd]">
-                      {item.n}
-                    </div>
-                    <Icon className="mx-auto mb-7 text-[#20aaa6]" size={30} strokeWidth={2.1} />
-                    <h3 className="text-[15px] font-bold text-[#1f2537]">{item.title}</h3>
-                    <p className="mx-auto mt-4 max-w-[120px] text-[11px] leading-[1.55] text-[#8f969d]">{item.desc}</p>
-                  </div>
-                  {i < process.length - 1 && (
-                    <ChevronRight className="absolute right-[-18px] top-1/2 z-10 hidden -translate-y-1/2 text-[#9ad6d4] md:block" size={15} />
-                  )}
-                </motion.div>
-              );
-            })}
+      ) : null}
+      <main ref={rootRef} className="rehai-page">
+      <section id="top" className="rehai-hero" data-rehai-scene="hero">
+        <Image src="/rehai/rehai-canopy-cinematic.jpg" alt="" fill priority sizes="100vw" className="rehai-hero-art" />
+        <Image src="/rehai/logo.png" alt="" width={320} height={320} className="rehai-hero-mark" />
+        <span className="rehai-petal rehai-petal--one" />
+        <span className="rehai-petal rehai-petal--two" />
+        <span className="rehai-petal rehai-petal--three" />
+        <span className="rehai-petal rehai-petal--four" />
+        <div className="rehai-shell rehai-hero-inner">
+          <div className="rehai-hero-copy">
+            <p className="rehai-eyebrow rehai-eyebrow--light">REHAI CARE, MADE PERSONAL</p>
+            <h1>Speech and<br />Cognitive Recovery.<br /><span>Powered by <em>AI.</em></span></h1>
+          </div>
+          <div className="rehai-hero-aside">
+            <p>AI-powered speech and cognitive rehabilitation in Indian languages, personalized for every patient&apos;s recovery.</p>
+            <div className="rehai-actions">
+              <a className="rehai-button rehai-hero-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={16} /></a>
+              <a className="rehai-link rehai-link--light" href="#how-it-works">Contact Us <RehaiIcon name="arrow" size={16} /></a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="technology" className="px-6 py-8">
-        <div className="mx-auto grid max-w-[1120px] gap-5 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1.05fr_.78fr]">
-          <motion.article {...fade()} className="overflow-hidden rounded-[18px] border border-white bg-white shadow-[0_25px_80px_rgba(28,34,53,.08)]">
-            <div className="relative h-[235px]">
-              <Image src="/rehai/therapy_session.png" alt="Patient using Rehai tablet" fill sizes="(min-width: 768px) 310px, 100vw" className="object-cover object-[45%_35%]" />
-            </div>
-            <div className="p-7">
-              <h3 className="text-[16px] font-bold">Designed for Real Recovery</h3>
-              <p className="mt-5 max-w-[245px] text-[13px] leading-[1.65] text-[#72767e]">
-                Evidence-based exercises for speech, cognition, attention and memory.
-              </p>
-              <div className="mt-6 flex items-center justify-between text-[#23aaa6]">
-                <span className="flex gap-3"><Sparkles size={14} /><CircleGauge size={14} /></span>
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-[0_12px_30px_rgba(28,34,53,.08)]">
-                  <ChevronRight size={16} />
-                </span>
+      <section className="rehai-section rehai-problem-section" data-rehai-scene="problem">
+        <div className="rehai-shell rehai-problem-grid">
+          <div className="rehai-problem-copy rehai-reveal">
+            <p className="rehai-eyebrow">THE PROBLEM</p>
+            <h2>Recovery doesn&apos;t end after therapy. But support often does.</h2>
+            <p>Millions of people in India live with speech and cognitive challenges due to stroke, aphasia, TBI and other neurological conditions.</p>
+          </div>
+          <div className="rehai-problem-art rehai-reveal">
+            <Image src="/rehai/problem-watercolor-clean.png" alt="Watercolor cherry blossom tree over misty mountains" fill sizes="(min-width: 900px) 55vw, 100vw" />
+          </div>
+          <div className="rehai-challenges rehai-reveal">
+            {challenges.map((challenge) => (
+              <div className="rehai-challenge" key={challenge.title}>
+                <span className="rehai-challenge-icon"><RehaiIcon name={challenge.icon} size={24} /></span>
+                <p>{challenge.title}<br /><span>{challenge.detail}</span></p>
               </div>
-            </div>
-          </motion.article>
-
-          <motion.article {...fade(0.05)} className="relative min-h-[385px] overflow-hidden rounded-[18px] border border-white bg-[#e4f8f7] p-7 shadow-[0_25px_80px_rgba(28,34,53,.06)]">
-            <h3 className="relative z-10 text-[16px] font-bold">Adaptive for Every Patient</h3>
-            <p className="relative z-10 mt-5 max-w-[220px] text-[13px] leading-[1.65] text-[#72767e]">
-              AI personalizes difficulty and recommends what works best for each individual.
-            </p>
-            <Image src="/rehai/chart-waves.png" alt="Adaptive recovery chart" fill sizes="(min-width: 768px) 270px, 100vw" className="z-0 object-cover object-bottom opacity-95" />
-          </motion.article>
-
-          <motion.article {...fade(0.1)} className="overflow-hidden rounded-[18px] border border-white bg-white p-7 shadow-[0_25px_80px_rgba(28,34,53,.08)]">
-            <h3 className="text-[16px] font-bold">Therapist-Guided Care</h3>
-            <p className="mt-5 max-w-[235px] text-[13px] leading-[1.65] text-[#545b63]">
-              AI assists. Therapists decide. Ensuring safe, effective and ethical rehabilitation.
-            </p>
-            <div className="mt-7 relative h-[174px] overflow-hidden rounded-[10px]">
-              <Image src="/rehai/doctor_priya.png" alt="Therapist consultation" fill sizes="(min-width: 768px) 270px, 100vw" className="object-cover object-[50%_28%]" />
-            </div>
-          </motion.article>
-
-          <motion.article {...fade(0.15)} className="relative min-h-[385px] overflow-hidden rounded-[18px] bg-[#21aaa7] p-7 text-white shadow-[0_25px_80px_rgba(33,184,181,.22)]">
-            <h3 className="text-[17px] font-bold leading-tight">Track What Matters</h3>
-            <p className="mt-5 text-[13px] leading-[1.65] text-white/92">Objective metrics that show real improvement over time.</p>
-            <div className="absolute bottom-10 left-1/2 flex h-[150px] w-[150px] -translate-x-1/2 items-center justify-center rounded-full border-[15px] border-white/25">
-              <div className="absolute inset-[-15px] rounded-full border-[15px] border-transparent border-t-white/70 border-r-white/70" />
-              <div className="text-center">
-                <p className="text-[38px] font-semibold">92%</p>
-                <p className="text-[12px] font-semibold leading-tight">Improvement<br />This Week</p>
-              </div>
-            </div>
-          </motion.article>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mx-auto mt-12 grid max-w-[1120px] gap-5 md:grid-cols-2">
-          <motion.div {...fade()} className="relative min-h-[300px] overflow-hidden rounded-[14px] bg-[#ddf6f5] p-10">
-            <h3 className="mb-8 text-[17px] font-bold">We Support</h3>
-            <ul className="space-y-5 text-[14px] font-semibold">
-              {["Stroke", "Aphasia", "Traumatic Brain Injury", "Cognitive Impairment", "Other Neurological Conditions"].map((item, i) => (
-                <li key={item} className="flex items-center gap-4">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#c7efec] text-[11px] text-[#22aaa7]">{i + 1}</span>
-                  {item}
-                </li>
-              ))}
+      <section id="how-it-works" className="rehai-section rehai-process-section" data-rehai-scene="process">
+        <div className="rehai-shell rehai-glass rehai-process-panel">
+          <SectionHeading eyebrow="HOW REHAI WORKS" title="Personalized rehabilitation. Measurable progress." />
+          <div className="rehai-process-track">
+            <svg className="rehai-process-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M 3 44 C 14 14, 20 14, 29 44 S 44 74, 51 44 S 67 14, 75 44 S 88 73, 97 44" />
+            </svg>
+          <div className="rehai-process-steps">
+            {steps.map((step) => (
+              <article className="rehai-step rehai-reveal" key={step.number} data-step={step.number}>
+                <span className="rehai-step-number">{step.number}</span>
+                <span className="rehai-step-icon"><RehaiIcon name={step.icon} size={28} /></span>
+                <h3>{step.title}</h3>
+                <p>{step.copy}</p>
+              </article>
+            ))}
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="technology" className="rehai-section rehai-audience-section" data-rehai-scene="audience">
+        <div className="rehai-shell rehai-audience-panel">
+          <Image src="/rehai/rehai-canopy-cinematic.jpg" alt="" fill sizes="(min-width: 900px) 1280px, 100vw" className="rehai-audience-art" />
+          <div className="rehai-audience-column rehai-reveal">
+            <p className="rehai-eyebrow rehai-eyebrow--light">FOR PATIENTS</p>
+            <h2>For Patients</h2>
+            <ul>
+              {["Personalized exercises that adapt to you", "Track your recovery over time", "Stay motivated with guided sessions", "Available in your preferred language"].map((item) => <li key={item}><RehaiIcon name="check" size={18} />{item}</li>)}
             </ul>
-            <Image src="/rehai/floral-panel.png" alt="" width={360} height={170} className="absolute bottom-0 right-0 w-[45%] opacity-85" />
-          </motion.div>
-
-          <motion.div {...fade(0.08)} className="relative min-h-[300px] overflow-hidden rounded-[14px] bg-[#def6f5] p-10">
-            <h3 className="relative z-10 text-[17px] font-bold">Built for Impact</h3>
-            <p className="relative z-10 mt-8 max-w-[250px] text-[18px] leading-[1.45] text-[#202237]">
-              Making quality rehabilitation accessible to more people, everywhere.
-            </p>
-            <button className="relative z-10 mt-10 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#23aaa6] shadow-[0_18px_45px_rgba(28,34,53,.08)]">
-              <ChevronRight size={19} />
-            </button>
-            <Image src="/rehai/ripple-panel.png" alt="" fill sizes="(min-width: 768px) 540px, 100vw" className="z-0 object-cover object-right opacity-90" />
-          </motion.div>
+            <a className="rehai-button rehai-button--light" href="#waitlist">I want to start my journey <RehaiIcon name="arrow" size={15} /></a>
+          </div>
+          <div className="rehai-audience-divider" aria-hidden="true"><span><Image src="/rehai/logo.png" alt="" width={56} height={56} /></span></div>
+          <div id="for-therapists" className="rehai-audience-column rehai-reveal">
+            <p className="rehai-eyebrow rehai-eyebrow--light">FOR THERAPISTS</p>
+            <h2>For Therapists</h2>
+            <ul>
+              {["Manage patients and sessions easily", "Objective insights and progress reports", "Save time with automated scoring", "Better outcomes with data-driven support"].map((item) => <li key={item}><RehaiIcon name="check" size={18} />{item}</li>)}
+            </ul>
+            <a className="rehai-button rehai-button--light" href="#waitlist">I&apos;m a therapist or clinician <RehaiIcon name="arrow" size={15} /></a>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-[1120px]">
-          <SectionTitle title="Real People. Real Progress." subtitle="AI-powered care that patients trust and therapists rely on." />
-          <div className="grid gap-5 md:grid-cols-4">
-            {benefits.map((item, i) => {
-              const Icon = item.icon;
+      <section className="rehai-section rehai-capabilities-section" data-rehai-scene="capabilities">
+        <div className="rehai-shell">
+          <SectionHeading eyebrow="WHAT WE'RE BUILDING" title="Rehabilitation, reimagined with AI" />
+          <div className="rehai-capability-grid">
+            {capabilities.map((capability) => (
+              <article className="rehai-capability rehai-glass rehai-reveal" key={capability.title}>
+                <span className="rehai-capability-icon"><RehaiIcon name={capability.icon} size={25} /></span>
+                <div><h3>{capability.title}</h3><p>{capability.copy}</p></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="rehai-section rehai-why-section" data-rehai-scene="why">
+        <div className="rehai-shell rehai-why-panel">
+          <Image src="/rehai/rehai-watercolor-journey.jpg" alt="" fill sizes="(min-width: 900px) 1280px, 100vw" className="rehai-why-art" />
+          <div className="rehai-why-copy rehai-reveal">
+            <p className="rehai-eyebrow">WHY REHAI</p>
+            <h2>Every recovery journey is unique. Rehabilitation should be too.</h2>
+            <p>Rehai combines clinical science with AI to deliver continuous, meaningful and measurable rehabilitation - anytime, anywhere.</p>
+            <div className="rehai-proof-points">
+              <span><RehaiIcon name="science" size={18} />Science-backed approach</span>
+              <span><RehaiIcon name="shield" size={18} />Privacy-first by design</span>
+              <span><RehaiIcon name="therapist" size={18} />Therapist-guided and AI-powered</span>
+              <span><RehaiIcon name="location" size={18} />Built in India for India</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="waitlist" className="rehai-section rehai-waitlist-section" data-rehai-scene="waitlist">
+        <div className="rehai-shell rehai-waitlist-grid">
+          <div className="rehai-waitlist-copy rehai-reveal">
+            <p className="rehai-eyebrow">HELP SHAPE THE FUTURE</p>
+            <h2>Be part of something that matters.</h2>
+            <p>Rehai is in early development and we&apos;re building with clinicians and patients. Join the waitlist to get early access, updates and opportunities to contribute.</p>
+          </div>
+           <div className="rehai-waitlist-cards">
+             <article className="rehai-waitlist-card rehai-waitlist-card--primary rehai-glass rehai-reveal">
+               <div className="rehai-role-switch" role="tablist" aria-label="Choose your Rehai role">
+                 {(Object.keys(roleCopy) as RehaiRole[]).map((role) => (
+                   <button key={role} type="button" role="tab" aria-selected={waitlistRole === role} className={waitlistRole === role ? "is-active" : ""} onClick={() => setWaitlistRole(role)}>
+                     {role === "patient" ? "For patients" : "For therapists"}
+                   </button>
+                 ))}
+               </div>
+               <span className="rehai-card-icon"><RehaiIcon name={roleCopy[waitlistRole].icon} size={24} /></span>
+               <h3>{roleCopy[waitlistRole].label}</h3>
+               <p>{roleCopy[waitlistRole].copy}</p>
+               <WaitlistForm compact idSuffix={waitlistRole} />
+             </article>
+             <p className="rehai-waitlist-note">No spam. Only meaningful updates.</p>
+           </div>
+         </div>
+      </section>
+
+      <section id="about-us" className="rehai-section rehai-faq-section">
+        <div className="rehai-shell rehai-glass rehai-faq-panel">
+          <div className="rehai-faq-intro rehai-reveal">
+            <p className="rehai-eyebrow">REHAI / FAQ</p>
+            <h2>Your questions,<br /><em>answered.</em></h2>
+            <p className="rehai-faq-intro-copy">A clearer first step for patients, families and therapists.</p>
+            <div className="rehai-faq-signal"><strong>05</strong><span>questions before your first session</span></div>
+            <Image src="/rehai/problem-watercolor-clean.png" alt="" width={620} height={340} className="rehai-faq-art" />
+          </div>
+          <div className="rehai-faq-list">
+            {faqs.map(([question, answer], index) => {
+              const isOpen = openFaq === index;
               return (
-                <motion.div key={item.title} {...fade(i * 0.05)} className="rounded-[14px] bg-white px-8 py-10 text-center shadow-[0_24px_75px_rgba(28,34,53,.06)]">
-                  <div className="mx-auto mb-8 flex h-14 w-14 items-center justify-center rounded-[14px] bg-[#ecf9f7] text-[#23aaa6]">
-                    <Icon size={30} strokeWidth={1.8} />
-                  </div>
-                  <h3 className="text-[15px] font-bold">{item.title}</h3>
-                  <p className="mt-4 text-[12px] leading-[1.6] text-[#72767e]">{item.desc}</p>
-                </motion.div>
+                <div className={isOpen ? "rehai-faq-item rehai-faq-item--open rehai-reveal" : "rehai-faq-item rehai-reveal"} key={question}>
+                  <button id={`rehai-faq-trigger-${index}`} type="button" aria-expanded={isOpen} aria-controls={`rehai-faq-answer-${index}`} onClick={() => setOpenFaq(isOpen ? null : index)}>
+                    <span className="rehai-faq-index">0{index + 1}</span>
+                    <span className="rehai-faq-question">{question}</span>
+                    <span className="rehai-faq-toggle"><RehaiIcon name={isOpen ? "chevron-down" : "plus"} size={17} /></span>
+                  </button>
+                  {isOpen ? <div id={`rehai-faq-answer-${index}`} className="rehai-faq-answer" role="region" aria-labelledby={`rehai-faq-trigger-${index}`}><p>{answer}</p><span>REHAI / CLINICAL CLARITY</span></div> : null}
+                </div>
               );
             })}
           </div>
         </div>
       </section>
 
-      <section id="for-therapists" className="px-6 pb-16">
-        <div className="mx-auto max-w-[1120px]">
-          <SectionTitle title="Trusted by Patients and Therapists" subtitle="" />
-          <div className="grid gap-5 md:grid-cols-3">
-            {testimonials.map((item, i) => (
-              <motion.article key={item.name} {...fade(i * 0.05)} className="rounded-[14px] bg-white p-8 shadow-[0_24px_75px_rgba(28,34,53,.06)]">
-                <div className="mb-5 text-[34px] font-serif leading-none text-[#86c9c7]">&ldquo;</div>
-                <p className="min-h-[88px] text-[15px] italic leading-[1.55] text-[#39404b]">{item.quote}</p>
-                <div className="mt-8 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Image src={item.avatar} alt={item.name} width={36} height={36} className="h-9 w-9 rounded-full object-cover" />
-                    <div>
-                      <p className="text-[13px] font-semibold">{item.name}</p>
-                      {item.role && <p className="text-[10px] text-[#8b9096]">{item.role}</p>}
-                    </div>
-                  </div>
-                  <button className="flex h-9 w-9 items-center justify-center rounded-full border border-[#23aaa6] text-[#23aaa6]">
-                    <ChevronRight size={16} />
-                  </button>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-          <div className="mt-8 flex justify-center gap-2">
-            {[0, 1, 2, 3].map((dot) => (
-              <span key={dot} className={`h-2 w-2 rounded-full ${dot === 0 ? "bg-[#23aaa6]" : "bg-[#d9e4e3]"}`} />
-            ))}
+      <section className="rehai-section rehai-final-section" data-rehai-scene="final">
+        <div className="rehai-shell rehai-final-panel">
+          <Image src="/rehai/blossom-branch.png" alt="" fill sizes="(min-width: 900px) 1280px, 100vw" className="rehai-final-art" />
+          <div className="rehai-final-copy rehai-reveal">
+            <h2>Recovery is personal.<br />Rehabilitation should be too.</h2>
+            <p>Join the REHAI Early Access List.</p>
+            <div className="rehai-actions"><a className="rehai-button rehai-final-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={15} /></a><a className="rehai-link rehai-link--light" href="#top">Contact Us <RehaiIcon name="arrow" size={15} /></a></div>
           </div>
         </div>
       </section>
-
-      <section id="about-us" className="px-6 pb-16">
-        <div className="mx-auto max-w-[1090px]">
-          <SectionTitle title="Your Questions Answered" subtitle="Everything you need to know about Rehai." />
-          <div className="grid gap-6 md:grid-cols-[1.28fr_.95fr]">
-            <div className="space-y-4">
-              {faq.map((item, i) => (
-                <motion.div key={item.q} {...fade(i * 0.04)} className="overflow-hidden rounded-[12px] bg-white shadow-[0_20px_60px_rgba(28,34,53,.06)]">
-                  <button onClick={() => setOpenFaq(openFaq === i ? -1 : i)} className="flex w-full items-center justify-between px-8 py-5 text-left text-[15px] font-semibold">
-                    {item.q}
-                    <ChevronDown className={`text-[#418683] transition-transform ${openFaq === i ? "rotate-180" : ""}`} size={18} />
-                  </button>
-                  {openFaq === i && <p className="px-8 pb-7 text-[13px] leading-[1.7] text-[#8b9096]">{item.a}</p>}
-                </motion.div>
-              ))}
-            </div>
-            <motion.div {...fade(0.08)} className="relative min-h-[300px] overflow-hidden rounded-[14px]">
-              <Image src="/rehai/floral-panel.png" alt="Soft flowers and bird" fill sizes="(min-width: 768px) 460px, 100vw" className="object-cover" />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section id="waitlist" className="px-6 pb-14">
-        <motion.div {...fade()} className="relative mx-auto flex min-h-[245px] max-w-[1090px] items-center justify-center overflow-hidden rounded-[14px]">
-          <Image src="/rehai/hero-garden.png" alt="" fill sizes="(min-width: 768px) 1090px, 100vw" className="object-cover object-center" />
-          <div className="absolute inset-0 bg-white/15" />
-          <div className="relative z-10 text-center">
-            <h2 className="font-rehai-display text-[41px] leading-tight text-[#202237]">We're Here When You Need Us.</h2>
-            <p className="mt-4 text-[15px] text-[#59606a]">Take the first step towards confident recovery.</p>
-            <a href="mailto:hello@rarestar.studio" className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#23aaa6] px-7 py-4 text-[13px] font-semibold text-white shadow-[0_18px_40px_rgba(35,170,166,.23)]">
-              Join Waitlist <ChevronRight size={16} />
-            </a>
-          </div>
-        </motion.div>
-      </section>
-    </main>
+      </main>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SmoothScroll from "@/components/SmoothScroll";
-import RehaiNav from "@/components/rehai/RehaiNav";
 import RehaiFooter from "@/components/rehai/RehaiFooter";
+import RehaiNav from "@/components/rehai/RehaiNav";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rehai.rarestar.studio"),

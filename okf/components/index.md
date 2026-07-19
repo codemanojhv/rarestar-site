@@ -21,6 +21,7 @@
 * [HowItWorks](../source/src/components/rehai/HowItWorks.md) - React component at src/components/rehai/HowItWorks.tsx.
 * [RehaiFooter](../source/src/components/rehai/RehaiFooter.md) - React component at src/components/rehai/RehaiFooter.tsx.
 * [RehaiHero](../source/src/components/rehai/RehaiHero.md) - React component at src/components/rehai/RehaiHero.tsx.
+* [RehaiIcon](../source/src/components/rehai/RehaiIcon.md) - React component at src/components/rehai/RehaiIcon.tsx.
 * [RehaiLanding](../source/src/components/rehai/RehaiLanding.md) - React component at src/components/rehai/RehaiLanding.tsx.
 * [RehaiNav](../source/src/components/rehai/RehaiNav.md) - React component at src/components/rehai/RehaiNav.tsx.
 * [SolutionsSection](../source/src/components/rehai/SolutionsSection.md) - React component at src/components/rehai/SolutionsSection.tsx.

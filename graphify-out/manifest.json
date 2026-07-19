@@ -490,343 +490,343 @@
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\api\\index.md": {
-    "mtime": 1783645742.6243339,
+    "mtime": 1784492677.1174693,
     "ast_hash": "22f08a8c1b48718912457b9f6454f0df",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\codebase\\overview.md": {
-    "mtime": 1783645742.393247,
-    "ast_hash": "3bff6726fee9f29c990c7ab381e5670b",
+    "mtime": 1784492675.7920141,
+    "ast_hash": "55f7c526160490016437f7066a6a341f",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\components\\index.md": {
-    "mtime": 1783645742.6223335,
-    "ast_hash": "d40f2376d48c13e03f72bffeb990478f",
+    "mtime": 1784492677.110469,
+    "ast_hash": "250a5acffa29c04380f9123d95b35926",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\dependencies\\package.md": {
-    "mtime": 1783645742.4032485,
-    "ast_hash": "706d7fd3fb86a01f4bbec82ac362c30e",
+    "mtime": 1784492675.8086178,
+    "ast_hash": "4f82524d2630154f8c740fcbe4d57aa6",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\index.md": {
-    "mtime": 1783645742.6173372,
-    "ast_hash": "123a0db58b613273b45272a2b8abcf2d",
+    "mtime": 1784492677.0962915,
+    "ast_hash": "cb7a2df0a120b040a9dc28642e8295ec",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\knowledge\\graphify.md": {
-    "mtime": 1783645742.3972456,
-    "ast_hash": "d52dcdb882259078b564253ebe455391",
+    "mtime": 1784492675.800578,
+    "ast_hash": "734f579f8117ecc6ef479f83b63fe4f5",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\knowledge\\obsidian.md": {
-    "mtime": 1783645742.3992474,
-    "ast_hash": "7c64302f24b6560ea4895a47815f4587",
+    "mtime": 1784492675.8025782,
+    "ast_hash": "533c0bee6f8dcaf98a53153bb359275f",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\knowledge\\okf.md": {
-    "mtime": 1783645742.3952456,
-    "ast_hash": "560718c0aad1844d2474ef73800f1f34",
+    "mtime": 1784492675.7975452,
+    "ast_hash": "47857b8604f91bf4e3a6e4fcc4551c95",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\knowledge\\update-flow.md": {
-    "mtime": 1783645742.4002466,
-    "ast_hash": "87f55ea171128b071c61d57f4d05a12f",
+    "mtime": 1784492675.8065915,
+    "ast_hash": "56af13ad1f0f2f4443f18e2e0067ce9d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\log.md": {
-    "mtime": 1783645742.6253376,
-    "ast_hash": "55040664e03bdfee9779bee3b9a66d20",
+    "mtime": 1784492677.1204672,
+    "ast_hash": "e34e16a8daef8cb06e3b4e7a995dfc0d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\routes\\index.md": {
-    "mtime": 1783645742.6193342,
+    "mtime": 1784492677.103472,
     "ast_hash": "07dfa1e908a75aab78db1ed2e9af8c19",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\next.config.md": {
-    "mtime": 1783645742.409244,
+    "mtime": 1784492675.822003,
     "ast_hash": "58a1a50439252fe0d0ed638ee296bedf",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\package.md": {
-    "mtime": 1783645742.412246,
-    "ast_hash": "7935c6f300285676139fe32b3b56cce3",
+    "mtime": 1784492675.840005,
+    "ast_hash": "12d193188b8aa342b05cc57d3016bfee",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\agency\\dashboard\\case-studies\\page.md": {
-    "mtime": 1783645742.4202454,
+    "mtime": 1784492675.856727,
     "ast_hash": "43178714f567343a80fad22fce8af80d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\agency\\dashboard\\layout.md": {
-    "mtime": 1783645742.4242487,
+    "mtime": 1784492675.869789,
     "ast_hash": "1b7899d2d9c3bd6c719b1bff14d047a0",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\agency\\layout.md": {
-    "mtime": 1783645742.4272497,
+    "mtime": 1784492675.8891404,
     "ast_hash": "4170c7c6bc335ceaabe1ea53bfccaa83",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\agency\\page.md": {
-    "mtime": 1783645742.4302502,
+    "mtime": 1784492675.9239097,
     "ast_hash": "19075285ae9fea9d56f4f8423f16370d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\agency\\work\\id\\page.md": {
-    "mtime": 1783645742.4352508,
+    "mtime": 1784492675.9459448,
     "ast_hash": "1445366671b367831e64050e76047366",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\api\\case-studies\\route.md": {
-    "mtime": 1783645742.4402568,
+    "mtime": 1784492675.9957697,
     "ast_hash": "ae8fffb2337cd8b61b3caac42487e541",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\api\\contact\\route.md": {
-    "mtime": 1783645742.443248,
+    "mtime": 1784492676.0132644,
     "ast_hash": "2fb759054961eb17aace0e32ab40eb3f",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\api\\upload\\route.md": {
-    "mtime": 1783645742.447261,
+    "mtime": 1784492676.0354662,
     "ast_hash": "22a6e92064045f780ca79e8801caa81e",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\globals.md": {
-    "mtime": 1783645742.4727857,
-    "ast_hash": "611e30e1d9d0aa0af22aa96d5ed76cb6",
+    "mtime": 1784492676.0504675,
+    "ast_hash": "193bede84d5973f318de3b938b3a88dc",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\layout.md": {
-    "mtime": 1783645742.4747884,
-    "ast_hash": "2ad96ce7e9009e71e70ab7e7953166f8",
+    "mtime": 1784492676.0579832,
+    "ast_hash": "a0a3c67dcdf916ba60b589cccd73cb77",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\manifest.md": {
-    "mtime": 1783645742.4777858,
+    "mtime": 1784492676.0644555,
     "ast_hash": "368f3133474e7aabfb87d4ea4a88c44b",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\opengraph-image.md": {
-    "mtime": 1783645742.4807868,
+    "mtime": 1784492676.0784564,
     "ast_hash": "8acdfa7846d1b1b2e0abb225d65cab96",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\rehai\\layout.md": {
-    "mtime": 1783645742.4837847,
-    "ast_hash": "7cf9deeba2e37a463be10bb4e4f978fa",
+    "mtime": 1784492676.0834565,
+    "ast_hash": "2b657d87b2097912cd132cdba033b2c7",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\rehai\\page.md": {
-    "mtime": 1783645742.486791,
+    "mtime": 1784492676.0974607,
     "ast_hash": "75d7043b79314ea61d21c4ba035a0f76",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\robots.md": {
-    "mtime": 1783645742.4897907,
+    "mtime": 1784492676.1266665,
     "ast_hash": "8af96e2449d1f210e579b26ace9db579",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\sitemap.md": {
-    "mtime": 1783645742.4927907,
+    "mtime": 1784492676.1647992,
     "ast_hash": "d2a945564a1f7cec7cbb25953ceb9122",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\studio\\layout.md": {
-    "mtime": 1783645742.4967887,
+    "mtime": 1784492676.1963024,
     "ast_hash": "9d0887936ea74d9dcc83a825424b4951",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\studio\\page.md": {
-    "mtime": 1783645742.4997902,
+    "mtime": 1784492676.25093,
     "ast_hash": "c54e3da029442fb0ed0df5e17ad4c88d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\app\\twitter-image.md": {
-    "mtime": 1783645742.5017848,
+    "mtime": 1784492676.3778234,
     "ast_hash": "b7e4cc30386e63da93ebc2ecbdb629d4",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\Cursor.md": {
-    "mtime": 1783645742.504787,
+    "mtime": 1784492676.4604385,
     "ast_hash": "6e61597ddd39c37a5bd2a7e98e359879",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\Magnetic.md": {
-    "mtime": 1783645742.507786,
+    "mtime": 1784492676.4954965,
     "ast_hash": "68915db6cebd4f34cbe2b96966ce7d22",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\ScrollProgress.md": {
-    "mtime": 1783645742.5117874,
+    "mtime": 1784492676.5134976,
     "ast_hash": "f444d91f0bc49d1aa4334444f38eaa5e",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\SmoothScroll.md": {
-    "mtime": 1783645742.516787,
+    "mtime": 1784492676.5550852,
     "ast_hash": "57bbb94d0f3e7a41353d6aeefedde1ca",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Contact.md": {
-    "mtime": 1783645742.5217903,
+    "mtime": 1784492676.565512,
     "ast_hash": "d3dc3b259cc4e64a2a55fcd46c6535bd",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Footer.md": {
-    "mtime": 1783645742.5247872,
+    "mtime": 1784492676.5755148,
     "ast_hash": "1d5f366956aa42cb3fba0b4579b11ee8",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Hero.md": {
-    "mtime": 1783645742.5277903,
+    "mtime": 1784492676.5845115,
     "ast_hash": "f16f77e2e8c3166b8e5f79efe040efdd",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\HeroVideo.md": {
-    "mtime": 1783645742.529795,
+    "mtime": 1784492676.5917442,
     "ast_hash": "b903f650dab7c7181699fd16df285268",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Manifesto.md": {
-    "mtime": 1783645742.532802,
+    "mtime": 1784492676.6029582,
     "ast_hash": "07bc4ecdaf9b8ffb6c80021abb5550ce",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Nav.md": {
-    "mtime": 1783645742.534796,
+    "mtime": 1784492676.6171234,
     "ast_hash": "016f3e8da6f6ebd1b160cf1b5665e113",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Process.md": {
-    "mtime": 1783645742.5377972,
+    "mtime": 1784492676.6330123,
     "ast_hash": "5d653543fb5974b501d1e5f9b993264d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Services.md": {
-    "mtime": 1783645742.54179,
+    "mtime": 1784492676.6480362,
     "ast_hash": "b9311437fc28c53fea741d86b0efd0eb",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\SoundDesign.md": {
-    "mtime": 1783645742.5438223,
+    "mtime": 1784492676.6655784,
     "ast_hash": "129e1669b4b834a106b36c41e6f7c305",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\StackMarquee.md": {
-    "mtime": 1783645742.5467997,
+    "mtime": 1784492676.6794672,
     "ast_hash": "20d14857e89e25ef7481df751b383d85",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Testimonials.md": {
-    "mtime": 1783645742.5498006,
+    "mtime": 1784492676.6888518,
     "ast_hash": "852366b88598a5d33ba969cfd8121cc3",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\agency\\Work.md": {
-    "mtime": 1783645742.5538018,
+    "mtime": 1784492676.6968462,
     "ast_hash": "a375e3dddf0d074092a859dd0b31c0cb",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\DualAudience.md": {
-    "mtime": 1783645742.5568,
+    "mtime": 1784492676.7048392,
     "ast_hash": "bfea1b3b6d26db1b2e3dd9653e2043a5",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\HowItWorks.md": {
-    "mtime": 1783645742.560339,
+    "mtime": 1784492676.7168398,
     "ast_hash": "38b233416fd5df7ddbfff4c4fce75fa9",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\RehaiFooter.md": {
-    "mtime": 1783645742.5633383,
-    "ast_hash": "d09aeb50baff597bc3629c4d70a13025",
+    "mtime": 1784492676.7281187,
+    "ast_hash": "889a5ed27252b7a4c829b86c07ff53ce",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\RehaiHero.md": {
-    "mtime": 1783645742.5663395,
+    "mtime": 1784492676.7374372,
     "ast_hash": "249d2afe332bbbbfdb6f9dcb7c1d016d",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\RehaiLanding.md": {
-    "mtime": 1783645742.5703409,
-    "ast_hash": "7576c63c89db6adca864bd738c6f24ff",
+    "mtime": 1784492676.7730877,
+    "ast_hash": "11b52d145a794c96615da40e92702b39",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\RehaiNav.md": {
-    "mtime": 1783645742.5733385,
-    "ast_hash": "390f967c0c6dd30150f7ea33a7ab1ef2",
+    "mtime": 1784492676.786342,
+    "ast_hash": "ba20f8bb4b6a318c038e72b40ef0c5a5",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\SolutionsSection.md": {
-    "mtime": 1783645742.5763373,
+    "mtime": 1784492676.7995186,
     "ast_hash": "6565692fe6513dc60d104f4af350d13e",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\studio\\Mission.md": {
-    "mtime": 1783645742.5793355,
+    "mtime": 1784492676.8072853,
     "ast_hash": "90b1d0e96b33c5fa9380950fdbdb93a7",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\studio\\StudioFooter.md": {
-    "mtime": 1783645742.5823367,
+    "mtime": 1784492676.8224006,
     "ast_hash": "eee5edfd67a9410927c8982cee36e914",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\studio\\StudioHero.md": {
-    "mtime": 1783645742.5853355,
+    "mtime": 1784492676.867414,
     "ast_hash": "f19cadce42a3e34b696e3bf225a059a2",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\studio\\StudioNav.md": {
-    "mtime": 1783645742.5883422,
+    "mtime": 1784492676.883034,
     "ast_hash": "0fb8ee6343ae0443ebc9ccd931795884",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\components\\studio\\Ventures.md": {
-    "mtime": 1783645742.5913348,
+    "mtime": 1784492676.9299536,
     "ast_hash": "b0818f575fea64e7995361b49213269a",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\data\\case-studies.md": {
-    "mtime": 1783645742.594339,
+    "mtime": 1784492676.9513295,
     "ast_hash": "a8d6c25fdfaa8ddb7f499a0ffab65c3e",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\lib\\case-studies-path.md": {
-    "mtime": 1783645742.5963414,
+    "mtime": 1784492676.984155,
     "ast_hash": "2cf119fc761db4f4133c0c428aeee196",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\lib\\lenisSingleton.md": {
-    "mtime": 1783645742.5993347,
+    "mtime": 1784492677.0069346,
     "ast_hash": "d0dcbd053a3302f2d95e64026d92c5cf",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\lib\\subdomain.md": {
-    "mtime": 1783645742.60234,
+    "mtime": 1784492677.0216763,
     "ast_hash": "f580b2bea4ba07885b566f1a06435206",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\middleware.md": {
-    "mtime": 1783645742.6053438,
+    "mtime": 1784492677.0417001,
     "ast_hash": "742f5f23097bdd0474c5e91d55853b26",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\types\\case-study.md": {
-    "mtime": 1783645742.6083336,
+    "mtime": 1784492677.0562444,
     "ast_hash": "a53466b323b128d3f739e260c99c64ed",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\src\\types\\site.md": {
-    "mtime": 1783645742.6113362,
+    "mtime": 1784492677.0641766,
     "ast_hash": "f51b8a231ea7c629089bf53610cd7693",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\okf\\source\\tsconfig.md": {
-    "mtime": 1783645742.614334,
-    "ast_hash": "b4cb9116235c05a71a5aef2b3c298bc9",
+    "mtime": 1784492677.0707304,
+    "ast_hash": "f9f216c12429487c4d6260f352b65799",
     "semantic_hash": ""
   },
   "E:\\rarestar-site\\docs\\app\\api-reference\\config\\next-config-js\\redirects.md": {
@@ -877,6 +877,11 @@
   "E:\\rarestar-site\\public\\rehai\\rehai-watercolor-journey.jpg": {
     "mtime": 1784475993.331,
     "ast_hash": "578f38ca31d16d0092edc3cce489ca3a",
+    "semantic_hash": ""
+  },
+  "E:\\rarestar-site\\okf\\source\\src\\components\\rehai\\RehaiIcon.md": {
+    "mtime": 1784492676.74854,
+    "ast_hash": "5fc806e924875e5c35b92a27336d39dd",
     "semantic_hash": ""
   }
 }

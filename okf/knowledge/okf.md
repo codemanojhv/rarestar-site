@@ -4,7 +4,7 @@ title: "Open Knowledge Format Bundle"
 description: "Repo-local OKF v0.1 bundle generated as Markdown concept files with YAML frontmatter."
 resource: "file:///E:/rarestar-site/okf"
 tags: ["okf", "knowledge", "markdown", "frontmatter"]
-timestamp: "2026-07-19T20:24:35.613Z"
+timestamp: "2026-07-19T21:00:11.790Z"
 ---
 # Implementation
 

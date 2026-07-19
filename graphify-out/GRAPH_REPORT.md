@@ -1,16 +1,16 @@
 # Graph Report - rarestar-site  (2026-07-20)
 
 ## Corpus Check
-- 137 files · ~543,895 words
+- 138 files · ~543,938 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 636 nodes · 740 edges · 100 communities (85 shown, 15 thin omitted)
+- 642 nodes · 747 edges · 101 communities (86 shown, 15 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5d4e69c2`
+- Built from commit: `1c71905a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -110,6 +110,7 @@
 - [[_COMMUNITY_Community 96|Community 96]]
 - [[_COMMUNITY_Community 97|Community 97]]
 - [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 18 edges
@@ -138,11 +139,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (100 total, 15 thin omitted)
+## Communities (101 total, 15 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.13
-Nodes (18): Footer(), NAV_LINKS, SOCIAL_LINKS, Hero(), HeroContent(), splitChars(), HeroVideo(), LINKS (+10 more)
+Cohesion: 0.10
+Nodes (25): Footer(), NAV_LINKS, SOCIAL_LINKS, Hero(), HeroContent(), splitChars(), HeroVideo(), AgencyLayout() (+17 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.07
@@ -169,8 +170,8 @@ Cohesion: 0.30
 Nodes (7): manifest(), getSiteFromHostname(), config, middleware(), SiteConfig, SiteKey, SITES
 
 ### Community 7 - "Community 7"
-Cohesion: 0.09
-Nodes (19): AgencyLayout(), jsonLd, metadata, ensureCtx(), playTick(), playWhoosh(), SoundDesign(), Cursor() (+11 more)
+Cohesion: 0.19
+Nodes (7): Cursor(), CursorMode, jsonLd, metadata, StudioLayout(), StudioFooter(), StudioNav()
 
 ### Community 8 - "Community 8"
 Cohesion: 0.20
@@ -198,7 +199,7 @@ Nodes (3): ContactBody, isValidEmail(), POST()
 
 ### Community 28 - "Community 28"
 Cohesion: 0.11
-Nodes (18): RehaiIconName, benefits, capabilities, Capability, Challenge, challenges, fade(), faq (+10 more)
+Nodes (20): IconShell(), RehaiIcon(), RehaiIconName, benefits, capabilities, Capability, Challenge, challenges (+12 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.17
@@ -453,15 +454,19 @@ Cohesion: 0.50
 Nodes (3): Exports, Local Imports, Role
 
 ### Community 96 - "Community 96"
-Cohesion: 0.50
-Nodes (3): 2026-07-08, 2026-07-10, OKF Update Log
+Cohesion: 0.40
+Nodes (4): 2026-07-08, 2026-07-10, 2026-07-19, OKF Update Log
 
 ### Community 99 - "Community 99"
-Cohesion: 0.36
-Nodes (6): createParticleGeometry(), createProgram(), createShader(), links, RehaiFooter(), seeded()
+Cohesion: 0.18
+Nodes (11): jsonLd, metadata, RehaiLayout(), createParticleGeometry(), createProgram(), createShader(), links, RehaiFooter() (+3 more)
+
+### Community 100 - "Community 100"
+Cohesion: 0.50
+Nodes (3): Exports, Local Imports, Role
 
 ## Knowledge Gaps
-- **291 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+286 more)
+- **295 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+290 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -471,9 +476,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `scrollToId()` connect `Community 0` to `Community 1`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
-  _291 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _295 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.12903225806451613 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09634551495016612 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.07239819004524888 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

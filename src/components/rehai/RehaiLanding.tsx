@@ -282,7 +282,6 @@ export default function RehaiLanding() {
             </ul>
             <a className="rehai-button rehai-button--light" href="#waitlist">I want to start my journey <RehaiIcon name="arrow" size={15} /></a>
           </div>
-          <div className="rehai-audience-divider" aria-hidden="true"><span><Image src="/rehai/logo.png" alt="" width={56} height={56} /></span></div>
           <div id="for-therapists" className="rehai-audience-column rehai-reveal">
             <p className="rehai-eyebrow rehai-eyebrow--light">FOR THERAPISTS</p>
             <h2>For Therapists</h2>

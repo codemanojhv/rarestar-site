@@ -4,7 +4,7 @@ title: "RareStar Site Codebase"
 description: "Next.js App Router site with agency, studio, and Rehai experiences plus graphify and OKF knowledge automation."
 resource: "file:///E:/rarestar-site"
 tags: ["rarestar", "nextjs", "codebase", "knowledge"]
-timestamp: "2026-07-19T21:00:11.790Z"
+timestamp: "2026-07-21T07:49:00.667Z"
 okf_version: "0.1"
 ---
 # Architecture

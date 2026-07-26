@@ -6,9 +6,9 @@ import RehaiIcon from "./RehaiIcon";
 
 const links = [
   ["How It Works", "#how-it-works"],
+  ["Technology", "#technology"],
+  ["For Therapists", "#for-therapists"],
   ["About Us", "#about-us"],
-  ["Resources", "#technology"],
-  ["For Therapists", "#for-therapists"]
 ];
 
 export default function RehaiNav() {
@@ -30,7 +30,7 @@ export default function RehaiNav() {
           <span>REHAI</span>
         </a>
         <nav className={open ? "rehai-nav-links rehai-nav-links--open" : "rehai-nav-links"}>
-          {links.map(([label, href]) => <a href={href} key={label} onClick={() => setOpen(false)}>{label}{label === "Resources" ? <RehaiIcon name="chevron-down" size={13} /> : null}</a>)}
+          {links.map(([label, href]) => <a href={href} key={label} onClick={() => setOpen(false)}>{label}</a>)}
         </nav>
         <div className="rehai-nav-actions">
           <a className="rehai-button rehai-button--light rehai-nav-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={15} /></a>

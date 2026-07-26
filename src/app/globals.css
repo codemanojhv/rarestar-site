@@ -788,11 +788,15 @@ body:has(.rehai-page) {
 .rehai-waitlist-card h3 { margin: 15px 0 0; color: var(--rehai-ink); font-size: 13px; font-weight: 800; line-height: 1.3; }
 .rehai-waitlist-card p { min-height: 34px; margin: 8px 0 0; color: var(--rehai-muted); font-size: 11px; line-height: 1.45; }
 .rehai-waitlist-note { grid-column: 1 / -1; margin: 0; color: #8a96ad; font-size: 10px; text-align: center; }
-.rehai-waitlist-form { display: flex; max-width: 420px; gap: 7px; margin-top: 26px; }
+.rehai-waitlist-form { display: flex; flex-wrap: wrap; max-width: 420px; gap: 7px; margin-top: 26px; }
 .rehai-waitlist-form--compact { max-width: none; margin-top: 16px; }
 .rehai-waitlist-form input { min-width: 0; flex: 1; height: 40px; padding: 0 12px; border: 1px solid #d8e3f1; border-radius: 6px; background: rgba(255, 255, 255, 0.88); color: var(--rehai-ink); font: inherit; font-size: 11px; outline: none; }
 .rehai-waitlist-form input:focus { border-color: var(--rehai-coral); box-shadow: 0 0 0 3px rgba(242, 125, 146, 0.15); }
 .rehai-waitlist-form button { height: 40px; padding: 0 14px; border: 0; border-radius: 6px; background: var(--rehai-cobalt); color: #fff; cursor: pointer; font: inherit; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.rehai-waitlist-form button:disabled { cursor: wait; opacity: 0.72; }
+.rehai-waitlist-message { flex-basis: 100%; margin: 2px 0 0; color: var(--rehai-muted); font-size: 10px; line-height: 1.4; }
+.rehai-waitlist-message--success { color: #2f7f70; }
+.rehai-waitlist-message--error { color: #c34f68; }
 
 .rehai-faq-section { padding-top: 12px; padding-bottom: 38px; }
 .rehai-faq-panel { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: 42px; padding: 34px 40px; overflow: hidden; border-radius: 8px; }

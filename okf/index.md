@@ -8,7 +8,7 @@
 * [Obsidian Vault Export](knowledge/obsidian.md) - Vault connection at E:/rarestar-site-vault.
 
 ## Source Areas
-* [Routes](routes/index.md) - 13 route and layout concepts.
+* [Routes](routes/index.md) - 14 route and layout concepts.
 * [Components](components/index.md) - 29 component concepts.
-* [API Endpoints](api/index.md) - 3 endpoint concepts.
+* [API Endpoints](api/index.md) - 4 endpoint concepts.
 * [Package Manifest](dependencies/package.md) - Scripts and dependencies.

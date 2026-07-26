@@ -8,6 +8,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const host = headersList.get("host") || "rarestar.studio";
   const siteKey = getSiteFromHostname(host);
   const site = SITES[siteKey];
+  const icon = siteKey === "rehai" ? "/rehai/logo.png" : "/icon.png";
 
   return {
     name: site.name,
@@ -19,12 +20,12 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     theme_color: site.themeColor,
     icons: [
       {
-        src: "/icon.png",
+        src: icon,
         sizes: "any",
         type: "image/png"
       },
       {
-        src: "/icon.png",
+        src: icon,
         sizes: "192x192",
         type: "image/png"
       }

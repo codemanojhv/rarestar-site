@@ -1,0 +1,23 @@
+---
+id: arc-01
+type: architecture
+title: Project Overview
+summary: "Add a brief summary of your project architecture here."
+tags:
+  - architecture
+files: []
+status: active
+---
+
+# Project Overview
+
+Describe your project architecture here. This is read by your AI coding agent
+at the start of every task to provide context.
+
+## Key Components
+
+(Add key components and their relationships)
+
+## Conventions
+
+(Add project-specific conventions)

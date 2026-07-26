@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Rehai - AI-Powered Neurological Rehabilitation",
   description:
     "Rehai is an AI-powered neurological rehabilitation platform focused on speech and cognitive recovery.",
+  icons: {
+    icon: "/rehai/logo.png",
+    apple: "/rehai/logo.png"
+  },
   keywords: [
     "neurological rehabilitation",
     "speech therapy AI",

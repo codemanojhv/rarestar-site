@@ -1,0 +1,8 @@
+[project]
+name = "rarestar-site"
+
+[search]
+max_results = 10
+
+[record]
+promotion_threshold = 3

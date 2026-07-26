@@ -832,6 +832,60 @@
       "norm_label": "post()"
     },
     {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L1",
+      "id": "waitlist_route",
+      "community": 7,
+      "norm_label": "route.ts"
+    },
+    {
+      "label": "WaitlistRole",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L6",
+      "id": "waitlist_route_waitlistrole",
+      "community": 7,
+      "norm_label": "waitlistrole"
+    },
+    {
+      "label": "WaitlistBody",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L8",
+      "id": "waitlist_route_waitlistbody",
+      "community": 7,
+      "norm_label": "waitlistbody"
+    },
+    {
+      "label": "isValidEmail()",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L13",
+      "id": "waitlist_route_isvalidemail",
+      "community": 7,
+      "norm_label": "isvalidemail()"
+    },
+    {
+      "label": "isWaitlistRole()",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L17",
+      "id": "waitlist_route_iswaitlistrole",
+      "community": 7,
+      "norm_label": "iswaitlistrole()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L21",
+      "id": "waitlist_route_post",
+      "community": 7,
+      "norm_label": "post()"
+    },
+    {
       "label": "layout.tsx",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
@@ -981,7 +1035,7 @@
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L1",
       "id": "src_app_rehai_layout_tsx_rehai_layout",
-      "community": 99,
+      "community": 0,
       "norm_label": "layout.tsx"
     },
     {
@@ -990,25 +1044,25 @@
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L6",
       "id": "rehai_layout_metadata",
-      "community": 99,
+      "community": 0,
       "norm_label": "metadata"
     },
     {
       "label": "jsonLd",
       "file_type": "code",
       "source_file": "src/app/rehai/layout.tsx",
-      "source_location": "L30",
+      "source_location": "L34",
       "id": "rehai_layout_jsonld",
-      "community": 99,
+      "community": 0,
       "norm_label": "jsonld"
     },
     {
       "label": "RehaiLayout()",
       "file_type": "code",
       "source_file": "src/app/rehai/layout.tsx",
-      "source_location": "L50",
+      "source_location": "L54",
       "id": "rehai_layout_rehailayout",
-      "community": 99,
+      "community": 0,
       "norm_label": "rehailayout()"
     },
     {
@@ -1071,7 +1125,7 @@
       "source_file": "src/app/studio/layout.tsx",
       "source_location": "L1",
       "id": "src_app_studio_layout_tsx_studio_layout",
-      "community": 7,
+      "community": 0,
       "norm_label": "layout.tsx"
     },
     {
@@ -1080,7 +1134,7 @@
       "source_file": "src/app/studio/layout.tsx",
       "source_location": "L8",
       "id": "studio_layout_metadata",
-      "community": 7,
+      "community": 0,
       "norm_label": "metadata"
     },
     {
@@ -1089,7 +1143,7 @@
       "source_file": "src/app/studio/layout.tsx",
       "source_location": "L46",
       "id": "studio_layout_jsonld",
-      "community": 7,
+      "community": 0,
       "norm_label": "jsonld"
     },
     {
@@ -1098,7 +1152,7 @@
       "source_file": "src/app/studio/layout.tsx",
       "source_location": "L64",
       "id": "studio_layout_studiolayout",
-      "community": 7,
+      "community": 0,
       "norm_label": "studiolayout()"
     },
     {
@@ -1134,7 +1188,7 @@
       "source_file": "src/components/Cursor.tsx",
       "source_location": "L1",
       "id": "src_components_cursor_tsx_components_cursor",
-      "community": 7,
+      "community": 0,
       "norm_label": "cursor.tsx"
     },
     {
@@ -1143,7 +1197,7 @@
       "source_file": "src/components/Cursor.tsx",
       "source_location": "L23",
       "id": "components_cursor_cursormode",
-      "community": 7,
+      "community": 0,
       "norm_label": "cursormode"
     },
     {
@@ -1152,7 +1206,7 @@
       "source_file": "src/components/Cursor.tsx",
       "source_location": "L24",
       "id": "components_cursor_cursor",
-      "community": 7,
+      "community": 0,
       "norm_label": "cursor()"
     },
     {
@@ -1867,10 +1921,19 @@
       "norm_label": "rolecopy"
     },
     {
-      "label": "WaitlistForm()",
+      "label": "WaitlistStatus",
       "file_type": "code",
       "source_file": "src/components/rehai/RehaiLanding.tsx",
       "source_location": "L63",
+      "id": "rehai_rehailanding_waitliststatus",
+      "community": 28,
+      "norm_label": "waitliststatus"
+    },
+    {
+      "label": "WaitlistForm()",
+      "file_type": "code",
+      "source_file": "src/components/rehai/RehaiLanding.tsx",
+      "source_location": "L65",
       "id": "rehai_rehailanding_waitlistform",
       "community": 28,
       "norm_label": "waitlistform()"
@@ -1879,7 +1942,7 @@
       "label": "SectionHeading()",
       "file_type": "code",
       "source_file": "src/components/rehai/RehaiLanding.tsx",
-      "source_location": "L90",
+      "source_location": "L123",
       "id": "rehai_rehailanding_sectionheading",
       "community": 28,
       "norm_label": "sectionheading()"
@@ -1888,7 +1951,7 @@
       "label": "RehaiLanding()",
       "file_type": "code",
       "source_file": "src/components/rehai/RehaiLanding.tsx",
-      "source_location": "L100",
+      "source_location": "L133",
       "id": "rehai_rehailanding_rehailanding",
       "community": 28,
       "norm_label": "rehailanding()"
@@ -1899,7 +1962,7 @@
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L1",
       "id": "src_components_rehai_rehainav_tsx_rehai_rehainav",
-      "community": 99,
+      "community": 0,
       "norm_label": "rehainav.tsx"
     },
     {
@@ -1908,7 +1971,7 @@
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L7",
       "id": "rehai_rehainav_links",
-      "community": 99,
+      "community": 0,
       "norm_label": "links"
     },
     {
@@ -1917,7 +1980,7 @@
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L14",
       "id": "rehai_rehainav_rehainav",
-      "community": 99,
+      "community": 0,
       "norm_label": "rehainav()"
     },
     {
@@ -1962,7 +2025,7 @@
       "source_file": "src/components/studio/StudioFooter.tsx",
       "source_location": "L1",
       "id": "src_components_studio_studiofooter_tsx_studio_studiofooter",
-      "community": 7,
+      "community": 0,
       "norm_label": "studiofooter.tsx"
     },
     {
@@ -1971,7 +2034,7 @@
       "source_file": "src/components/studio/StudioFooter.tsx",
       "source_location": "L3",
       "id": "studio_studiofooter_studiofooter",
-      "community": 7,
+      "community": 0,
       "norm_label": "studiofooter()"
     },
     {
@@ -1998,7 +2061,7 @@
       "source_file": "src/components/studio/StudioNav.tsx",
       "source_location": "L1",
       "id": "src_components_studio_studionav_tsx_studio_studionav",
-      "community": 7,
+      "community": 0,
       "norm_label": "studionav.tsx"
     },
     {
@@ -2007,7 +2070,7 @@
       "source_file": "src/components/studio/StudioNav.tsx",
       "source_location": "L6",
       "id": "studio_studionav_studionav",
-      "community": 7,
+      "community": 0,
       "norm_label": "studionav()"
     },
     {
@@ -3046,13 +3109,13 @@
       "norm_label": "okf update log"
     },
     {
-      "label": "2026-07-19",
+      "label": "2026-07-21",
       "file_type": "document",
       "source_file": "okf/log.md",
       "source_location": "L3",
-      "id": "okf_log_2026_07_19",
+      "id": "okf_log_2026_07_21",
       "community": 96,
-      "norm_label": "2026-07-19"
+      "norm_label": "2026-07-21"
     },
     {
       "label": "index.md",
@@ -5197,6 +5260,15 @@
       "norm_label": "contenttype"
     },
     {
+      "label": "2026-07-19",
+      "file_type": "document",
+      "source_file": "okf/log.md",
+      "source_location": "L3",
+      "community": 96,
+      "norm_label": "2026-07-19",
+      "id": "okf_log_2026_07_19"
+    },
+    {
       "label": "RehaiIcon.tsx",
       "file_type": "code",
       "source_file": "src/components/rehai/RehaiIcon.tsx",
@@ -5408,7 +5480,7 @@
       "file_type": "code",
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L1",
-      "community": 99,
+      "community": 0,
       "norm_label": "layout.tsx",
       "id": "rehai_layout"
     },
@@ -5444,7 +5516,7 @@
       "file_type": "code",
       "source_file": "src/app/studio/layout.tsx",
       "source_location": "L1",
-      "community": 7,
+      "community": 0,
       "norm_label": "layout.tsx",
       "id": "studio_layout"
     },
@@ -5471,7 +5543,7 @@
       "file_type": "code",
       "source_file": "src/components/Cursor.tsx",
       "source_location": "L1",
-      "community": 7,
+      "community": 0,
       "norm_label": "cursor.tsx",
       "id": "components_cursor"
     },
@@ -5660,7 +5732,7 @@
       "file_type": "code",
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L1",
-      "community": 99,
+      "community": 0,
       "norm_label": "rehainav.tsx",
       "id": "rehai_rehainav"
     },
@@ -5687,7 +5759,7 @@
       "file_type": "code",
       "source_file": "src/components/studio/StudioFooter.tsx",
       "source_location": "L1",
-      "community": 7,
+      "community": 0,
       "norm_label": "studiofooter.tsx",
       "id": "studio_studiofooter"
     },
@@ -5705,7 +5777,7 @@
       "file_type": "code",
       "source_file": "src/components/studio/StudioNav.tsx",
       "source_location": "L1",
-      "community": 7,
+      "community": 0,
       "norm_label": "studionav.tsx",
       "id": "studio_studionav"
     },
@@ -7224,6 +7296,78 @@
       "confidence_score": 1.0,
       "source": "upload_route",
       "target": "upload_route_post"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_isvalidemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_iswaitlistrole",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_waitlistbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_waitlistrole",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "waitlist_route_post",
+      "target": "waitlist_route_isvalidemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "waitlist_route_post",
+      "target": "waitlist_route_iswaitlistrole",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9180,9 +9324,9 @@
       "source_file": "src/components/rehai/RehaiIcon.tsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_rehai_rehaiicon_tsx_rehai_rehaiicon",
-      "target": "rehai_rehaiicon_iconshell",
-      "confidence_score": 1.0
+      "target": "rehai_rehaiicon_iconshell"
     },
     {
       "relation": "contains",
@@ -9190,9 +9334,9 @@
       "source_file": "src/components/rehai/RehaiIcon.tsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_rehai_rehaiicon_tsx_rehai_rehaiicon",
-      "target": "rehai_rehaiicon_rehaiicon",
-      "confidence_score": 1.0
+      "target": "rehai_rehaiicon_rehaiicon"
     },
     {
       "relation": "contains",
@@ -9200,9 +9344,9 @@
       "source_file": "src/components/rehai/RehaiIcon.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_rehai_rehaiicon_tsx_rehai_rehaiicon",
-      "target": "rehai_rehaiicon_rehaiiconname",
-      "confidence_score": 1.0
+      "target": "rehai_rehaiicon_rehaiiconname"
     },
     {
       "relation": "contains",
@@ -9445,6 +9589,16 @@
       "confidence_score": 1.0,
       "source": "src_components_rehai_rehailanding_tsx_rehai_rehailanding",
       "target": "rehai_rehailanding_waitlistform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/rehai/RehaiLanding.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_components_rehai_rehailanding_tsx_rehai_rehailanding",
+      "target": "rehai_rehailanding_waitliststatus",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10919,8 +11073,18 @@
       "source_file": "okf/log.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "okf_log_okf_update_log",
-      "target": "okf_log_2026_07_19",
+      "target": "okf_log_2026_07_19"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "okf/log.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "okf_log_okf_update_log",
+      "target": "okf_log_2026_07_21",
       "confidence_score": 1.0
     },
     {
@@ -12179,9 +12343,9 @@
       "source_file": "okf/source/src/components/rehai/RehaiIcon.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "okf_source_src_components_rehai_rehaiicon_md_rehai_rehaiicon",
-      "target": "rehai_rehaiicon_exports",
-      "confidence_score": 1.0
+      "target": "rehai_rehaiicon_exports"
     },
     {
       "relation": "contains",
@@ -12189,9 +12353,9 @@
       "source_file": "okf/source/src/components/rehai/RehaiIcon.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "okf_source_src_components_rehai_rehaiicon_md_rehai_rehaiicon",
-      "target": "rehai_rehaiicon_local_imports",
-      "confidence_score": 1.0
+      "target": "rehai_rehaiicon_local_imports"
     },
     {
       "relation": "contains",
@@ -12199,9 +12363,9 @@
       "source_file": "okf/source/src/components/rehai/RehaiIcon.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "okf_source_src_components_rehai_rehaiicon_md_rehai_rehaiicon",
-      "target": "rehai_rehaiicon_role",
-      "confidence_score": 1.0
+      "target": "rehai_rehaiicon_role"
     },
     {
       "relation": "contains",
@@ -13437,5 +13601,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1c71905ae346ab3b7a64ec6a4f07609d90f2a5bc"
+  "built_at_commit": "553c1552b3517853a32912d938c77627f7145dc1"
 }

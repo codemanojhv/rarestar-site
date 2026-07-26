@@ -55,19 +55,51 @@ const roleCopy: Record<RehaiRole, { label: string; copy: string; icon: RehaiIcon
   },
   therapist: {
     label: "I am a therapist or clinician",
-    copy: "Collaborate with us, get early access and help shape Rehai.",
+    copy: "Join the build, get early access and help shape Rehai with your clinical insight.",
     icon: "users"
   }
 };
 
-function WaitlistForm({ compact = false, idSuffix = "final" }: { compact?: boolean; idSuffix?: string }) {
-  const [email, setEmail] = useState("");
-  const [done, setDone] = useState(false);
+type WaitlistStatus = "idle" | "submitting" | "success" | "error";
 
-  function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setDone(true);
+function WaitlistForm({ compact = false, idSuffix = "final", role }: { compact?: boolean; idSuffix?: string; role: RehaiRole }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<WaitlistStatus>("idle");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
     setEmail("");
+    setStatus("idle");
+    setMessage("");
+  }, [role]);
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (status === "submitting") return;
+
+    setStatus("submitting");
+    setMessage("");
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, role, source: "rehai-site" })
+      });
+      const payload = (await response.json()) as { ok?: boolean; error?: string; existing?: boolean };
+
+      if (!response.ok || !payload.ok) {
+        setStatus("error");
+        setMessage(payload.error === "email_invalid" ? "Please check your email." : "Something went wrong. Please try again.");
+        return;
+      }
+
+      setStatus("success");
+      setMessage(payload.existing ? "You are already on the list." : "You’re in. We’ll be in touch.");
+      setEmail("");
+    } catch {
+      setStatus("error");
+      setMessage("Network hiccup. Please try again.");
+    }
   }
 
   return (
@@ -82,7 +114,8 @@ function WaitlistForm({ compact = false, idSuffix = "final" }: { compact?: boole
         onChange={(event) => setEmail(event.target.value)}
         placeholder="Enter your email"
       />
-      <button type="submit">{done ? "You're in" : "Join Waitlist"}</button>
+      <button type="submit" disabled={status === "submitting"}>{status === "submitting" ? "Joining..." : status === "success" ? "Joined" : "Join Waitlist"}</button>
+      {message ? <p className={`rehai-waitlist-message rehai-waitlist-message--${status}`} role={status === "error" ? "alert" : "status"}>{message}</p> : null}
     </form>
   );
 }
@@ -223,7 +256,7 @@ export default function RehaiLanding() {
             <p>AI-powered speech and cognitive rehabilitation in Indian languages, personalized for every patient&apos;s recovery.</p>
             <div className="rehai-actions">
               <a className="rehai-button rehai-hero-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={16} /></a>
-              <a className="rehai-link rehai-link--light" href="#how-it-works">Contact Us <RehaiIcon name="arrow" size={16} /></a>
+              <a className="rehai-link rehai-link--light" href="#waitlist">Contact Us <RehaiIcon name="arrow" size={16} /></a>
             </div>
           </div>
         </div>
@@ -280,7 +313,7 @@ export default function RehaiLanding() {
             <ul>
               {["Personalized exercises that adapt to you", "Track your recovery over time", "Stay motivated with guided sessions", "Available in your preferred language"].map((item) => <li key={item}><RehaiIcon name="check" size={18} />{item}</li>)}
             </ul>
-            <a className="rehai-button rehai-button--light" href="#waitlist">I want to start my journey <RehaiIcon name="arrow" size={15} /></a>
+            <a className="rehai-button rehai-button--light" href="#waitlist" onClick={() => setWaitlistRole("patient")}>I want to start my journey <RehaiIcon name="arrow" size={15} /></a>
           </div>
           <div id="for-therapists" className="rehai-audience-column rehai-reveal">
             <p className="rehai-eyebrow rehai-eyebrow--light">FOR THERAPISTS</p>
@@ -288,7 +321,7 @@ export default function RehaiLanding() {
             <ul>
               {["Manage patients and sessions easily", "Objective insights and progress reports", "Save time with automated scoring", "Better outcomes with data-driven support"].map((item) => <li key={item}><RehaiIcon name="check" size={18} />{item}</li>)}
             </ul>
-            <a className="rehai-button rehai-button--light" href="#waitlist">I&apos;m a therapist or clinician <RehaiIcon name="arrow" size={15} /></a>
+            <a className="rehai-button rehai-button--light" href="#waitlist" onClick={() => setWaitlistRole("therapist")}>I&apos;m a therapist or clinician <RehaiIcon name="arrow" size={15} /></a>
           </div>
         </div>
       </section>
@@ -307,7 +340,7 @@ export default function RehaiLanding() {
         </div>
       </section>
 
-      <section className="rehai-section rehai-why-section" data-rehai-scene="why">
+      <section id="why-rehai" className="rehai-section rehai-why-section" data-rehai-scene="why">
         <div className="rehai-shell rehai-why-panel">
           <Image src="/rehai/rehai-watercolor-journey.jpg" alt="" fill sizes="(min-width: 900px) 1280px, 100vw" className="rehai-why-art" />
           <div className="rehai-why-copy rehai-reveal">
@@ -329,7 +362,7 @@ export default function RehaiLanding() {
           <div className="rehai-waitlist-copy rehai-reveal">
             <p className="rehai-eyebrow">HELP SHAPE THE FUTURE</p>
             <h2>Be part of something that matters.</h2>
-            <p>Rehai is in early development and we&apos;re building with clinicians and patients. Join the waitlist to get early access, updates and opportunities to contribute.</p>
+            <p>Rehai is in early development and we&apos;re building with clinicians and patients. Join the waitlist for early access, updates and a chance to help shape what comes next.</p>
           </div>
            <div className="rehai-waitlist-cards">
              <article className="rehai-waitlist-card rehai-waitlist-card--primary rehai-glass rehai-reveal">
@@ -343,7 +376,7 @@ export default function RehaiLanding() {
                <span className="rehai-card-icon"><RehaiIcon name={roleCopy[waitlistRole].icon} size={24} /></span>
                <h3>{roleCopy[waitlistRole].label}</h3>
                <p>{roleCopy[waitlistRole].copy}</p>
-               <WaitlistForm compact idSuffix={waitlistRole} />
+               <WaitlistForm compact idSuffix={waitlistRole} role={waitlistRole} />
              </article>
              <p className="rehai-waitlist-note">No spam. Only meaningful updates.</p>
            </div>
@@ -383,7 +416,7 @@ export default function RehaiLanding() {
           <div className="rehai-final-copy rehai-reveal">
             <h2>Recovery is personal.<br />Rehabilitation should be too.</h2>
             <p>Join the REHAI Early Access List.</p>
-            <div className="rehai-actions"><a className="rehai-button rehai-final-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={15} /></a><a className="rehai-link rehai-link--light" href="#top">Contact Us <RehaiIcon name="arrow" size={15} /></a></div>
+            <div className="rehai-actions"><a className="rehai-button rehai-final-cta" href="#waitlist">Join Waitlist <RehaiIcon name="arrow" size={15} /></a><a className="rehai-link rehai-link--light" href="#waitlist">Contact Us <RehaiIcon name="arrow" size={15} /></a></div>
           </div>
         </div>
       </section>

@@ -1,16 +1,16 @@
-# Graph Report - rarestar-site  (2026-07-20)
+# Graph Report - rarestar-site  (2026-07-25)
 
 ## Corpus Check
-- 138 files · ~543,938 words
+- 139 files · ~544,392 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 642 nodes · 747 edges · 101 communities (86 shown, 15 thin omitted)
+- 650 nodes · 756 edges · 101 communities (86 shown, 15 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1c71905a`
+- Built from commit: `553c1552`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -142,8 +142,8 @@
 ## Communities (101 total, 15 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.10
-Nodes (25): Footer(), NAV_LINKS, SOCIAL_LINKS, Hero(), HeroContent(), splitChars(), HeroVideo(), AgencyLayout() (+17 more)
+Cohesion: 0.06
+Nodes (37): Footer(), NAV_LINKS, SOCIAL_LINKS, Hero(), HeroContent(), splitChars(), HeroVideo(), AgencyLayout() (+29 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.07
@@ -170,8 +170,8 @@ Cohesion: 0.30
 Nodes (7): manifest(), getSiteFromHostname(), config, middleware(), SiteConfig, SiteKey, SITES
 
 ### Community 7 - "Community 7"
-Cohesion: 0.19
-Nodes (7): Cursor(), CursorMode, jsonLd, metadata, StudioLayout(), StudioFooter(), StudioNav()
+Cohesion: 0.47
+Nodes (5): isValidEmail(), isWaitlistRole(), POST(), WaitlistBody, WaitlistRole
 
 ### Community 8 - "Community 8"
 Cohesion: 0.20
@@ -199,7 +199,7 @@ Nodes (3): ContactBody, isValidEmail(), POST()
 
 ### Community 28 - "Community 28"
 Cohesion: 0.11
-Nodes (20): IconShell(), RehaiIcon(), RehaiIconName, benefits, capabilities, Capability, Challenge, challenges (+12 more)
+Nodes (21): IconShell(), RehaiIcon(), RehaiIconName, benefits, capabilities, Capability, Challenge, challenges (+13 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.17
@@ -454,19 +454,19 @@ Cohesion: 0.50
 Nodes (3): Exports, Local Imports, Role
 
 ### Community 96 - "Community 96"
-Cohesion: 0.40
-Nodes (4): 2026-07-08, 2026-07-10, 2026-07-19, OKF Update Log
+Cohesion: 0.33
+Nodes (5): 2026-07-08, 2026-07-10, 2026-07-19, 2026-07-21, OKF Update Log
 
 ### Community 99 - "Community 99"
-Cohesion: 0.18
-Nodes (11): jsonLd, metadata, RehaiLayout(), createParticleGeometry(), createProgram(), createShader(), links, RehaiFooter() (+3 more)
+Cohesion: 0.36
+Nodes (6): createParticleGeometry(), createProgram(), createShader(), links, RehaiFooter(), seeded()
 
 ### Community 100 - "Community 100"
 Cohesion: 0.50
 Nodes (3): Exports, Local Imports, Role
 
 ## Knowledge Gaps
-- **295 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+290 more)
+- **299 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+294 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -476,9 +476,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `scrollToId()` connect `Community 0` to `Community 1`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
-  _295 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _299 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.09634551495016612 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05834464043419267 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.07239819004524888 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

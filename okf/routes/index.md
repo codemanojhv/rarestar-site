@@ -9,6 +9,7 @@
 * [src / app / api / case-studies route](../source/src/app/api/case-studies/route.md) - API Endpoint for /api/case-studies.
 * [src / app / api / contact route](../source/src/app/api/contact/route.md) - API Endpoint for /api/contact.
 * [src / app / api / upload route](../source/src/app/api/upload/route.md) - API Endpoint for /api/upload.
+* [src / app / api / waitlist route](../source/src/app/api/waitlist/route.md) - API Endpoint for /api/waitlist.
 * [src / app layout](../source/src/app/layout.md) - Route Layout for /.
 * [src / app / rehai layout](../source/src/app/rehai/layout.md) - Route Layout for /rehai.
 * [src / app / rehai page](../source/src/app/rehai/page.md) - Route Page for /rehai.

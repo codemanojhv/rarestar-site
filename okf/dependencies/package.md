@@ -4,7 +4,7 @@ title: "Package Scripts and Dependencies"
 description: "NPM scripts and runtime packages that define local development, build, and knowledge automation."
 resource: "file:///E:/rarestar-site/package.json"
 tags: ["npm", "scripts", "dependencies"]
-timestamp: "2026-07-21T07:49:00.667Z"
+timestamp: "2026-07-26T15:41:02.659Z"
 ---
 # Scripts
 

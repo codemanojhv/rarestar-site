@@ -4,7 +4,7 @@ title: "src / app / api / waitlist route"
 description: "API Endpoint at src/app/api/waitlist/route.ts."
 resource: "file:///E:/rarestar-site/src/app/api/waitlist/route.ts"
 tags: ["api-endpoint", "app"]
-timestamp: "2026-07-25T14:20:27.804Z"
+timestamp: "2026-07-26T15:46:42.098Z"
 source_path: "src/app/api/waitlist/route.ts"
 ---
 # Role

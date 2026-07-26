@@ -4,7 +4,7 @@ title: "Knowledge Update Automation"
 description: "Single command and git hooks that keep graphify, the Obsidian vault, and OKF current."
 resource: "file:///E:/rarestar-site/scripts/update-knowledge.mjs"
 tags: ["automation", "git-hooks", "obsidian", "okf", "graphify"]
-timestamp: "2026-07-26T15:41:02.659Z"
+timestamp: "2026-07-26T15:48:52.209Z"
 ---
 # Command
 

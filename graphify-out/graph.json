@@ -836,7 +836,7 @@
       "file_type": "code",
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L1",
-      "id": "waitlist_route",
+      "id": "src_app_api_waitlist_route_ts_waitlist_route",
       "community": 7,
       "norm_label": "route.ts"
     },
@@ -1035,7 +1035,7 @@
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L1",
       "id": "src_app_rehai_layout_tsx_rehai_layout",
-      "community": 0,
+      "community": 99,
       "norm_label": "layout.tsx"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L6",
       "id": "rehai_layout_metadata",
-      "community": 0,
+      "community": 99,
       "norm_label": "metadata"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L34",
       "id": "rehai_layout_jsonld",
-      "community": 0,
+      "community": 99,
       "norm_label": "jsonld"
     },
     {
@@ -1062,7 +1062,7 @@
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L54",
       "id": "rehai_layout_rehailayout",
-      "community": 0,
+      "community": 99,
       "norm_label": "rehailayout()"
     },
     {
@@ -1962,7 +1962,7 @@
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L1",
       "id": "src_components_rehai_rehainav_tsx_rehai_rehainav",
-      "community": 0,
+      "community": 99,
       "norm_label": "rehainav.tsx"
     },
     {
@@ -1971,7 +1971,7 @@
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L7",
       "id": "rehai_rehainav_links",
-      "community": 0,
+      "community": 99,
       "norm_label": "links"
     },
     {
@@ -1980,7 +1980,7 @@
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L14",
       "id": "rehai_rehainav_rehainav",
-      "community": 0,
+      "community": 99,
       "norm_label": "rehainav()"
     },
     {
@@ -3109,13 +3109,13 @@
       "norm_label": "okf update log"
     },
     {
-      "label": "2026-07-21",
+      "label": "2026-07-26",
       "file_type": "document",
       "source_file": "okf/log.md",
       "source_location": "L3",
-      "id": "okf_log_2026_07_21",
+      "id": "okf_log_2026_07_26",
       "community": 96,
-      "norm_label": "2026-07-21"
+      "norm_label": "2026-07-26"
     },
     {
       "label": "index.md",
@@ -3502,6 +3502,42 @@
       "source_location": "L18",
       "id": "upload_route_local_imports",
       "community": 71,
+      "norm_label": "local imports"
+    },
+    {
+      "label": "route.md",
+      "file_type": "document",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L1",
+      "id": "okf_source_src_app_api_waitlist_route_md_waitlist_route",
+      "community": 101,
+      "norm_label": "route.md"
+    },
+    {
+      "label": "Role",
+      "file_type": "document",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L10",
+      "id": "waitlist_route_role",
+      "community": 101,
+      "norm_label": "role"
+    },
+    {
+      "label": "Exports",
+      "file_type": "document",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L14",
+      "id": "waitlist_route_exports",
+      "community": 101,
+      "norm_label": "exports"
+    },
+    {
+      "label": "Local Imports",
+      "file_type": "document",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L20",
+      "id": "waitlist_route_local_imports",
+      "community": 101,
       "norm_label": "local imports"
     },
     {
@@ -5260,6 +5296,24 @@
       "norm_label": "contenttype"
     },
     {
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L1",
+      "community": 7,
+      "norm_label": "route.ts",
+      "id": "waitlist_route"
+    },
+    {
+      "label": "2026-07-21",
+      "file_type": "document",
+      "source_file": "okf/log.md",
+      "source_location": "L3",
+      "community": 96,
+      "norm_label": "2026-07-21",
+      "id": "okf_log_2026_07_21"
+    },
+    {
       "label": "2026-07-19",
       "file_type": "document",
       "source_file": "okf/log.md",
@@ -5480,7 +5534,7 @@
       "file_type": "code",
       "source_file": "src/app/rehai/layout.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 99,
       "norm_label": "layout.tsx",
       "id": "rehai_layout"
     },
@@ -5732,7 +5786,7 @@
       "file_type": "code",
       "source_file": "src/components/rehai/RehaiNav.tsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 99,
       "norm_label": "rehainav.tsx",
       "id": "rehai_rehainav"
     },
@@ -7303,7 +7357,7 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L13",
       "weight": 1.0,
-      "source": "waitlist_route",
+      "source": "src_app_api_waitlist_route_ts_waitlist_route",
       "target": "waitlist_route_isvalidemail",
       "confidence_score": 1.0
     },
@@ -7313,7 +7367,7 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L17",
       "weight": 1.0,
-      "source": "waitlist_route",
+      "source": "src_app_api_waitlist_route_ts_waitlist_route",
       "target": "waitlist_route_iswaitlistrole",
       "confidence_score": 1.0
     },
@@ -7323,7 +7377,7 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L21",
       "weight": 1.0,
-      "source": "waitlist_route",
+      "source": "src_app_api_waitlist_route_ts_waitlist_route",
       "target": "waitlist_route_post",
       "confidence_score": 1.0
     },
@@ -7333,7 +7387,7 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L8",
       "weight": 1.0,
-      "source": "waitlist_route",
+      "source": "src_app_api_waitlist_route_ts_waitlist_route",
       "target": "waitlist_route_waitlistbody",
       "confidence_score": 1.0
     },
@@ -7343,9 +7397,39 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L6",
       "weight": 1.0,
-      "source": "waitlist_route",
+      "source": "src_app_api_waitlist_route_ts_waitlist_route",
       "target": "waitlist_route_waitlistrole",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_waitlistrole"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_waitlistbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_isvalidemail"
     },
     {
       "relation": "calls",
@@ -7354,9 +7438,19 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "waitlist_route_post",
-      "target": "waitlist_route_isvalidemail",
-      "confidence_score": 1.0
+      "target": "waitlist_route_isvalidemail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_iswaitlistrole"
     },
     {
       "relation": "calls",
@@ -7365,9 +7459,19 @@
       "source_file": "src/app/api/waitlist/route.ts",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "waitlist_route_post",
-      "target": "waitlist_route_iswaitlistrole",
-      "confidence_score": 1.0
+      "target": "waitlist_route_iswaitlistrole"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/api/waitlist/route.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "waitlist_route",
+      "target": "waitlist_route_post"
     },
     {
       "relation": "contains",
@@ -9596,9 +9700,9 @@
       "source_file": "src/components/rehai/RehaiLanding.tsx",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_rehai_rehailanding_tsx_rehai_rehailanding",
-      "target": "rehai_rehailanding_waitliststatus",
-      "confidence_score": 1.0
+      "target": "rehai_rehailanding_waitliststatus"
     },
     {
       "relation": "contains",
@@ -11083,8 +11187,18 @@
       "source_file": "okf/log.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "okf_log_okf_update_log",
-      "target": "okf_log_2026_07_21",
+      "target": "okf_log_2026_07_21"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "okf/log.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "okf_log_okf_update_log",
+      "target": "okf_log_2026_07_26",
       "confidence_score": 1.0
     },
     {
@@ -11406,6 +11520,36 @@
       "confidence_score": 1.0,
       "source": "okf_source_src_app_api_upload_route_md_upload_route",
       "target": "upload_route_role"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "okf_source_src_app_api_waitlist_route_md_waitlist_route",
+      "target": "waitlist_route_exports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "okf_source_src_app_api_waitlist_route_md_waitlist_route",
+      "target": "waitlist_route_local_imports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "okf/source/src/app/api/waitlist/route.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "okf_source_src_app_api_waitlist_route_md_waitlist_route",
+      "target": "waitlist_route_role",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13601,5 +13745,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "553c1552b3517853a32912d938c77627f7145dc1"
+  "built_at_commit": "44ec0a75451da7c92d7155fb881a0912a2ff4cb3"
 }

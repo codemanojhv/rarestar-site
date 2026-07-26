@@ -52,8 +52,7 @@ export async function POST(request: Request) {
       headers,
       body: JSON.stringify({
         email,
-        unsubscribed: false,
-        properties: { role, source: "rehai-site" }
+        unsubscribed: false
       })
     });
   } catch (error) {
@@ -61,8 +60,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "storage_failed" }, { status: 502 });
   }
 
+  const contactPayload = await contactResponse.json().catch(() => null) as { name?: string; message?: string } | null;
   if (!contactResponse.ok && contactResponse.status !== 409) {
-    console.error("[waitlist] contact storage failed", { status: contactResponse.status });
+    console.error("[waitlist] contact storage failed", {
+      status: contactResponse.status,
+      error: contactPayload?.name ?? contactPayload?.message ?? "unknown"
+    });
     return NextResponse.json({ ok: false, error: "storage_failed" }, { status: 502 });
   }
 

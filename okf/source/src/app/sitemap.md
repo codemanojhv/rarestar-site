@@ -4,7 +4,7 @@ title: "Sitemap"
 description: "Source File at src/app/sitemap.ts."
 resource: "file:///E:/rarestar-site/src/app/sitemap.ts"
 tags: ["source-file", "app"]
-timestamp: "2026-06-26T10:40:03.372Z"
+timestamp: "2026-11-02T07:51:28.083Z"
 source_path: "src/app/sitemap.ts"
 ---
 # Role
@@ -17,4 +17,4 @@ source_path: "src/app/sitemap.ts"
 
 # Local Imports
 
-* `@/data/case-studies.json`
+* No local imports detected.

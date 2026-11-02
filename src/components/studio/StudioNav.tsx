@@ -31,20 +31,6 @@ export default function StudioNav() {
           />
         </a>
 
-        <nav className="flex items-center gap-6 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/60">
-          <a
-            href={process.env.NODE_ENV === "development" ? "/?site=agency" : "https://agency.rarestar.studio"}
-            className="transition-colors hover:text-paper"
-          >
-            Agency
-          </a>
-          <a
-            href={process.env.NODE_ENV === "development" ? "/?site=rehai" : "https://rehai.rarestar.studio"}
-            className="transition-colors hover:text-paper"
-          >
-            Rehai
-          </a>
-        </nav>
       </div>
     </header>
   );

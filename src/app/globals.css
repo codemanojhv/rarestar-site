@@ -8,13 +8,7 @@
   --color-dust: #8b8b84;
   --color-smoke: #151515;
 
-  --color-rehai-primary: #00C9A7;
-  --color-rehai-accent: #6366F1;
-  --color-rehai-glow: #00E5BF;
-
   --font-display: var(--font-fraunces), "Times New Roman", serif;
-  --font-rehai-display: var(--font-playfair), Georgia, "Times New Roman", serif;
-  --font-rehai: var(--font-manrope), system-ui, sans-serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }

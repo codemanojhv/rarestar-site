@@ -4,7 +4,7 @@ title: "Globals"
 description: "Source File at src/app/globals.css."
 resource: "file:///E:/rarestar-site/src/app/globals.css"
 tags: ["source-file", "app"]
-timestamp: "2026-07-25T14:20:27.806Z"
+timestamp: "2026-11-02T07:52:40.409Z"
 source_path: "src/app/globals.css"
 ---
 # Role

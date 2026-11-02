@@ -2,21 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSiteFromHostname } from "@/lib/subdomain";
 
 /**
- * Middleware — routes requests to the correct route-group based on hostname.
+ * Middleware — routes requests to the Studio route group.
  *
  * ┌──────────────────────────────┬─────────────────────┐
  * │  Hostname                    │  Route group        │
  * ├──────────────────────────────┼─────────────────────┤
- * │  rarestar.studio             │  /(studio)/*        │
- * │  agency.rarestar.studio      │  /(agency)/*        │
- * │  rehai.rarestar.studio       │  /(rehai)/*         │
- * │  localhost (default)         │  /(studio)/*        │
- * │  localhost?site=agency       │  /(agency)/*        │
- * │  localhost?site=rehai        │  /(rehai)/*         │
+ * │  any hostname                │  /(studio)/*        │
  * └──────────────────────────────┴─────────────────────┘
  */
 export function middleware(request: NextRequest) {
-  const { pathname, searchParams } = request.nextUrl;
+  const { pathname } = request.nextUrl;
 
   // Skip internal Next.js paths, API routes, and static assets
   if (
@@ -40,12 +35,7 @@ export function middleware(request: NextRequest) {
 
   const host = request.headers.get("host") ?? "localhost";
 
-  // In local dev, allow ?site= query param to override hostname detection
-  const siteOverride = searchParams.get("site");
-  const site =
-    siteOverride === "agency" || siteOverride === "rehai"
-      ? siteOverride
-      : getSiteFromHostname(host);
+  const site = getSiteFromHostname(host);
 
   // Rewrite /path → /(site)/path
   const url = request.nextUrl.clone();

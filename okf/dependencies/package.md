@@ -4,7 +4,7 @@ title: "Package Scripts and Dependencies"
 description: "NPM scripts and runtime packages that define local development, build, and knowledge automation."
 resource: "file:///E:/rarestar-site/package.json"
 tags: ["npm", "scripts", "dependencies"]
-timestamp: "2026-07-26T15:48:52.209Z"
+timestamp: "2026-11-02T07:55:21.807Z"
 ---
 # Scripts
 
@@ -21,15 +21,12 @@ timestamp: "2026-07-26T15:48:52.209Z"
 
 # Runtime Dependencies
 
-* `framer-motion`
 * `gsap`
 * `lenis`
-* `lucide-react`
 * `next`
 * `react`
 * `react-dom`
 * `sharp`
-* `three`
 
 # Development Dependencies
 
@@ -37,7 +34,6 @@ timestamp: "2026-07-26T15:48:52.209Z"
 * `@types/node`
 * `@types/react`
 * `@types/react-dom`
-* `@types/three`
 * `hytrax`
 * `postcss`
 * `tailwindcss`

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, JetBrains_Mono, Manrope, Playfair_Display } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -24,20 +24,6 @@ const jetbrains = JetBrains_Mono({
   display: "swap"
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-playfair",
-  display: "swap"
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
-  display: "swap"
-});
-
 export const viewport: Viewport = {
   themeColor: "#050505",
   width: "device-width",
@@ -57,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} ${playfair.variable} ${manrope.variable}`}
+      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <body className="grain">

@@ -21,26 +21,7 @@ export default function StudioFooter() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 md:flex-row md:gap-24">
-          <div className="flex flex-col gap-3">
-            <h3 className="font-mono text-[10px] uppercase tracking-[0.22em] text-paper/40">
-              Ventures
-            </h3>
-            <a
-              href={process.env.NODE_ENV === "development" ? "/?site=agency" : "https://agency.rarestar.studio"}
-              className="font-sans text-sm text-paper/70 hover:text-paper"
-            >
-              Rarestar Agency
-            </a>
-            <a
-              href={process.env.NODE_ENV === "development" ? "/?site=rehai" : "https://rehai.rarestar.studio"}
-              className="font-sans text-sm text-paper/70 hover:text-paper"
-            >
-              Rehai Platform
-            </a>
-          </div>
-
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3">
             <h3 className="font-mono text-[10px] uppercase tracking-[0.22em] text-paper/40">
               Connect
             </h3>
@@ -66,7 +47,6 @@ export default function StudioFooter() {
             >
               LinkedIn
             </a>
-          </div>
         </div>
       </div>
 

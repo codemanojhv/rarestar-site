@@ -4,7 +4,7 @@ title: "Subdomain"
 description: "Library Module at src/lib/subdomain.ts."
 resource: "file:///E:/rarestar-site/src/lib/subdomain.ts"
 tags: ["library-module", "lib"]
-timestamp: "2026-06-23T03:31:34.723Z"
+timestamp: "2026-11-02T07:51:28.079Z"
 source_path: "src/lib/subdomain.ts"
 ---
 # Role

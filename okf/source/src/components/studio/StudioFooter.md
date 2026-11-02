@@ -4,7 +4,7 @@ title: "StudioFooter"
 description: "React Component at src/components/studio/StudioFooter.tsx."
 resource: "file:///E:/rarestar-site/src/components/studio/StudioFooter.tsx"
 tags: ["react-component", "components"]
-timestamp: "2026-06-26T10:07:48.028Z"
+timestamp: "2026-11-02T07:51:28.076Z"
 source_path: "src/components/studio/StudioFooter.tsx"
 ---
 # Role

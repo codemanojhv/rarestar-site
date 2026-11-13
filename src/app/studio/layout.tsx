@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
-import SmoothScroll from "@/components/SmoothScroll";
-import Cursor from "@/components/Cursor";
-import ScrollProgress from "@/components/ScrollProgress";
 import StudioNav from "@/components/studio/StudioNav";
 import StudioFooter from "@/components/studio/StudioFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rarestar.studio"),
-  title: "Rarestar Studio - Products With a Point of View",
+  title: "Rarestar Studio | Building String Theory in Bengaluru",
   description:
-    "Rarestar Studio is a minimal product studio building focused software, AI systems, and digital ventures.",
+    "Rarestar is an independent venture studio in Bengaluru building String Theory, a hyperlocal indoor digital out-of-home network.",
   openGraph: {
     type: "website",
     url: "https://rarestar.studio",
-    title: "Rarestar Studio - Products With a Point of View",
-    description: "A focused product studio building software, AI systems, and new ventures.",
+    title: "Rarestar Studio | Building String Theory in Bengaluru",
+    description: "A Bengaluru venture studio developing a hyperlocal, context-aware indoor DOOH network.",
     siteName: "Rarestar Studio",
-    locale: "en_US",
+    locale: "en_IN",
     images: [
       {
         url: "/opengraph-image",
@@ -28,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rarestar Studio - Products With a Point of View",
-    description: "A focused product studio building software, AI systems, and new ventures.",
+    title: "Rarestar Studio | Building String Theory in Bengaluru",
+    description: "A Bengaluru venture studio developing a hyperlocal, context-aware indoor DOOH network.",
     creator: "@rarestarstudio",
     images: ["/twitter-image"]
   },
@@ -49,6 +46,7 @@ const jsonLd = {
   "@id": "https://rarestar.studio#organization",
   name: "Rarestar Creative Studio LLP",
   url: "https://rarestar.studio",
+  description: "An independent Bengaluru venture studio building String Theory, a hyperlocal indoor DOOH network.",
   logo: {
     "@type": "ImageObject",
     url: "https://rarestar.studio/brand/studio-lockup-red-bg.png",
@@ -68,12 +66,9 @@ export default function StudioLayout({ children }: { children: React.ReactNode }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <SmoothScroll />
-      <ScrollProgress />
       <StudioNav />
       {children}
       <StudioFooter />
-      <Cursor />
     </>
   );
 }

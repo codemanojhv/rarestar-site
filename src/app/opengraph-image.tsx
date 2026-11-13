@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 export const runtime = "nodejs";
-export const alt = "Rarestar Studio";
+export const alt = "Rarestar Studio — Building String Theory";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -96,7 +96,7 @@ export default async function OpenGraphImage() {
               color: "#f7f7f4"
             }}
           >
-            Products with a
+            Attention,
           </div>
           <div
             style={{
@@ -107,7 +107,7 @@ export default async function OpenGraphImage() {
               color: "#cf0000"
             }}
           >
-            point of view.
+            in context.
           </div>
         </div>
 
@@ -129,7 +129,7 @@ export default async function OpenGraphImage() {
               color: "rgba(247,247,244,0.72)"
             }}
           >
-            A focused product studio building software, AI systems, and new ventures.
+            A Bengaluru venture studio developing String Theory, a hyperlocal indoor DOOH network.
           </div>
           <div
             style={{
@@ -140,7 +140,7 @@ export default async function OpenGraphImage() {
               color: "rgba(247,247,244,0.48)"
             }}
           >
-            Software / AI / Ventures
+            IN DEVELOPMENT / BENGALURU
           </div>
         </div>
       </div>

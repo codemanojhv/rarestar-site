@@ -46,9 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
-      <body className="grain">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

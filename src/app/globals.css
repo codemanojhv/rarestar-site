@@ -39,6 +39,15 @@ body {
   outline-offset: 4px;
 }
 
+.string-theory-ads :focus-visible {
+  outline-color: #5474ff;
+}
+
+.string-theory-ads ::selection {
+  background: #3154ff;
+  color: white;
+}
+
 .display {
   font-family: var(--font-display);
   font-weight: 400;

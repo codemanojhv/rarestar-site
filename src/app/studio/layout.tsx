@@ -4,14 +4,14 @@ import StudioFooter from "@/components/studio/StudioFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rarestar.studio"),
-  title: "Rarestar Studio | Building String Theory in Bengaluru",
+  title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
   description:
-    "Rarestar is an independent venture studio in Bengaluru building String Theory, a hyperlocal indoor digital out-of-home network.",
+    "Rarestar is an independent venture studio in Bengaluru building String Theory Ads, a hyperlocal digital out-of-home advertising product.",
   openGraph: {
     type: "website",
     url: "https://rarestar.studio",
-    title: "Rarestar Studio | Building String Theory in Bengaluru",
-    description: "A Bengaluru venture studio developing a hyperlocal, context-aware indoor DOOH network.",
+    title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
+    description: "A Bengaluru venture studio developing String Theory Ads, a hyperlocal, context-aware indoor advertising product.",
     siteName: "Rarestar Studio",
     locale: "en_IN",
     images: [
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rarestar Studio | Building String Theory in Bengaluru",
-    description: "A Bengaluru venture studio developing a hyperlocal, context-aware indoor DOOH network.",
+    title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
+    description: "A Bengaluru venture studio developing String Theory Ads, a hyperlocal, context-aware indoor advertising product.",
     creator: "@rarestarstudio",
     images: ["/twitter-image"]
   },
@@ -46,7 +46,7 @@ const jsonLd = {
   "@id": "https://rarestar.studio#organization",
   name: "Rarestar Creative Studio LLP",
   url: "https://rarestar.studio",
-  description: "An independent Bengaluru venture studio building String Theory, a hyperlocal indoor DOOH network.",
+  description: "An independent Bengaluru venture studio building String Theory Ads, a hyperlocal indoor DOOH advertising product.",
   logo: {
     "@type": "ImageObject",
     url: "https://rarestar.studio/brand/studio-lockup-red-bg.png",

@@ -15,16 +15,16 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     description: site.tagline,
     start_url: "/",
     display: "standalone",
-    background_color: "#050505",
+    background_color: site.themeColor,
     theme_color: site.themeColor,
     icons: [
       {
-        src: "/icon.png",
+        src: site.icon,
         sizes: "any",
         type: "image/png"
       },
       {
-        src: "/icon.png",
+        src: site.icon,
         sizes: "192x192",
         type: "image/png"
       }

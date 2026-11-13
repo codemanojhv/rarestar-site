@@ -2,12 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSiteFromHostname } from "@/lib/subdomain";
 
 /**
- * Middleware — routes requests to the Studio route group.
+ * Middleware — routes requests to the site matching the hostname.
  *
  * ┌──────────────────────────────┬─────────────────────┐
- * │  Hostname                    │  Route group        │
- * ├──────────────────────────────┼─────────────────────┤
- * │  any hostname                │  /(studio)/*        │
+ * │  Hostname                           │  Route group           │
+ * ├─────────────────────────────────────┼────────────────────────┤
+ * │  stringtheoryads.rarestar.studio    │  /stringtheoryads/*    │
+ * │  all other hosts                    │  /studio/*             │
  * └──────────────────────────────┴─────────────────────┘
  */
 export function middleware(request: NextRequest) {
@@ -37,7 +38,7 @@ export function middleware(request: NextRequest) {
 
   const site = getSiteFromHostname(host);
 
-  // Rewrite /path → /(site)/path
+  // Rewrite /path → /{site}/path
   const url = request.nextUrl.clone();
   url.pathname = `/${site}${pathname}`;
 

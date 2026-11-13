@@ -17,13 +17,13 @@ export default function StudioFooter() {
             />
           </div>
           <p className="max-w-xs font-sans text-sm text-paper/50">
-            An independent venture studio building String Theory, a local-first indoor media network in development.
+            An independent venture studio building String Theory Ads, a local-first indoor advertising product in development.
           </p>
         </div>
 
         <nav aria-label="Footer navigation" className="flex flex-col gap-3">
           <h3 className="eyebrow text-paper/40">Explore</h3>
-          <a href="#string-theory" className="text-sm text-paper/70 hover:text-paper">String Theory</a>
+          <a href="#string-theory" className="text-sm text-paper/70 hover:text-paper">String Theory Ads</a>
           <a href="#team" className="text-sm text-paper/70 hover:text-paper">Team</a>
           <a href="#careers" className="text-sm text-paper/70 hover:text-paper">Careers</a>
         </nav>

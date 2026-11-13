@@ -1,6 +1,7 @@
-import type { SiteKey } from "@/types/site";
+import { SITES, type SiteKey } from "@/types/site";
 
-/** Resolve every request to the remaining Studio site. */
-export function getSiteFromHostname(_host: string): SiteKey {
-  return "studio";
+/** Resolve the product subdomain; all other hosts remain the Rarestar site. */
+export function getSiteFromHostname(host: string): SiteKey {
+  const hostname = host.toLowerCase().split(":")[0];
+  return hostname === SITES.stringtheoryads.domain ? "stringtheoryads" : "studio";
 }

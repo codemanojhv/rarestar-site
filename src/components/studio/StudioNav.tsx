@@ -16,7 +16,7 @@ export default function StudioNav() {
         </a>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
-          <a className="text-xs text-paper/65 transition hover:text-paper" href="#string-theory">String Theory</a>
+          <a className="text-xs text-paper/65 transition hover:text-paper" href="#string-theory">String Theory Ads</a>
           <a className="text-xs text-paper/65 transition hover:text-paper" href="#studio">Studio</a>
           <a className="text-xs text-paper/65 transition hover:text-paper" href="#partners">Partners</a>
           <a className="text-xs text-paper/65 transition hover:text-paper" href="#team">Team</a>

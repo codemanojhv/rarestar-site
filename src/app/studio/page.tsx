@@ -22,11 +22,11 @@ export default function StudioHome() {
               <span className="accent-italic">in context.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-relaxed text-paper/75 md:text-xl">
-              We&apos;re building String Theory, a hyperlocal indoor digital out-of-home network designed to bring brands closer to local audiences and the moments that matter.
+              We&apos;re building String Theory Ads, a hyperlocal digital out-of-home advertising product designed to bring brands closer to local audiences and the moments that matter.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#string-theory" className="inline-flex min-h-12 items-center gap-3 bg-ember px-5 text-sm font-semibold text-paper transition hover:bg-paper hover:text-ink">
-                Explore String Theory <span aria-hidden="true">↘</span>
+              <a href="https://stringtheoryads.rarestar.studio" className="inline-flex min-h-12 items-center gap-3 bg-ember px-5 text-sm font-semibold text-paper transition hover:bg-paper hover:text-ink">
+                Explore String Theory Ads <span aria-hidden="true">↗</span>
               </a>
               <a href="mailto:hello@rarestar.studio?subject=String%20Theory%20campaign" className="inline-flex min-h-12 items-center border border-paper/30 px-5 text-sm font-semibold text-paper transition hover:border-paper hover:bg-paper/10">
                 Talk about a campaign <span className="ml-3" aria-hidden="true">↗</span>
@@ -48,7 +48,7 @@ export default function StudioHome() {
               Independent studio.<br />One focused venture.
             </h2>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-paper/65 md:text-lg">
-              Rarestar is an independent venture studio based in Bengaluru. We build String Theory around a simple idea: a brand message can be more useful when it fits the place and the moment in which people see it.
+              Rarestar is an independent venture studio based in Bengaluru. We&apos;re building String Theory Ads around a simple idea: a brand message can be more useful when it fits the place and the moment in which people see it.
             </p>
           </div>
         </div>
@@ -58,9 +58,9 @@ export default function StudioHome() {
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-24">
           <div>
             <p className="eyebrow text-ember">02 / What we&apos;re building</p>
-            <h2 className="display mt-6 text-[clamp(3.5rem,9vw,8rem)] leading-[0.86]">String<br />Theory</h2>
+            <h2 className="display mt-6 text-[clamp(3.5rem,9vw,8rem)] leading-[0.86]">String<br />Theory Ads</h2>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink/70 md:text-xl">
-              A hyperlocal, context-aware indoor DOOH network in development. The ambition is to connect brands with nearby audiences through digital screens in the places they already visit.
+              A hyperlocal, context-aware indoor digital out-of-home advertising product in development. The ambition is to connect brands with nearby audiences through screens in the places they already visit.
             </p>
             <p className="eyebrow mt-8 inline-flex border border-ink/20 px-3 py-2 text-ink/65">
               In development · Bengaluru pilot planned
@@ -139,7 +139,7 @@ export default function StudioHome() {
             <div>
               <p className="eyebrow text-paper/40">Rarestar Studio · Bengaluru</p>
               <h3 className="display mt-4 text-4xl md:text-5xl">Manoj H V</h3>
-              <p className="mt-2 text-sm text-paper/60">Building String Theory at Rarestar.</p>
+              <p className="mt-2 text-sm text-paper/60">Building String Theory Ads at Rarestar.</p>
             </div>
             <a className="mt-6 inline-flex items-center gap-2 text-sm text-paper hover:text-ember sm:mt-0" href="https://in.linkedin.com/in/manojhv" target="_blank" rel="noopener noreferrer">
               LinkedIn <span aria-hidden="true">↗</span>

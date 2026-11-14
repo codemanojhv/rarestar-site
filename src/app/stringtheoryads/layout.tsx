@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
-const siteUrl = "https://stringtheoryads.rarestar.studio";
+const siteUrl = "https://stringtheoryads.in";
 const description =
   "String Theory Ads is a local-first, context-aware digital out-of-home advertising product in development at Rarestar Studio.";
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08154d",
+  themeColor: "#050030",
   width: "device-width",
   initialScale: 1
 };
@@ -44,7 +44,7 @@ const jsonLd = {
   publisher: {
     "@type": "Organization",
     name: "Rarestar Studio",
-    url: "https://rarestar.studio"
+    url: "https://www.rarestar.studio"
   }
 };
 

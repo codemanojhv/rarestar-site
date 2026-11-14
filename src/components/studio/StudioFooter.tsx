@@ -23,7 +23,8 @@ export default function StudioFooter() {
 
         <nav aria-label="Footer navigation" className="flex flex-col gap-3">
           <h3 className="eyebrow text-paper/40">Explore</h3>
-          <a href="#string-theory" className="text-sm text-paper/70 hover:text-paper">String Theory Ads</a>
+          <a href="https://stringtheoryads.in" className="text-sm text-paper/70 hover:text-paper">String Theory Ads ↗</a>
+          <a href="#studio" className="text-sm text-paper/70 hover:text-paper">Studio</a>
           <a href="#team" className="text-sm text-paper/70 hover:text-paper">Team</a>
           <a href="#careers" className="text-sm text-paper/70 hover:text-paper">Careers</a>
         </nav>

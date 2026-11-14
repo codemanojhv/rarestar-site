@@ -7,12 +7,21 @@ import { getSiteFromHostname } from "@/lib/subdomain";
  * ┌──────────────────────────────┬─────────────────────┐
  * │  Hostname                           │  Route group           │
  * ├─────────────────────────────────────┼────────────────────────┤
- * │  stringtheoryads.rarestar.studio    │  /stringtheoryads/*    │
+ * │  stringtheoryads.in                 │  /stringtheoryads/*    │
  * │  all other hosts                    │  /studio/*             │
  * └──────────────────────────────┴─────────────────────┘
  */
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const host = (request.headers.get("host") ?? "localhost").toLowerCase().split(":")[0];
+
+  if (host === "www.stringtheoryads.in" || host === "stringtheoryads.rarestar.studio") {
+    const canonical = request.nextUrl.clone();
+    canonical.protocol = "https:";
+    canonical.host = "stringtheoryads.in";
+    canonical.port = "";
+    return NextResponse.redirect(canonical, 308);
+  }
 
   // Skip internal Next.js paths, API routes, and static assets
   if (
@@ -33,8 +42,6 @@ export function middleware(request: NextRequest) {
   ) {
     return NextResponse.next();
   }
-
-  const host = request.headers.get("host") ?? "localhost";
 
   const site = getSiteFromHostname(host);
 

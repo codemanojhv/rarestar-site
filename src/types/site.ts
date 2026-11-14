@@ -17,7 +17,7 @@ export const SITES: Record<SiteKey, SiteConfig> = {
     name: "Rarestar Studio",
     tagline: "Independent venture studio building String Theory Ads.",
     domain: "rarestar.studio",
-    baseUrl: "https://rarestar.studio",
+    baseUrl: "https://www.rarestar.studio",
     themeColor: "#050505",
     icon: "/icon.png"
   },
@@ -25,9 +25,9 @@ export const SITES: Record<SiteKey, SiteConfig> = {
     key: "stringtheoryads",
     name: "String Theory Ads",
     tagline: "Local attention, in context.",
-    domain: "stringtheoryads.rarestar.studio",
-    baseUrl: "https://stringtheoryads.rarestar.studio",
-    themeColor: "#08154d",
+    domain: "stringtheoryads.in",
+    baseUrl: "https://stringtheoryads.in",
+    themeColor: "#050030",
     icon: "/brand/string-theory-ads-mark.png"
   }
 } as const;

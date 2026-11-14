@@ -1,223 +1,156 @@
 import Image from "next/image";
+import Story, { StoryArt } from "@/components/string-theory/Story";
+import ContactForm from "@/components/string-theory/ContactForm";
+import MobileNav from "@/components/MobileNav";
 
-const focus = [
-  ["01", "Place", "Build around the venues and neighbourhoods where local audiences already spend time."],
-  ["02", "Moment", "Explore how timing and local context can make a campaign feel more relevant."],
-  ["03", "Message", "Make the creative fit the screen, the space, and the people who use it."]
+const questions = [
+  ["Is String Theory Ads available now?", "String Theory Ads is in development. We’re speaking with potential advertisers and venue partners as we plan a first pilot in Bengaluru."],
+  ["What would an early pilot involve?", "We would discuss a campaign’s objective, potential venues, creative and timing together. The details will depend on the pilot and the partners involved."],
+  ["Can my venue take part?", "We’d love to hear about your space and any indoor screens you manage. A conversation will help us understand whether it could be a fit for a future pilot."],
+  ["What can be measured?", "Where available, player records can show logged playback. They don’t tell us who saw an ad or prove a campaign’s sales or business results."],
+  ["What creative would I need?", "We’ll discuss the screen format and creative requirements with each pilot partner before anything runs."]
 ] as const;
 
 export default function StringTheoryAdsHome() {
   return (
-    <main id="top" className="string-theory-ads overflow-hidden bg-[#f7f8ff] text-[#081239]">
-      <header className="sticky top-0 z-50 border-b border-[#0a1b55]/10 bg-[#f7f8ff]/95 backdrop-blur-xl">
-        <div className="mx-auto flex min-h-[72px] max-w-7xl items-center justify-between gap-4 px-5 md:px-10">
-          <a href="#top" aria-label="String Theory Ads home" className="flex shrink-0 items-center gap-3">
-            <Image src="/brand/string-theory-ads-mark.png" alt="" width={48} height={48} priority className="size-10 rounded-xl" />
-            <span className="text-sm font-semibold tracking-[-0.04em] sm:text-base">String Theory <span className="text-[#3154ff]">Ads</span></span>
+    <main id="top" className="string-theory-ads sta">
+      <header className="sta-header">
+        <div className="sta-header-inner sta-container">
+          <a className="sta-brand" href="#top" aria-label="String Theory Ads home">
+            <Image src="/brand/string-theory-ads-mark.png" alt="" width={44} height={44} priority />
+            <span>STRING THEORY <b>ADS</b></span>
           </a>
-          <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
-            <a className="text-xs text-[#081239]/65 transition hover:text-[#3154ff]" href="#idea">The idea</a>
-            <a className="text-xs text-[#081239]/65 transition hover:text-[#3154ff]" href="#partners">For partners</a>
-            <a className="text-xs text-[#081239]/65 transition hover:text-[#3154ff]" href="#team">Team</a>
-            <a className="text-xs text-[#081239]/65 transition hover:text-[#3154ff]" href="#careers">Careers</a>
+          <nav className="sta-nav" aria-label="Main navigation">
+            <a href="#story">The story</a><a href="#pilot">The pilot</a><a href="#partners">For partners</a><a href="#team">Team</a>
           </nav>
-          <a href="#contact" className="inline-flex min-h-10 shrink-0 items-center rounded-full bg-[#1738de] px-4 text-xs font-semibold text-white transition hover:bg-[#08154d] sm:px-5">
-            Talk to us <span className="ml-2" aria-hidden="true">↗</span>
-          </a>
+          <div className="sta-header-actions">
+            <a className="sta-nav-cta" href="#contact">Discuss a pilot <span aria-hidden="true">↗</span></a>
+            <MobileNav className="sta-mobile-menu" links={[["The story", "#story"], ["The pilot", "#pilot"], ["For partners", "#partners"], ["Team", "#team"], ["Careers", "#careers"], ["Contact", "#contact"]]} />
+          </div>
         </div>
       </header>
 
-      <section className="relative isolate overflow-hidden bg-[#07103a] text-white">
-        <div aria-hidden="true" className="absolute -right-48 -top-56 -z-10 size-[42rem] rounded-full bg-[#2446ff]/50 blur-[100px]" />
-        <div aria-hidden="true" className="absolute -bottom-64 left-1/3 -z-10 size-[38rem] rounded-full bg-[#8197ff]/25 blur-[110px]" />
-        <div className="mx-auto grid min-h-[680px] max-w-7xl items-center gap-12 px-5 py-20 md:px-10 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div className="max-w-3xl">
-            <p className="eyebrow text-[#a8b6ff]">A Rarestar Studio venture · Bengaluru, India</p>
-            <h1 className="mt-7 text-[clamp(3.25rem,8.2vw,7.5rem)] font-semibold leading-[0.91] tracking-[-0.075em]">
-              Local reach.<br />In context.
-            </h1>
-            <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/75 md:text-xl">
-              String Theory Ads is building a hyperlocal, context-aware digital out-of-home product for brands that want to connect with people in the places they already choose.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a href="mailto:hello@rarestar.studio?subject=String%20Theory%20Ads%20campaign" className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-[#081239] transition hover:bg-[#aebaff]">
-                Talk about a campaign <span className="ml-3" aria-hidden="true">↗</span>
-              </a>
-              <a href="#partners" className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-6 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10">
-                Partner with us <span className="ml-3" aria-hidden="true">↓</span>
-              </a>
+      <section className="sta-hero">
+        <div className="sta-hero-glow" aria-hidden="true" />
+        <div className="sta-container sta-hero-grid">
+          <div className="sta-hero-copy">
+            <p className="sta-label sta-light-label"><span className="sta-live-dot" /> A RARESTAR STUDIO VENTURE · BENGALURU</p>
+            <h1>A message<br /><em>finds its place.</em></h1>
+            <p className="sta-hero-description">We&apos;re developing local advertising on indoor screens, connecting brands with the places people already go.</p>
+            <div className="sta-hero-actions">
+              <a className="sta-button sta-button-light" href="#contact" data-enquiry="brand">Discuss a Bengaluru pilot <span aria-hidden="true">↗</span></a>
+              <a className="sta-text-link sta-text-link-light" href="#story">Follow the story <span aria-hidden="true">↓</span></a>
             </div>
-            <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.14em] text-white/65">
-              <span className="size-1.5 rounded-full bg-[#9aabff]" /> In development · Bengaluru pilot planned
-            </p>
+            <p className="sta-hero-status"><span /> IN DEVELOPMENT &nbsp; / &nbsp; BENGALURU PILOT PLANNED</p>
           </div>
+          <div className="sta-hero-art">
+            <StoryArt step={3} />
+            <span className="sta-hero-art-caption">A MESSAGE / A PLACE / A MOMENT</span>
+          </div>
+        </div>
+        <div className="sta-hero-foot sta-container"><span>LOCAL ATTENTION, IN CONTEXT.</span><span>SCROLL TO EXPLORE ↓</span></div>
+      </section>
 
-          <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
-            <div aria-hidden="true" className="absolute inset-8 rounded-[2rem] bg-[#4562ff]/40 blur-3xl" />
-            <Image
-              src="/brand/string-theory-ads-wordmark.png"
-              alt="String Theory Ads wordmark on the brand's blue gradient"
-              width={1400}
-              height={700}
-              priority
-              sizes="(max-width: 1024px) 90vw, 42vw"
-              className="relative h-auto w-full rounded-[2rem] shadow-[0_28px_100px_rgba(1,8,45,0.5)]"
-            />
-            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">A new way to think about local media</p>
-          </div>
+      <section className="sta-intro-band">
+        <div className="sta-container sta-intro-grid">
+          <p className="sta-label">A LITTLE CONTEXT</p>
+          <p>Good advertising doesn&apos;t just appear.<br /><em>It belongs somewhere.</em></p>
+          <span>↓</span>
         </div>
       </section>
 
-      <section className="border-b border-[#0a1b55]/10 bg-white px-5 py-20 md:px-10 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.75fr_1.25fr] md:gap-20">
-          <p className="eyebrow text-[#3154ff]">01 / What we do</p>
-          <div>
-            <h2 className="max-w-4xl text-[clamp(2.7rem,6.4vw,5.75rem)] font-semibold leading-[0.96] tracking-[-0.065em]">
-              Advertising shaped by where people are.
-            </h2>
-            <p className="mt-7 max-w-3xl text-base leading-relaxed text-[#081239]/65 md:text-lg">
-              We&apos;re developing a local-first indoor screen network that brings brands, media planners, and venue partners into one conversation. The focus is simple: make place, timing, and creative part of the plan from the start.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Story />
 
-      <section id="idea" className="scroll-mt-28 bg-[#f7f8ff] px-5 py-20 md:px-10 md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-[0.75fr_1.25fr] md:gap-20">
-            <p className="eyebrow text-[#3154ff]">02 / The working idea</p>
+      <section id="idea" className="sta-idea">
+        <div className="sta-container">
+          <div className="sta-section-intro sta-section-intro-light">
+            <p className="sta-label">02 / THE IDEA</p>
             <div>
-              <h2 className="max-w-4xl text-[clamp(2.6rem,6vw,5.25rem)] font-semibold leading-[0.96] tracking-[-0.065em]">Place. Moment. Message.</h2>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#081239]/60 md:text-lg">
-                A useful local campaign begins with the setting. We&apos;re exploring how a screen, its surroundings, and the message can work together without losing sight of the people on the other side of it.
-              </p>
+              <h2>Built around<br /><em>real places.</em></h2>
+              <p>We&apos;re developing a local-first indoor screen product that brings brands and venues into the same conversation.</p>
             </div>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
-            {focus.map(([number, title, description]) => (
-              <article key={number} className="flex min-h-64 flex-col justify-between rounded-3xl border border-[#0a1b55]/10 bg-white p-6 md:min-h-72 md:p-8">
-                <span className="font-mono text-xs text-[#3154ff]">{number} / 03</span>
-                <div>
-                  <span className="mb-4 block h-1.5 w-12 rounded-full bg-linear-to-r from-[#1836d8] to-[#94a5ff]" />
-                  <h3 className="text-3xl font-semibold tracking-[-0.06em] md:text-4xl">{title}</h3>
-                  <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#081239]/60 md:text-base">{description}</p>
-                </div>
-              </article>
-            ))}
+          <div className="sta-principles">
+            <article><span>01 / PLACE</span><div className="sta-principle-symbol">◎</div><h3>Start local.</h3><p>Begin with a neighbourhood and the places people choose to spend time.</p></article>
+            <article><span>02 / MOMENT</span><div className="sta-principle-symbol">◌</div><h3>Consider the setting.</h3><p>Think about the space and the experience around the screen.</p></article>
+            <article><span>03 / MESSAGE</span><div className="sta-principle-symbol">↗</div><h3>Make it fit.</h3><p>Give the creative a reason to belong in the place it appears.</p></article>
           </div>
-          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.15em] text-[#081239]/35">A product direction in development</p>
         </div>
       </section>
 
-      <section id="partners" className="scroll-mt-28 bg-[#0a1545] px-5 py-20 text-white md:px-10 md:py-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-[0.75fr_1.25fr] md:gap-20">
-            <p className="eyebrow text-[#a8b6ff]">03 / Who we work with</p>
+      <section id="pilot" className="sta-pilot">
+        <div className="sta-container">
+          <div className="sta-section-intro">
+            <p className="sta-label">03 / THE FIRST CHAPTER</p>
             <div>
-              <h2 className="max-w-4xl text-[clamp(2.6rem,6vw,5.4rem)] font-semibold leading-[0.96] tracking-[-0.065em]">Better local media takes both sides.</h2>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
-                String Theory Ads is still taking shape. We&apos;re speaking with people who want to help shape a thoughtful Bengaluru pilot.
-              </p>
+              <h2>Start with one<br /><em>neighbourhood.</em></h2>
+              <p>We&apos;re planning a Bengaluru pilot with people who believe local media can be more thoughtful. Here&apos;s the approach we want to explore together.</p>
             </div>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            <article className="flex min-h-72 flex-col rounded-3xl border border-white/15 bg-white/[0.04] p-7 md:p-9">
-              <p className="eyebrow text-[#a8b6ff]">Brands &amp; media planners</p>
-              <h3 className="mt-7 max-w-lg text-3xl font-semibold leading-tight tracking-[-0.055em] md:text-4xl">Have a local audience in mind?</h3>
-              <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/60 md:text-base">
-                Tell us about the campaign, the neighbourhood, and the kind of experience you want to create. We&apos;ll explore whether an early pilot could fit.
-              </p>
-              <a href="mailto:hello@rarestar.studio?subject=String%20Theory%20Ads%20campaign" className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold text-white transition hover:text-[#a8b6ff]">
-                Share a campaign brief <span aria-hidden="true">↗</span>
-              </a>
+          <div className="sta-pilot-steps">
+            <article><span>01</span><h3>Find the fit.</h3><p>Talk through the campaign, neighbourhood and audience you have in mind.</p></article>
+            <article><span>02</span><h3>Shape the pilot.</h3><p>Explore participating venues, screen requirements and creative together.</p></article>
+            <article><span>03</span><h3>Learn from it.</h3><p>Review the pilot and available playback records, then decide what comes next.</p></article>
+          </div>
+          <p className="sta-pilot-note">A proposed approach · Details will be agreed with pilot partners</p>
+        </div>
+      </section>
+
+      <section id="partners" className="sta-partners">
+        <div className="sta-container">
+          <div className="sta-partners-heading"><p className="sta-label">04 / LET&apos;S MAKE A CONNECTION</p><h2>There&apos;s a place<br />for <em>you here.</em></h2></div>
+          <div className="sta-partner-grid">
+            <article>
+              <div className="sta-partner-top"><span>01 / FOR BRANDS</span><span>↗</span></div>
+              <h3>Have a story<br />to put out there?</h3>
+              <p>Explore a campaign in the places your customers already go.</p>
+              <a href="#contact" data-enquiry="brand" className="sta-partner-link">Discuss an advertiser pilot <span aria-hidden="true">↗</span></a>
             </article>
-            <article className="flex min-h-72 flex-col rounded-3xl border border-white/15 bg-white/[0.04] p-7 md:p-9">
-              <p className="eyebrow text-[#a8b6ff]">Venues &amp; screen partners</p>
-              <h3 className="mt-7 max-w-lg text-3xl font-semibold leading-tight tracking-[-0.055em] md:text-4xl">Run a space with a local community?</h3>
-              <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/60 md:text-base">
-                If you manage an indoor venue or display, tell us about the setting, the screens, and the people who come through.
-              </p>
-              <a href="mailto:hello@rarestar.studio?subject=String%20Theory%20Ads%20venue%20partnership" className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold text-white transition hover:text-[#a8b6ff]">
-                Explore a partnership <span aria-hidden="true">↗</span>
-              </a>
+            <article>
+              <div className="sta-partner-top"><span>02 / FOR VENUES</span><span>↗</span></div>
+              <h3>Have a space<br />people love?</h3>
+              <p>Explore whether your venue or screen could be part of a local network.</p>
+              <a href="#contact" data-enquiry="venue" className="sta-partner-link">Talk about a venue partnership <span aria-hidden="true">↗</span></a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="team" className="scroll-mt-28 border-b border-[#0a1b55]/10 bg-white px-5 py-20 md:px-10 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.75fr_1.25fr] md:gap-20">
-          <p className="eyebrow text-[#3154ff]">04 / The team</p>
-          <div>
-            <h2 className="max-w-4xl text-[clamp(2.7rem,6.4vw,5.75rem)] font-semibold leading-[0.96] tracking-[-0.065em]">A focused venture, close to the work.</h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#081239]/60 md:text-lg">
-              String Theory Ads is a venture built by Rarestar Studio in Bengaluru. The team is developing the product alongside the conversations that will shape its first local pilot.
-            </p>
-            <div className="mt-10 flex flex-col gap-5 border-t border-[#0a1b55]/15 pt-6 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="eyebrow text-[#081239]/40">Rarestar Studio · Bengaluru</p>
-                <h3 className="mt-3 text-3xl font-semibold tracking-[-0.06em] md:text-4xl">Manoj H V</h3>
-                <p className="mt-1 text-sm text-[#081239]/60">Building String Theory at Rarestar.</p>
-              </div>
-              <a href="https://in.linkedin.com/in/manojhv" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-[#1738de] hover:text-[#081239]">
-                LinkedIn <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+      <section className="sta-faq">
+        <div className="sta-container sta-faq-grid">
+          <div><p className="sta-label">05 / A FEW DETAILS</p><h2>Curious?<br /><em>Good.</em></h2><p>Some answers as we get started.</p></div>
+          <div className="sta-questions">
+            {questions.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}
           </div>
         </div>
       </section>
 
-      <section id="careers" className="scroll-mt-28 bg-[#eef0ff] px-5 py-20 md:px-10 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.75fr_1.25fr] md:gap-20">
-          <p className="eyebrow text-[#3154ff]">05 / Careers</p>
-          <div>
-            <h2 className="max-w-4xl text-[clamp(2.7rem,6.4vw,5.75rem)] font-semibold leading-[0.96] tracking-[-0.065em]">Help shape what comes next.</h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#081239]/65 md:text-lg">
-              We&apos;re keen to meet thoughtful people interested in local media, partnerships, operations, product, design, and growth. Share a little about what you do and the work you want to help build.
-            </p>
-            <a href="mailto:hello@rarestar.studio?subject=Careers%20at%20String%20Theory%20Ads" className="mt-7 inline-flex items-center gap-2 border-b border-[#3154ff] pb-2 text-sm font-semibold text-[#081239] transition hover:text-[#3154ff]">
-              Get in touch about careers <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+      <section id="team" className="sta-team">
+        <div className="sta-container sta-team-grid">
+          <div><p className="sta-label">06 / THE PEOPLE BEHIND IT</p><h2>Small team.<br /><em>Big curiosity.</em></h2></div>
+          <div><p>String Theory Ads is being developed by Rarestar Studio in Bengaluru. We&apos;re shaping the idea through conversations with the brands, venues and communities it is made for.</p><a className="sta-text-link" href="https://www.rarestar.studio">Meet Rarestar Studio <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-28 bg-linear-to-br from-[#09133f] via-[#1939dd] to-[#7c91ff] px-5 py-20 text-white md:px-10 md:py-28">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="eyebrow text-white/65">Campaigns · venues · collaborators</p>
-            <h2 className="mt-5 max-w-4xl text-[clamp(2.8rem,7vw,6.5rem)] font-semibold leading-[0.92] tracking-[-0.07em]">Let&apos;s make local matter.</h2>
-          </div>
-          <a href="mailto:hello@rarestar.studio?subject=String%20Theory%20Ads%20enquiry" className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-[#081239] transition hover:bg-[#dfe4ff]">
-            hello@rarestar.studio <span className="ml-3" aria-hidden="true">↗</span>
-          </a>
+      <section id="careers" className="sta-careers">
+        <div className="sta-container sta-careers-grid"><p className="sta-label">07 / CAREERS</p><div><h2>Make something<br /><em>with us.</em></h2><p>Interested in what we&apos;re building? We&apos;d like to hear about your work and what you care about. There are no open roles listed right now.</p><a className="sta-text-link" href="mailto:hello@rarestar.studio?subject=Careers%20at%20String%20Theory%20Ads">Share your work <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+
+      <section id="contact" className="sta-contact">
+        <div className="sta-container">
+          <div className="sta-contact-heading"><p className="sta-label sta-light-label">08 / START A CONVERSATION</p><h2>Have a place<br /><em>in mind?</em></h2><p>Tell us a little about your idea. We&apos;ll take it from there.</p></div>
+          <ContactForm />
         </div>
       </section>
 
-      <footer className="bg-[#07103a] px-5 py-12 text-white md:px-10">
-        <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_auto_auto] lg:items-start">
-          <div>
-            <a href="#top" className="inline-flex items-center gap-3">
-              <Image src="/brand/string-theory-ads-mark.png" alt="" width={40} height={40} className="size-8 rounded-lg" />
-              <span className="text-sm font-semibold tracking-[-0.04em]">String Theory Ads</span>
-            </a>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/50">A local-first digital out-of-home product in development at Rarestar Studio.</p>
+      <footer className="sta-footer">
+        <div className="sta-container">
+          <div className="sta-footer-main">
+            <div><Image src="/brand/string-theory-ads-wordmark.png" alt="String Theory" width={2731} height={1081} className="sta-footer-wordmark" /><p>Local attention, in context.<br />A venture by <a href="https://www.rarestar.studio">Rarestar Studio ↗</a></p></div>
+            <div><span>EXPLORE</span><a href="#story">The story</a><a href="#pilot">The pilot</a><a href="#partners">For partners</a><a href="#careers">Careers</a></div>
+            <div><span>GET IN TOUCH</span><a href="mailto:hello@rarestar.studio">hello@rarestar.studio ↗</a><p>Bengaluru, India</p></div>
           </div>
-          <nav aria-label="Footer navigation" className="flex flex-col gap-3 text-sm text-white/65">
-            <a href="#idea" className="hover:text-white">The idea</a>
-            <a href="#partners" className="hover:text-white">Partners</a>
-            <a href="#team" className="hover:text-white">Team</a>
-            <a href="#careers" className="hover:text-white">Careers</a>
-          </nav>
-          <div className="flex flex-col gap-3 text-sm text-white/65">
-            <a href="mailto:hello@rarestar.studio" className="hover:text-white">hello@rarestar.studio</a>
-            <a href="https://rarestar.studio" className="hover:text-white">A venture by Rarestar Studio ↗</a>
-            <p>Bengaluru, India</p>
-          </div>
-        </div>
-        <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-5 text-[10px] text-white/35 sm:flex-row sm:justify-between">
-          <p>© {new Date().getFullYear()} Rarestar Creative Studio LLP</p>
-          <p>String Theory Ads · Bengaluru</p>
+          <div className="sta-footer-bottom"><span>© {new Date().getFullYear()} RARESTAR CREATIVE STUDIO LLP</span><span>MADE FOR THE PLACES IN BETWEEN.</span></div>
         </div>
       </footer>
     </main>

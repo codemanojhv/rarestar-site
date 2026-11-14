@@ -3,13 +3,13 @@ import StudioNav from "@/components/studio/StudioNav";
 import StudioFooter from "@/components/studio/StudioFooter";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rarestar.studio"),
+  metadataBase: new URL("https://www.rarestar.studio"),
   title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
   description:
     "Rarestar is an independent venture studio in Bengaluru building String Theory Ads, a hyperlocal digital out-of-home advertising product.",
   openGraph: {
     type: "website",
-    url: "https://rarestar.studio",
+    url: "https://www.rarestar.studio",
     title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
     description: "A Bengaluru venture studio developing String Theory Ads, a hyperlocal, context-aware indoor advertising product.",
     siteName: "Rarestar Studio",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ["/twitter-image"]
   },
   alternates: {
-    canonical: "https://rarestar.studio"
+    canonical: "https://www.rarestar.studio"
   },
   manifest: "/manifest.webmanifest",
   icons: {
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://rarestar.studio#organization",
+  "@id": "https://www.rarestar.studio#organization",
   name: "Rarestar Creative Studio LLP",
-  url: "https://rarestar.studio",
+  url: "https://www.rarestar.studio",
   description: "An independent Bengaluru venture studio building String Theory Ads, a hyperlocal indoor DOOH advertising product.",
   logo: {
     "@type": "ImageObject",
-    url: "https://rarestar.studio/brand/studio-lockup-red-bg.png",
+    url: "https://www.rarestar.studio/brand/studio-lockup-red-bg.png",
     width: "2516",
     height: "631"
   },

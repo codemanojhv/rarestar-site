@@ -143,6 +143,7 @@
 .sta-contact-heading h2 em { color: #aab9ff; }
 .sta-contact-heading > p:last-child { margin-top: 24px; color: #d1d6f1; font-size: 17px; }
 .sta-form { max-width: 930px; margin: 70px 0 0 auto; }
+.sta-no-script { margin-bottom: 28px; color: white; font-size: 14px; }.sta-no-script a { text-decoration: underline; }
 .sta-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .sta-form label { display: block; margin-bottom: 28px; font-size: 12px; font-weight: 600; color: #e3e6fa; }
 .sta-form input, .sta-form select, .sta-form textarea { display: block; width: 100%; border: 0; border-bottom: 1px solid #8e9ae1; border-radius: 0; outline-offset: 4px; padding: 15px 0; background: transparent; color: white; font-size: 15px; font-weight: 400; }

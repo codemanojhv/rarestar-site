@@ -37,7 +37,8 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="sta-form" onSubmit={submit}>
+    <form className="sta-form" method="post" action="/api/contact" onSubmit={submit}>
+      <noscript><p className="sta-no-script">To get in touch without JavaScript, email <a href="mailto:hello@rarestar.studio">hello@rarestar.studio</a>.</p></noscript>
       <div className="sta-form-grid">
         <label>Your name <input name="name" autoComplete="name" required maxLength={100} placeholder="Name" /></label>
         <label>Work email <input name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@company.com" /></label>

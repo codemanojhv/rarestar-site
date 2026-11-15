@@ -13,6 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 1.0
-    }
+    },
+    ...(site.key === "studio" ? [{ url: `${site.baseUrl}/privacy`, lastModified: now, changeFrequency: "yearly" as const, priority: 0.3 }] : [])
   ];
 }

@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono, Manrope } from "next/font/google";
+import { ExperienceProvider } from "@/components/string-theory/ExperienceContext";
 import "./globals.css";
 import "./experience.css";
+import "./journey.css";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -25,6 +27,13 @@ const jetbrains = JetBrains_Mono({
   display: "swap"
 });
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+  display: "swap"
+});
+
 export const viewport: Viewport = {
   themeColor: "#050505",
   width: "device-width",
@@ -44,10 +53,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}
+      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} ${manrope.variable}`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body><ExperienceProvider>{children}</ExperienceProvider></body>
     </html>
   );
 }

@@ -15,6 +15,11 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const host = (request.headers.get("host") ?? "localhost").toLowerCase().split(":")[0];
 
+  // Preview the product without changing the production hostname routing.
+  if (process.env.VERCEL_ENV === "preview" && pathname === "/stringtheoryads") {
+    return NextResponse.next();
+  }
+
   if (host === "www.stringtheoryads.in" || host === "stringtheoryads.rarestar.studio") {
     const canonical = request.nextUrl.clone();
     canonical.protocol = "https:";

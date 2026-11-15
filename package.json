@@ -16,10 +16,11 @@
     "prepare": "node scripts/install-knowledge-hook.mjs"
   },
   "dependencies": {
-    "next": "latest",
+    "gsap": "3.15.1",
+    "next": "16.4.6",
     "react": "latest",
     "react-dom": "latest",
-    "sharp": "^0.33.4"
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",

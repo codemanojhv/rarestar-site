@@ -17,17 +17,17 @@ export default function StudioNav() {
         </a>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
-          <a className="text-xs text-paper/65 transition hover:text-paper" href="#studio">Studio</a>
-          <a className="text-xs text-paper/65 transition hover:text-paper" href="#venture">The venture</a>
-          <a className="text-xs text-paper/65 transition hover:text-paper" href="#process">Our approach</a>
-          <a className="text-xs text-paper/65 transition hover:text-paper" href="#team">Team</a>
-          <a className="text-xs text-paper/65 transition hover:text-paper" href="#careers">Careers</a>
+          <a className="text-xs text-paper/65 transition hover:text-paper" href="/#story">The story</a>
+          <a className="text-xs text-paper/65 transition hover:text-paper" href="/#studio">Studio</a>
+          <a className="text-xs text-paper/65 transition hover:text-paper" href="/#venture">The venture</a>
+          <a className="text-xs text-paper/65 transition hover:text-paper" href="/#team">Team</a>
+          <a className="text-xs text-paper/65 transition hover:text-paper" href="/#careers">Careers</a>
         </nav>
         <div className="flex items-center gap-2">
-          <a className="inline-flex min-h-10 shrink-0 items-center border border-paper/25 px-3 text-xs font-semibold text-paper transition hover:border-paper hover:bg-paper hover:text-ink sm:px-4" href="#contact">
-            Let&apos;s talk <span className="ml-2" aria-hidden="true">↗</span>
+          <a className="inline-flex min-h-10 shrink-0 items-center border border-paper/25 px-3 text-xs font-semibold text-paper transition hover:border-paper hover:bg-paper hover:text-ink sm:px-4" href="/#contact" data-enquiry="campaign">
+            Discuss a pilot <span className="ml-2" aria-hidden="true">↗</span>
           </a>
-          <MobileNav className="rs-mobile-menu lg:hidden" links={[["Studio", "#studio"], ["The venture", "#venture"], ["Our approach", "#process"], ["Team", "#team"], ["Careers", "#careers"]]} />
+          <MobileNav className="rs-mobile-menu lg:hidden" links={[["The story", "/#story"], ["Studio", "/#studio"], ["The venture", "/#venture"], ["Our approach", "/#process"], ["Team", "/#team"], ["Careers", "/#careers"], ["Contact", "/#contact"]]} />
         </div>
       </div>
     </header>

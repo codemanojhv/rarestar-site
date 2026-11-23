@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import StudioNav from "@/components/studio/StudioNav";
-import StudioFooter from "@/components/studio/StudioFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rarestar.studio"),
@@ -66,9 +64,7 @@ export default function StudioLayout({ children }: { children: React.ReactNode }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <StudioNav />
       {children}
-      <StudioFooter />
     </>
   );
 }

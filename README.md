@@ -26,11 +26,7 @@ The contact check mocks the email provider and does not send a message.
 
 ## Enquiries
 
-Both forms post to `/api/contact`. Set `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `CONTACT_RECEIVER_EMAIL` in Vercel or in an untracked `.env.local` for local development. The sender must be permitted by the Resend account. The recipient defaults to `hello@rarestar.studio`; the visitor's email is used as reply-to. If sending fails, the form retains the details and offers a retry and email fallback.
-
-Campaign, venue and careers enquiries have different fields. A visitor's illustrative place, moment and sample headline are included only when the context is shown beside the form. Cross-domain links carry only the place and moment; free text and contact details never go into the URL. Identical retries use the same Resend idempotency key. Logs contain delivery status and a correlation ID, not enquiry contents.
-
-The form uses server validation, an origin check and a honeypot. The honeypot only filters simple automated submissions; managed Turnstile was deferred by request. Use shared rate limiting or a challenge if abuse becomes a problem.
+Both landing pages link directly to `hello@rarestar.studio` using the visitor's email app. The previous `/api/contact` endpoint remains available for compatibility; it is not used by the landing pages. Its Resend configuration and existing honeypot are unchanged.
 
 ## Deployment and DNS
 

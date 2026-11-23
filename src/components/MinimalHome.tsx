@@ -13,20 +13,20 @@ export default function MinimalHome({ product = false }: { product?: boolean }) 
 
         <div className="minimal-content">
           <div className="minimal-copy">
-            <p className="minimal-label">{product ? "A Rarestar Studio venture" : "An independent venture studio"}</p>
+            <p className="minimal-label">{product ? "A Rarestar Studio product" : "An independent venture"}</p>
             <h1 id="intro-title">
               {product ? <>Local attention,<br /><em>in context.</em></> : <>Ideas for<br /><em>the everyday.</em></>}
             </h1>
             <p className="minimal-description">
               {product
                 ? "String Theory Ads is a local-first indoor advertising product in development at Rarestar Studio."
-                : "Rarestar is a Bengaluru venture studio building String Theory Ads, a local-first indoor advertising product."}
+                : "Rarestar Studio is a Bengaluru venture building String Theory Ads, a local-first indoor advertising product."}
             </p>
             <a className="minimal-contact" href="mailto:hello@rarestar.studio">Get in touch <span aria-hidden="true">↗</span></a>
           </div>
 
           <div className="minimal-venture">
-            <div className="minimal-venture-top"><span>Our venture</span><span>01 / 01</span></div>
+            <div className="minimal-venture-top"><span>Our product</span><span>01 / 01</span></div>
             <Image className="minimal-venture-logo" src="/brand/string-theory-ads-wordmark.png" alt="String Theory" width={2731} height={1081} sizes="(max-width: 800px) 90vw, 40vw" priority />
             <div className="minimal-venture-bottom"><span>String Theory Ads</span><span>By Rarestar Studio</span></div>
           </div>

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 
+const description = "Rarestar Studio is a Bengaluru venture building String Theory Ads, a local-first indoor advertising product.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rarestar.studio"),
   title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
-  description:
-    "Rarestar is an independent venture studio in Bengaluru building String Theory Ads, a hyperlocal digital out-of-home advertising product.",
+  description,
   openGraph: {
     type: "website",
     url: "https://www.rarestar.studio",
     title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
-    description: "A Bengaluru venture studio developing String Theory Ads, a hyperlocal, context-aware indoor advertising product.",
+    description,
     siteName: "Rarestar Studio",
     locale: "en_IN",
     images: [
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rarestar Studio | Building String Theory Ads in Bengaluru",
-    description: "A Bengaluru venture studio developing String Theory Ads, a hyperlocal, context-aware indoor advertising product.",
+    description,
     creator: "@rarestarstudio",
     images: ["/twitter-image"]
   },
@@ -44,7 +45,7 @@ const jsonLd = {
   "@id": "https://www.rarestar.studio#organization",
   name: "Rarestar Creative Studio LLP",
   url: "https://www.rarestar.studio",
-  description: "An independent Bengaluru venture studio building String Theory Ads, a hyperlocal indoor DOOH advertising product.",
+  description,
   logo: {
     "@type": "ImageObject",
     url: "https://www.rarestar.studio/brand/studio-lockup-red-bg.png",

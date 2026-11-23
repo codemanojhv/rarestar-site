@@ -129,7 +129,7 @@ export default async function OpenGraphImage() {
               color: "rgba(247,247,244,0.72)"
             }}
           >
-            A Bengaluru venture studio developing String Theory, a hyperlocal indoor DOOH network.
+            A Bengaluru venture developing String Theory Ads, a local-first indoor advertising product.
           </div>
           <div
             style={{

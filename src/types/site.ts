@@ -15,7 +15,7 @@ export const SITES: Record<SiteKey, SiteConfig> = {
   studio: {
     key: "studio",
     name: "Rarestar Studio",
-    tagline: "Independent venture studio building String Theory Ads.",
+    tagline: "An independent venture building String Theory Ads.",
     domain: "rarestar.studio",
     baseUrl: "https://www.rarestar.studio",
     themeColor: "#050505",
